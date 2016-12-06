@@ -6732,3 +6732,56 @@ Processing by PostsController#show as */*
   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", "14"]]
   Rendered posts/show.html.erb within layouts/application (0.3ms)
 Completed 200 OK in 27ms (Views: 22.9ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/" for ::1 at 2016-11-05 14:20:18 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/railties-4.2.5/lib/rails/templates/rails/welcome/index.html.erb (3.4ms)
+Completed 200 OK in 27ms (Views: 15.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/posts/new" for ::1 at 2016-11-05 14:20:27 -0400
+Processing by PostsController#new as HTML
+  Rendered posts/new.html.erb within layouts/application (24.7ms)
+Completed 200 OK in 551ms (Views: 533.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/posts/new" for ::1 at 2016-11-05 14:27:05 -0400
+Processing by PostsController#new as HTML
+  Rendered posts/new.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 21ms (Views: 20.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/posts" for ::1 at 2016-11-05 14:27:12 -0400
+Processing by PostsController#create as */*
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"DqsaqCQgXP/gfUrn2WsCGn4rLMRxOR4XIqI21pDA6pKczGosKnum8j3mPHtAKudB7Hj32mPzYHGY7zrOeSVq/Q==", "post"=>{"title"=>"7hyhyhy", "description"=>"ljljllljljl"}}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "posts" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "7hyhyhy"], ["description", "ljljllljljl"], ["created_at", "2016-11-05 18:27:12.774387"], ["updated_at", "2016-11-05 18:27:12.774387"]]
+  [1m[35m (1.0ms)[0m  commit transaction
+Redirected to http://localhost:3000/posts/15
+Completed 302 Found in 39ms (ActiveRecord: 1.6ms)
+
+
+Started GET "/posts/15" for ::1 at 2016-11-05 14:27:12 -0400
+Processing by PostsController#show as */*
+  Parameters: {"id"=>"15"}
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 15]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", "15"]]
+  Rendered posts/show.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 50ms (Views: 34.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/posts/new" for ::1 at 2016-11-05 14:36:53 -0400
+Processing by PostsController#new as HTML
+  Rendered posts/new.html.erb within layouts/application (5.6ms)
+Completed 200 OK in 42ms (Views: 33.4ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/posts" for ::1 at 2016-11-05 14:36:58 -0400
+Processing by PostsController#create as */*
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"v2yPdGzvReP0UhoIRJUw7AWuNawfelxqbiFHbuP2LpAtC//wYrS/7inJbJTd1NW3l/3usg2wIgzUbEt2ChOu/w==", "post"=>{"title"=>"kuhkkjkh", "description"=>"ljlkjljklj"}}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "posts" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["title", "kuhkkjkh"], ["description", "ljlkjljklj"], ["created_at", "2016-11-05 18:36:58.774754"], ["updated_at", "2016-11-05 18:36:58.774754"]]
+  [1m[36m (0.9ms)[0m  [1mcommit transaction[0m
+Completed 201 Created in 9ms (Views: 1.8ms | ActiveRecord: 1.5ms)
