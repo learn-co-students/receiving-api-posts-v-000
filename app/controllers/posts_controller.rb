@@ -7,10 +7,7 @@ class PostsController < ApplicationController
 
   def show
     @post = Post.find(params[:id])
-    respond_to do |format|
-      format.html { render :show }
-      format.json { render json: @post}
-    end
+    render json: @post, status: 201
   end
 
   def new
