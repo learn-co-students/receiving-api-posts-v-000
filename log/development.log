@@ -6732,3 +6732,31 @@ Processing by PostsController#show as */*
   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", "14"]]
   Rendered posts/show.html.erb within layouts/application (0.3ms)
 Completed 200 OK in 27ms (Views: 22.9ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2017-04-09 14:02:24 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts"
+  Rendered posts/_post.html.erb (1.7ms)
+  Rendered posts/_post.html.erb (0.3ms)
+  Rendered posts/_post.html.erb (0.2ms)
+  Rendered posts/_post.html.erb (0.3ms)
+  Rendered posts/_post.html.erb (0.2ms)
+  Rendered posts/_post.html.erb (0.4ms)
+  Rendered posts/_post.html.erb (0.2ms)
+  Rendered posts/_post.html.erb (0.2ms)
+  Rendered posts/_post.html.erb (0.3ms)
+  Rendered posts/_post.html.erb (0.3ms)
+  Rendered posts/_post.html.erb (0.2ms)
+  Rendered posts/_post.html.erb (0.3ms)
+  Rendered posts/_post.html.erb (0.2ms)
+  Rendered posts/_post.html.erb (0.3ms)
+  Rendered posts/index.html.erb within layouts/application (57.0ms)
+Completed 200 OK in 699ms (Views: 680.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2017-04-09 14:02:26 -0700
+Processing by PostsController#new as HTML
+  Rendered posts/new.html.erb within layouts/application (30.1ms)
+Completed 200 OK in 50ms (Views: 49.4ms | ActiveRecord: 0.0ms)
