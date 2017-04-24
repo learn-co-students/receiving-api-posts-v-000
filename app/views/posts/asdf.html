@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>BlogFlash</title>
+  <link rel="stylesheet" media="all" href="/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" data-turbolinks-track="true" />
+  <script src="/assets/jquery.self-c64a74367bda6ef8b860f19e74df08927ca99d2be2ac934e9e92d5fd361e0da4.js?body=1" data-turbolinks-track="true"></script>
+  <script src="/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" data-turbolinks-track="true"></script>
+  <script src="/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" data-turbolinks-track="true"></script>
+  <script src="/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" data-turbolinks-track="true"></script>
+  <meta name="csrf-param" content="authenticity_token" />
+  <meta name="csrf-token" content="XWvrVmM15IwayCcGCLWtbRKQJSwEmy9ZgtGBtZW3UqEaop6R/Y5GGy+kIoGyoDbhIKuu28Wo+GAMUREvZApGQg==" />
+</head>
+
+<body>
+  <a href="#" class="js-next" data-id="21">Next...</a>
+  <h1 class="postTitle">Columbo</h1>
+  <p class="postBody">Oh, ma&#39;am, one more thing, if you don&#39;t mind.</p>
+  <script type="text/javascript" charset="utf-8">
+  $(function() {
+    $(".js-next").on("click", function() {
+      var nextId = parseInt($(".js-next").attr("data-id")) + 1;
+      $.get("/posts/" + nextId + ".json", function(data) {
+        // get post
+        var post = data;
+        $(".postTitle").text(post["title"]);
+        $(".postBody").text(post["description"]);
+        // re-set the id to current on the link
+        $(".js-next").attr("data-id", post["id"]);
+      });
+    });
+  });
+  </script>
+</body>
+
+</html>

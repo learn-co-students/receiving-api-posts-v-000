@@ -6732,3 +6732,574 @@ Processing by PostsController#show as */*
   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", "14"]]
   Rendered posts/show.html.erb within layouts/application (0.3ms)
 Completed 200 OK in 27ms (Views: 22.9ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-04-23 19:46:53 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendered /Users/BradSmith/.rvm/gems/ruby-2.3.0/gems/railties-4.2.5/lib/rails/templates/rails/welcome/index.html.erb (1.2ms)
+Completed 200 OK in 16ms (Views: 8.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2017-04-23 19:46:56 -0400
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts"
+  Rendered posts/_post.html.erb (0.8ms)
+  Rendered posts/_post.html.erb (0.2ms)
+  Rendered posts/_post.html.erb (0.3ms)
+  Rendered posts/_post.html.erb (0.3ms)
+  Rendered posts/_post.html.erb (0.2ms)
+  Rendered posts/_post.html.erb (0.2ms)
+  Rendered posts/_post.html.erb (0.7ms)
+  Rendered posts/_post.html.erb (0.2ms)
+  Rendered posts/_post.html.erb (0.2ms)
+  Rendered posts/_post.html.erb (0.2ms)
+  Rendered posts/_post.html.erb (0.2ms)
+  Rendered posts/_post.html.erb (0.2ms)
+  Rendered posts/_post.html.erb (0.2ms)
+  Rendered posts/_post.html.erb (0.2ms)
+  Rendered posts/index.html.erb within layouts/application (29.4ms)
+Completed 200 OK in 444ms (Views: 438.2ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/posts/1/post_data" for 127.0.0.1 at 2017-04-23 19:47:02 -0400
+Processing by PostsController#post_data as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mAuthor Load (0.1ms)[0m  SELECT  "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT 1  [["id", 1]]
+Completed 200 OK in 48ms (Views: 3.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2017-04-23 19:47:10 -0400
+Processing by PostsController#new as HTML
+  Rendered posts/new.html.erb within layouts/application (12.6ms)
+Completed 200 OK in 25ms (Views: 24.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/posts" for 127.0.0.1 at 2017-04-23 19:48:38 -0400
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"rlCODY9i7ojEftCQLIa+9Qn86BG1DvpEnXKN5h4xFZ/pmfvKEdlMH/ES1ReWkyV5O8dj5nQ9LX0T8h1874wBfA==", "post"=>{"title"=>"My Cat Hates Me", "description"=>"My evidence? Poop, and fur everywhere."}, "commit"=>"Create Post"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "posts" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["title", "My Cat Hates Me"], ["description", "My evidence? Poop, and fur everywhere."], ["created_at", "2017-04-23 23:48:38.752291"], ["updated_at", "2017-04-23 23:48:38.752291"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+Redirected to http://127.0.0.1:3000/posts/15
+Completed 302 Found in 4ms (ActiveRecord: 1.2ms)
+
+
+Started GET "/posts/15" for 127.0.0.1 at 2017-04-23 19:48:38 -0400
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"15"}
+  [1m[35mPost Load (0.1ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 15]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", "15"]]
+  Rendered posts/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 13ms (Views: 11.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/posts/16.json" for 127.0.0.1 at 2017-04-23 19:48:41 -0400
+Processing by PostsController#show as JSON
+  Parameters: {"id"=>"16"}
+  [1m[35mPost Load (0.1ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 16]]
+Completed 404 Not Found in 1ms (ActiveRecord: 0.1ms)
+
+ActiveRecord::RecordNotFound (Couldn't find Post with 'id'=16):
+  app/controllers/posts_controller.rb:43:in `set_post'
+
+
+  Rendered /Users/BradSmith/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (2.0ms)
+  Rendered /Users/BradSmith/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb (0.5ms)
+  Rendered /Users/BradSmith/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.text.erb (0.6ms)
+  Rendered /Users/BradSmith/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.text.erb (45.7ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2017-04-23 19:48:45 -0400
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/_post.html.erb (0.3ms)
+  Rendered posts/_post.html.erb (0.3ms)
+  Rendered posts/_post.html.erb (0.2ms)
+  Rendered posts/_post.html.erb (0.2ms)
+  Rendered posts/_post.html.erb (0.2ms)
+  Rendered posts/_post.html.erb (0.1ms)
+  Rendered posts/_post.html.erb (0.1ms)
+  Rendered posts/_post.html.erb (0.1ms)
+  Rendered posts/_post.html.erb (0.2ms)
+  Rendered posts/_post.html.erb (0.4ms)
+  Rendered posts/_post.html.erb (0.3ms)
+  Rendered posts/_post.html.erb (0.2ms)
+  Rendered posts/_post.html.erb (0.2ms)
+  Rendered posts/_post.html.erb (0.1ms)
+  Rendered posts/_post.html.erb (0.1ms)
+  Rendered posts/index.html.erb within layouts/application (20.9ms)
+Completed 200 OK in 34ms (Views: 33.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/posts/15/post_data" for 127.0.0.1 at 2017-04-23 19:48:51 -0400
+Processing by PostsController#post_data as */*
+  Parameters: {"id"=>"15"}
+  [1m[35mPost Load (0.1ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 15]]
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2017-04-23 19:57:21 -0400
+Processing by PostsController#new as HTML
+  Rendered posts/new.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 15ms (Views: 14.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2017-04-23 19:58:44 -0400
+Processing by PostsController#new as HTML
+  Rendered posts/new.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 12ms (Views: 11.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/posts" for 127.0.0.1 at 2017-04-23 19:58:45 -0400
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"B1n2TXG/q2PESoZT7N4UIjN2F5jncwO3g5nXRKUP0Q1AkIOK7wQJ9PEmg9RWy4+uAU2cbyZA1I4NGUfeVLLF7g==", "post"=>{"title"=>"", "description"=>""}, "commit"=>"Create Post"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "posts" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["title", ""], ["description", ""], ["created_at", "2017-04-23 23:58:45.721103"], ["updated_at", "2017-04-23 23:58:45.721103"]]
+  [1m[36m (1.3ms)[0m  [1mcommit transaction[0m
+Redirected to http://127.0.0.1:3000/posts/16
+Completed 302 Found in 4ms (ActiveRecord: 1.5ms)
+
+
+Started GET "/posts/16" for 127.0.0.1 at 2017-04-23 19:58:45 -0400
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"16"}
+  [1m[35mPost Load (0.1ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 16]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", "16"]]
+  Rendered posts/show.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 12ms (Views: 11.1ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/posts" for 127.0.0.1 at 2017-04-23 19:59:11 -0400
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"B1n2TXG/q2PESoZT7N4UIjN2F5jncwO3g5nXRKUP0Q1AkIOK7wQJ9PEmg9RWy4+uAU2cbyZA1I4NGUfeVLLF7g==", "post"=>{"title"=>"Where are the buns?", "description"=>"When you have a picnic, and beans and abs, you need buns."}, "commit"=>"Create Post"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "posts" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Where are the buns?"], ["description", "When you have a picnic, and beans and abs, you need buns."], ["created_at", "2017-04-23 23:59:11.570564"], ["updated_at", "2017-04-23 23:59:11.570564"]]
+  [1m[35m (1.2ms)[0m  commit transaction
+Redirected to http://127.0.0.1:3000/posts/17
+Completed 302 Found in 4ms (ActiveRecord: 1.6ms)
+
+
+Started GET "/posts/17" for 127.0.0.1 at 2017-04-23 19:59:11 -0400
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"17"}
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 17]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", "17"]]
+  Rendered posts/show.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 11ms (Views: 9.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2017-04-23 20:01:34 -0400
+Processing by PostsController#new as HTML
+  Rendered posts/new.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 19ms (Views: 18.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2017-04-23 20:01:40 -0400
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/_post.html.erb (0.3ms)
+  Rendered posts/_post.html.erb (0.3ms)
+  Rendered posts/_post.html.erb (0.1ms)
+  Rendered posts/_post.html.erb (0.1ms)
+  Rendered posts/_post.html.erb (0.2ms)
+  Rendered posts/_post.html.erb (0.1ms)
+  Rendered posts/_post.html.erb (0.2ms)
+  Rendered posts/_post.html.erb (0.1ms)
+  Rendered posts/_post.html.erb (0.1ms)
+  Rendered posts/_post.html.erb (0.1ms)
+  Rendered posts/_post.html.erb (0.4ms)
+  Rendered posts/_post.html.erb (0.2ms)
+  Rendered posts/_post.html.erb (0.2ms)
+  Rendered posts/_post.html.erb (0.1ms)
+  Rendered posts/_post.html.erb (0.2ms)
+  Rendered posts/_post.html.erb (0.1ms)
+  Rendered posts/_post.html.erb (0.1ms)
+  Rendered posts/index.html.erb within layouts/application (21.6ms)
+Completed 200 OK in 34ms (Views: 32.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2017-04-23 20:01:45 -0400
+Processing by PostsController#new as HTML
+  Rendered posts/new.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 12ms (Views: 11.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2017-04-23 20:01:45 -0400
+Processing by PostsController#new as HTML
+  Rendered posts/new.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 20ms (Views: 18.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2017-04-23 20:02:18 -0400
+Processing by PostsController#new as HTML
+  Rendered posts/new.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 16ms (Views: 14.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2017-04-23 20:02:35 -0400
+Processing by PostsController#new as HTML
+  Rendered posts/new.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 19ms (Views: 18.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2017-04-23 20:02:36 -0400
+Processing by PostsController#new as HTML
+  Rendered posts/new.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 21ms (Views: 20.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2017-04-23 20:07:23 -0400
+Processing by PostsController#new as HTML
+  Rendered posts/new.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 15ms (Views: 14.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/posts" for 127.0.0.1 at 2017-04-23 20:07:40 -0400
+Processing by PostsController#create as */*
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"dbghAlVOzzIkDqiGmnNg484IHtcUeocDv97OitS3dwMycVTFy/VtpRFirQEgZvtv/DOVINVJUDoxXl4QJQpj4A==", "post"=>{"title"=>"Blue Fish", "description"=>"They are not really blue, in fact they are more grey."}}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "posts" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Blue Fish"], ["description", "They are not really blue, in fact they are more grey."], ["created_at", "2017-04-24 00:07:40.492195"], ["updated_at", "2017-04-24 00:07:40.492195"]]
+  [1m[35m (2.0ms)[0m  commit transaction
+Redirected to http://127.0.0.1:3000/posts/18
+Completed 302 Found in 5ms (ActiveRecord: 2.4ms)
+
+
+Started GET "/posts/18" for 127.0.0.1 at 2017-04-23 20:09:27 -0400
+Processing by PostsController#show as */*
+  Parameters: {"id"=>"18"}
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 18]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", "18"]]
+  Rendered posts/show.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 17ms (Views: 15.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2017-04-23 20:09:38 -0400
+Processing by PostsController#new as HTML
+  Rendered posts/new.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 19ms (Views: 17.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2017-04-23 20:09:48 -0400
+Processing by PostsController#new as HTML
+  Rendered posts/new.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 24ms (Views: 22.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2017-04-23 20:09:53 -0400
+Processing by PostsController#new as HTML
+  Rendered posts/new.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 16ms (Views: 15.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/posts" for 127.0.0.1 at 2017-04-23 20:10:12 -0400
+Processing by PostsController#create as */*
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"GtiTJcXZJID/A/BJX0xaUDjjCJkdMg3CSfg7YOmhHg1dEebiW2KGF8pv9c7lWcHcCtiDbtwB2vvHeKv6GBwK7g==", "post"=>{"title"=>"Tonight I'll have the fish", "description"=>"Fish are an excellent source of fish"}}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "posts" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["title", "Tonight I'll have the fish"], ["description", "Fish are an excellent source of fish"], ["created_at", "2017-04-24 00:10:12.828764"], ["updated_at", "2017-04-24 00:10:12.828764"]]
+  [1m[36m (1.3ms)[0m  [1mcommit transaction[0m
+Redirected to http://127.0.0.1:3000/posts/19
+Completed 302 Found in 5ms (ActiveRecord: 2.0ms)
+
+
+Started GET "/posts/19" for 127.0.0.1 at 2017-04-23 20:10:12 -0400
+Processing by PostsController#show as */*
+  Parameters: {"id"=>"19"}
+  [1m[35mPost Load (0.1ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 19]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", "19"]]
+  Rendered posts/show.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 13ms (Views: 11.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2017-04-23 20:10:37 -0400
+Processing by PostsController#new as HTML
+  Rendered posts/new.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 23ms (Views: 22.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/posts" for 127.0.0.1 at 2017-04-23 20:10:52 -0400
+Processing by PostsController#create as */*
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"T2iAk03G7hHFVjEhxJE1hBK3KqA6Ljqdc9/CqZiOJBEIofVU031MhvA6NKZ+hK4IIIyhV/sd7aT9X1IzaTMw8g==", "post"=>{"title"=>"Let's Eat", "description"=>"The fish is excellent, if you get there early."}}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "posts" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Let's Eat"], ["description", "The fish is excellent, if you get there early."], ["created_at", "2017-04-24 00:10:52.999884"], ["updated_at", "2017-04-24 00:10:52.999884"]]
+  [1m[35m (1.3ms)[0m  commit transaction
+Redirected to http://127.0.0.1:3000/posts/20
+Completed 302 Found in 4ms (ActiveRecord: 1.6ms)
+
+
+Started GET "/posts/20" for 127.0.0.1 at 2017-04-23 20:10:53 -0400
+Processing by PostsController#show as */*
+  Parameters: {"id"=>"20"}
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 20]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", "20"]]
+  Rendered posts/show.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 11ms (Views: 9.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-04-23 20:11:10 -0400
+Processing by Rails::WelcomeController#index as HTML
+  Rendered /Users/BradSmith/.rvm/gems/ruby-2.3.0/gems/railties-4.2.5/lib/rails/templates/rails/welcome/index.html.erb (0.1ms)
+Completed 200 OK in 4ms (Views: 3.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2017-04-23 20:11:16 -0400
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/_post.html.erb (0.2ms)
+  Rendered posts/_post.html.erb (0.1ms)
+  Rendered posts/_post.html.erb (0.2ms)
+  Rendered posts/_post.html.erb (0.1ms)
+  Rendered posts/_post.html.erb (0.6ms)
+  Rendered posts/_post.html.erb (0.7ms)
+  Rendered posts/_post.html.erb (0.2ms)
+  Rendered posts/_post.html.erb (0.2ms)
+  Rendered posts/_post.html.erb (0.2ms)
+  Rendered posts/_post.html.erb (0.2ms)
+  Rendered posts/_post.html.erb (0.2ms)
+  Rendered posts/_post.html.erb (0.2ms)
+  Rendered posts/_post.html.erb (0.1ms)
+  Rendered posts/_post.html.erb (0.1ms)
+  Rendered posts/_post.html.erb (0.1ms)
+  Rendered posts/_post.html.erb (0.3ms)
+  Rendered posts/_post.html.erb (1.1ms)
+  Rendered posts/_post.html.erb (0.2ms)
+  Rendered posts/_post.html.erb (0.2ms)
+  Rendered posts/_post.html.erb (0.2ms)
+  Rendered posts/index.html.erb within layouts/application (30.1ms)
+Completed 200 OK in 44ms (Views: 43.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2017-04-23 20:25:17 -0400
+Processing by PostsController#new as HTML
+  Rendered posts/new.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 12ms (Views: 11.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/posts" for 127.0.0.1 at 2017-04-23 20:25:36 -0400
+Processing by PostsController#create as */*
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"p5G0aYMepdw84PMQCPkr8azUW7NVCoPimZqwj9IpB03gWMGuHaUHSwmM9pey7LB9nu/QRJQ5VNsXGiAVI5QTrg==", "post"=>{"title"=>"Columbo", "description"=>"Oh, ma'am, one more thing, if you don't mind."}}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "posts" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Columbo"], ["description", "Oh, ma'am, one more thing, if you don't mind."], ["created_at", "2017-04-24 00:25:36.988627"], ["updated_at", "2017-04-24 00:25:36.988627"]]
+  [1m[35m (1.3ms)[0m  commit transaction
+Redirected to http://127.0.0.1:3000/posts/21
+Completed 302 Found in 4ms (ActiveRecord: 1.6ms)
+
+
+Started GET "/posts/21" for 127.0.0.1 at 2017-04-23 20:25:36 -0400
+Processing by PostsController#show as */*
+  Parameters: {"id"=>"21"}
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 21]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", "21"]]
+  Rendered posts/show.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 12ms (Views: 10.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2017-04-23 20:34:08 -0400
+Processing by PostsController#new as HTML
+  Rendered posts/new.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 23ms (Views: 16.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2017-04-23 20:34:25 -0400
+Processing by PostsController#new as HTML
+  Rendered posts/new.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 14ms (Views: 13.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2017-04-23 20:34:39 -0400
+Processing by PostsController#new as HTML
+  Rendered posts/new.html.erb within layouts/application (10.0ms)
+Completed 200 OK in 26ms (Views: 24.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/posts" for 127.0.0.1 at 2017-04-23 20:35:09 -0400
+Processing by PostsController#create as */*
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"PpcZPZIqboCnu3VGHGCDsjJ0MxZaVFnUvOeJlyAKecx5Xmz6DJHMF5LXcMGmdRg+AE+44Ztnju0yZxkN0bdtLw==", "post"=>{"title"=>"The Van", "description"=>"I want to put a futon and desk in the van for studying on the road."}}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "posts" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["title", "The Van"], ["description", "I want to put a futon and desk in the van for studying on the road."], ["created_at", "2017-04-24 00:35:09.915917"], ["updated_at", "2017-04-24 00:35:09.915917"]]
+  [1m[36m (1.1ms)[0m  [1mcommit transaction[0m
+[active_model_serializers] Rendered PostSerializer with ActiveModelSerializers::Adapter::Attributes (0.15ms)
+Completed 201 Created in 15ms (Views: 11.4ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2017-04-23 20:36:13 -0400
+Processing by PostsController#new as HTML
+  Rendered posts/new.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 26ms (Views: 18.1ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/posts" for 127.0.0.1 at 2017-04-23 20:36:43 -0400
+Processing by PostsController#create as */*
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"jDPjVdHMWRRDlN/Ify36Px9Ta+bQd5zwTe0BGLiOGQXL+paST3f7g3b42k/FOGGzLWjgERFES8nDbZGCSTMN5g==", "post"=>{"title"=>"Music XML", "description"=>"You don't have a lot of options currently, to stream music xml"}}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "posts" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Music XML"], ["description", "You don't have a lot of options currently, to stream music xml"], ["created_at", "2017-04-24 00:36:43.164830"], ["updated_at", "2017-04-24 00:36:43.164830"]]
+  [1m[35m (1.2ms)[0m  commit transaction
+[active_model_serializers] Rendered PostSerializer with ActiveModelSerializers::Adapter::Attributes (4.24ms)
+Completed 201 Created in 16ms (Views: 11.9ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2017-04-23 20:37:55 -0400
+Processing by PostsController#new as HTML
+  [1m[36mAuthor Load (0.2ms)[0m  [1mSELECT "authors".* FROM "authors"[0m
+  Rendered posts/new.html.erb within layouts/application (8.3ms)
+Completed 200 OK in 27ms (Views: 25.3ms | ActiveRecord: 0.3ms)
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "authors" ("name", "hometown", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["name", "Brad Smith"], ["hometown", "Bedford"], ["created_at", "2017-04-24 00:38:37.543768"], ["updated_at", "2017-04-24 00:38:37.543768"]]
+  [1m[36m (1.9ms)[0m  [1mcommit transaction[0m
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2017-04-23 20:38:51 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PostsController#new as HTML
+  [1m[35mAuthor Load (0.2ms)[0m  SELECT "authors".* FROM "authors"
+  Rendered posts/new.html.erb within layouts/application (20.0ms)
+Completed 200 OK in 207ms (Views: 193.0ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2017-04-23 20:38:54 -0400
+Processing by PostsController#new as HTML
+  [1m[36mAuthor Load (0.2ms)[0m  [1mSELECT "authors".* FROM "authors"[0m
+  Rendered posts/new.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 15ms (Views: 13.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2017-04-23 20:39:06 -0400
+Processing by PostsController#new as HTML
+  [1m[35mAuthor Load (0.1ms)[0m  SELECT "authors".* FROM "authors"
+  Rendered posts/new.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 14ms (Views: 13.3ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/posts" for 127.0.0.1 at 2017-04-23 20:39:28 -0400
+Processing by PostsController#create as */*
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"QNNrorYkOACUanCl3bTK2K9aO9RJT0kioO13NXCpA9UHGh5lKJ+al6EGdSJnoVFUnWGwI4h8nhsubeevgRQXNg==", "post"=>{"title"=>"My Horse has Fleas", "description"=>"Just kidding, I have no horse in this race.", "author_id"=>"4"}}
+Unpermitted parameter: author_id
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "posts" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["title", "My Horse has Fleas"], ["description", "Just kidding, I have no horse in this race."], ["created_at", "2017-04-24 00:39:28.278140"], ["updated_at", "2017-04-24 00:39:28.278140"]]
+  [1m[36m (1.3ms)[0m  [1mcommit transaction[0m
+[active_model_serializers] Rendered PostSerializer with ActiveModelSerializers::Adapter::Attributes (4.58ms)
+Completed 201 Created in 25ms (Views: 18.1ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2017-04-23 20:40:23 -0400
+Processing by PostsController#new as HTML
+  [1m[35mAuthor Load (0.2ms)[0m  SELECT "authors".* FROM "authors"
+  Rendered posts/new.html.erb within layouts/application (6.6ms)
+Completed 200 OK in 24ms (Views: 18.6ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/posts" for 127.0.0.1 at 2017-04-23 20:40:46 -0400
+Processing by PostsController#create as */*
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"fkYBzWf6Hu51+l9CIlT6HUK8R/dp0LPLFgXk+I0u+f45j3QK+UG8eUCWWsWYQWGRcIfMAKjjZPKYhXRifJPtHQ==", "post"=>{"title"=>"The Dark", "description"=>"Another scary book by Brad Smith", "author_id"=>"4"}}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "posts" ("title", "description", "author_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["title", "The Dark"], ["description", "Another scary book by Brad Smith"], ["author_id", 4], ["created_at", "2017-04-24 00:40:46.507319"], ["updated_at", "2017-04-24 00:40:46.507319"]]
+  [1m[36m (1.3ms)[0m  [1mcommit transaction[0m
+[active_model_serializers]   [1m[35mAuthor Load (0.2ms)[0m  SELECT  "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT 1  [["id", 4]]
+[active_model_serializers] Rendered PostSerializer with ActiveModelSerializers::Adapter::Attributes (5.24ms)
+Completed 201 Created in 11ms (Views: 7.1ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/authors/4" for 127.0.0.1 at 2017-04-23 20:41:38 -0400
+Processing by AuthorsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mAuthor Load (0.1ms)[0m  [1mSELECT  "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT 1[0m  [["id", 4]]
+  Rendered authors/show.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 18ms (Views: 14.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/authors/4.json" for 127.0.0.1 at 2017-04-23 20:41:42 -0400
+Processing by AuthorsController#show as JSON
+  Parameters: {"id"=>"4"}
+  [1m[35mAuthor Load (0.1ms)[0m  SELECT  "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT 1  [["id", 4]]
+[active_model_serializers]   [1m[36mPost Load (0.2ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."author_id" = ?[0m  [["author_id", 4]]
+[active_model_serializers] Rendered AuthorSerializer with ActiveModelSerializers::Adapter::Attributes (7.43ms)
+Completed 200 OK in 9ms (Views: 7.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/authors/4.json" for 127.0.0.1 at 2017-04-23 20:51:50 -0400
+Processing by AuthorsController#show as JSON
+  Parameters: {"id"=>"4"}
+  [1m[35mAuthor Load (0.1ms)[0m  SELECT  "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT 1  [["id", 4]]
+[active_model_serializers]   [1m[36mPost Load (0.1ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."author_id" = ?[0m  [["author_id", 4]]
+[active_model_serializers] Rendered AuthorSerializer with ActiveModelSerializers::Adapter::Attributes (1.66ms)
+Completed 200 OK in 3ms (Views: 2.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2017-04-23 20:51:55 -0400
+Processing by PostsController#new as HTML
+  [1m[35mAuthor Load (0.2ms)[0m  SELECT "authors".* FROM "authors"
+  Rendered posts/new.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 14ms (Views: 13.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2017-04-23 20:51:55 -0400
+Processing by PostsController#new as HTML
+  [1m[36mAuthor Load (0.2ms)[0m  [1mSELECT "authors".* FROM "authors"[0m
+  Rendered posts/new.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 18ms (Views: 16.6ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/posts" for 127.0.0.1 at 2017-04-23 20:52:28 -0400
+Processing by PostsController#create as */*
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"J7OVVk5xyB+T1IBKmoBDs7W3l4UnNoX2krl6J1DhgZJgeuCR0MpqiKa4hc0gldg/h4wccuYFUs8cOeq9oVyVcQ==", "post"=>{"title"=>"Big Red Bike", "description"=>"It's big, and its red, and its a bike.", "author_id"=>"2"}}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "posts" ("title", "description", "author_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "Big Red Bike"], ["description", "It's big, and its red, and its a bike."], ["author_id", 2], ["created_at", "2017-04-24 00:52:28.111925"], ["updated_at", "2017-04-24 00:52:28.111925"]]
+  [1m[35m (1.3ms)[0m  commit transaction
+[active_model_serializers]   [1m[36mAuthor Load (0.1ms)[0m  [1mSELECT  "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT 1[0m  [["id", 2]]
+[active_model_serializers] Rendered PostSerializer with ActiveModelSerializers::Adapter::Attributes (1.01ms)
+Completed 201 Created in 5ms (Views: 1.4ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2017-04-23 20:55:40 -0400
+Processing by PostsController#new as HTML
+  [1m[35mAuthor Load (0.2ms)[0m  SELECT "authors".* FROM "authors"
+  Rendered posts/new.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 18ms (Views: 16.1ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/posts" for 127.0.0.1 at 2017-04-23 20:55:58 -0400
+Processing by PostsController#create as */*
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"sc2u22sUBKicrY6DOK/fZC7kYmWQvomQNaZEGBR9A1L2BNsc9a+mP6nBiwSCukToHN/pklGNXqm7JtSC5cAXsQ==", "post"=>{"title"=>"a long way home", "description"=>"why did you fart like that?", "author_id"=>"2"}}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "posts" ("title", "description", "author_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["title", "a long way home"], ["description", "why did you fart like that?"], ["author_id", 2], ["created_at", "2017-04-24 00:55:58.794080"], ["updated_at", "2017-04-24 00:55:58.794080"]]
+  [1m[36m (1.3ms)[0m  [1mcommit transaction[0m
+[active_model_serializers]   [1m[35mAuthor Load (0.1ms)[0m  SELECT  "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT 1  [["id", 2]]
+[active_model_serializers] Rendered PostSerializer with ActiveModelSerializers::Adapter::Attributes (0.93ms)
+Completed 201 Created in 6ms (Views: 1.3ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2017-04-23 21:01:38 -0400
+Processing by PostsController#new as HTML
+  [1m[36mAuthor Load (0.7ms)[0m  [1mSELECT "authors".* FROM "authors"[0m
+  Rendered posts/new.html.erb within layouts/application (6.1ms)
+Completed 200 OK in 18ms (Views: 16.5ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/posts" for 127.0.0.1 at 2017-04-23 21:02:02 -0400
+Processing by PostsController#create as */*
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"djidgXLOPnc00j7ry7lslyG9WeIL7nfWprS3G5J4WiUx8ehG7HWc4AG+O2xxrPcbE4bSFcrdoO8oNCeBY8VOxg==", "post"=>{"title"=>"Alligator Cocodillo", "description"=>"Great Salsa tune.", "author_id"=>"1"}}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "posts" ("title", "description", "author_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "Alligator Cocodillo"], ["description", "Great Salsa tune."], ["author_id", 1], ["created_at", "2017-04-24 01:02:02.334917"], ["updated_at", "2017-04-24 01:02:02.334917"]]
+  [1m[35m (1.3ms)[0m  commit transaction
+[active_model_serializers]   [1m[36mAuthor Load (0.1ms)[0m  [1mSELECT  "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT 1[0m  [["id", 1]]
+[active_model_serializers] Rendered PostSerializer with ActiveModelSerializers::Adapter::Attributes (0.85ms)
+Completed 201 Created in 6ms (Views: 1.2ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2017-04-23 21:03:14 -0400
+Processing by PostsController#new as HTML
+  [1m[35mAuthor Load (0.2ms)[0m  SELECT "authors".* FROM "authors"
+  Rendered posts/new.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 16ms (Views: 14.5ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/posts" for 127.0.0.1 at 2017-04-23 21:03:48 -0400
+Processing by PostsController#create as */*
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"sKpUEsfg0s6YfiBt0QE2PSUubHQNQVdWovAFMJ057pr3YyHVWVtwWa0SJeprFK2xFxXng8xygG8scJWqbIT6eQ==", "post"=>{"title"=>"The New Jazz Club", "description"=>"We're going to hear a great singer tonight.", "author_id"=>"2"}}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "posts" ("title", "description", "author_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["title", "The New Jazz Club"], ["description", "We're going to hear a great singer tonight."], ["author_id", 2], ["created_at", "2017-04-24 01:03:48.540141"], ["updated_at", "2017-04-24 01:03:48.540141"]]
+  [1m[36m (1.3ms)[0m  [1mcommit transaction[0m
+[active_model_serializers]   [1m[35mAuthor Load (0.1ms)[0m  SELECT  "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT 1  [["id", 2]]
+[active_model_serializers] Rendered PostSerializer with ActiveModelSerializers::Adapter::Attributes (0.88ms)
+Completed 201 Created in 5ms (Views: 1.3ms | ActiveRecord: 1.7ms)

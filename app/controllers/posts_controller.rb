@@ -19,7 +19,7 @@ class PostsController < ApplicationController
 
   def create
     @post = Post.create(post_params)
-    redirect_to post_path(@post)
+    render json: @post, status: 201
   end
 
   def edit
@@ -45,6 +45,6 @@ private
 
   # Never trust parameters from the scary internet, only allow the white list through.
   def post_params
-    params.require(:post).permit(:title, :description)
+    params.require(:post).permit(:title, :description, :author_id)
   end
 end

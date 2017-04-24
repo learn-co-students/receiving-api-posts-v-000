@@ -6,8 +6,38 @@
   <div class="field">
     <%= f.label :description %><br>
     <%= f.text_field :description %>
+    <%= f.collection_select :author_id, Author.all, :id, :name %>
   </div>
   <div class="actions">
     <%= f.submit %>
   </div>
 <% end %>
+
+<hr>
+<div id="postResult">
+  <h2 id="postTitle"></h2>
+  <p id="postBody"></p>
+</div>
+ 
+
+<script type="text/javascript">
+  $(function(){
+    $("form").submit(function(event){
+      event.preventDefault();
+      var values = $(this).serialize();
+      var posting = $.post('/posts', values);
+ // var posting is an object equal to the serialized 'values', we submitted to the '/posts' url
+ // the values were serialized by jQuery, and came from the form filled out
+ // the filled form is "THIS"
+ // "THIS" exists, because AJAX was listening to a DOM element called "form", listening for the .submit event
+ // when 'submit' was clicked, AJAX hijacked it, and prevented it from default (submitting data to route '/posts') behavior
+ // upon being hijacked, the form became "THIS" and a callback function was executed
+ 
+      posting.done(function(data){
+      // var post = data;
+      $('#postTitle').text(data["title"]);
+      $('#postBody').text(data["description"]);
+      });
+    });
+  });
+</script>
