@@ -6732,3 +6732,132 @@ Processing by PostsController#show as */*
   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", "14"]]
   Rendered posts/show.html.erb within layouts/application (0.3ms)
 Completed 200 OK in 27ms (Views: 22.9ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/" for 72.231.3.71 at 2017-09-24 21:24:24 +0000
+Cannot render console from 72.231.3.71! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendered /usr/local/rvm/gems/ruby-2.3.1/gems/railties-4.2.5/lib/rails/templates/rails/welcome/index.html.erb (2.9ms)
+Completed 200 OK in 28ms (Views: 16.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/posts/new" for 72.231.3.71 at 2017-09-24 21:24:28 +0000
+Cannot render console from 72.231.3.71! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#new as HTML
+  Rendered posts/new.html.erb within layouts/application (29.4ms)
+Completed 200 OK in 349ms (Views: 336.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" for 72.231.3.71 at 2017-09-24 21:24:28 +0000
+Cannot render console from 72.231.3.71! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery.self-c64a74367bda6ef8b860f19e74df08927ca99d2be2ac934e9e92d5fd361e0da4.js?body=1" for 72.231.3.71 at 2017-09-24 21:24:28 +0000
+Cannot render console from 72.231.3.71! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 72.231.3.71 at 2017-09-24 21:24:28 +0000
+Cannot render console from 72.231.3.71! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 72.231.3.71 at 2017-09-24 21:24:28 +0000
+Cannot render console from 72.231.3.71! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 72.231.3.71 at 2017-09-24 21:24:28 +0000
+Cannot render console from 72.231.3.71! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/posts/new" for 72.231.3.71 at 2017-09-24 21:28:52 +0000
+Cannot render console from 72.231.3.71! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#new as HTML
+  Rendered posts/new.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 25ms (Views: 23.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/posts" for 72.231.3.71 at 2017-09-24 21:28:55 +0000
+Cannot render console from 72.231.3.71! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#create as */*
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"1VVXGW8DcpmanEFCZPqVG9GdUgB3v6elkZiK+ZLJT06Rl7/ao9VkYO6z1Fg3+e58CN+aGJtsxWlNutZo/OOtpQ==", "post"=>{"title"=>"sfda", "description"=>"rhgseafwd"}}
+  [1m[35m (0.6ms)[0m  begin transaction
+  [1m[36mSQL (1.5ms)[0m  [1mINSERT INTO "posts" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "sfda"], ["description", "rhgseafwd"], ["created_at", "2017-09-24 21:28:55.660711"], ["updated_at", "2017-09-24 21:28:55.660711"]]
+  [1m[35m (3.5ms)[0m  commit transaction
+Redirected to http://165.227.81.218:43877/posts/15
+Completed 302 Found in 36ms (ActiveRecord: 5.6ms)
+
+
+Started GET "/posts/15" for 72.231.3.71 at 2017-09-24 21:28:55 +0000
+Cannot render console from 72.231.3.71! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#show as */*
+  Parameters: {"id"=>"15"}
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 15]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", "15"]]
+  Rendered posts/show.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 72ms (Views: 54.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/posts/new" for 72.231.3.71 at 2017-09-24 21:29:30 +0000
+Cannot render console from 72.231.3.71! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#new as HTML
+  Rendered posts/new.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 20ms (Views: 18.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/posts" for 72.231.3.71 at 2017-09-24 21:29:37 +0000
+Cannot render console from 72.231.3.71! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#create as */*
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"6v1OjZM8Y8+aMYUwKPLqXgHLYxrexi/iH8MDGjdKV3muP6ZOX+p1Nu4eECp78ZE52ImrAjIVTS7D4V+LWWC1kg==", "post"=>{"title"=>"asdf", "description"=>"ijfsioj dsfiojdsoi oidsjaf"}}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "posts" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["title", "asdf"], ["description", "ijfsioj dsfiojdsoi oidsjaf"], ["created_at", "2017-09-24 21:29:37.577183"], ["updated_at", "2017-09-24 21:29:37.577183"]]
+  [1m[36m (3.3ms)[0m  [1mcommit transaction[0m
+Redirected to http://165.227.81.218:43877/posts/16
+Completed 302 Found in 8ms (ActiveRecord: 3.6ms)
+
+
+Started GET "/posts/16" for 72.231.3.71 at 2017-09-24 21:29:37 +0000
+Cannot render console from 72.231.3.71! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#show as */*
+  Parameters: {"id"=>"16"}
+  [1m[35mPost Load (0.2ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 16]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", "16"]]
+  Rendered posts/show.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 26ms (Views: 23.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/posts/new" for 72.231.3.71 at 2017-09-24 21:31:24 +0000
+Cannot render console from 72.231.3.71! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#new as HTML
+  Rendered posts/new.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 41ms (Views: 28.2ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 72.231.3.71 at 2017-09-24 21:31:24 +0000
+Cannot render console from 72.231.3.71! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" for 72.231.3.71 at 2017-09-24 21:31:24 +0000
+Cannot render console from 72.231.3.71! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery.self-c64a74367bda6ef8b860f19e74df08927ca99d2be2ac934e9e92d5fd361e0da4.js?body=1" for 72.231.3.71 at 2017-09-24 21:31:24 +0000
+Cannot render console from 72.231.3.71! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 72.231.3.71 at 2017-09-24 21:31:24 +0000
+Cannot render console from 72.231.3.71! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 72.231.3.71 at 2017-09-24 21:31:24 +0000
+Cannot render console from 72.231.3.71! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started POST "/posts" for 72.231.3.71 at 2017-09-24 21:31:35 +0000
+Cannot render console from 72.231.3.71! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#create as */*
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"eBJxpUgc9v6qvqQKMCYZOJRVkfDHm8Iae//F6yOD1bc80JlmhMrgB96RMRBjJWJfTRdZ6CtIoNan3Zl6Tak3XA==", "post"=>{"title"=>"Request", "description"=>"This is my request"}}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "posts" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Request"], ["description", "This is my request"], ["created_at", "2017-09-24 21:31:35.649214"], ["updated_at", "2017-09-24 21:31:35.649214"]]
+  [1m[35m (8.0ms)[0m  commit transaction
+[active_model_serializers] Rendered PostSerializer with ActiveModelSerializers::Adapter::Attributes (0.42ms)
+Completed 201 Created in 44ms (Views: 31.8ms | ActiveRecord: 8.4ms)
