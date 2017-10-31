@@ -19,25 +19,30 @@
   <p id="postBody"></p>
 </div>
  
-
-<script type="text/javascript">
-  $(function(){
-    $("form").submit(function(event){
-      event.preventDefault();
-      var values = $(this).serialize();
-      var posting = $.post('/posts', values);
- // var posting is an object equal to the serialized 'values', we submitted to the '/posts' url
+ <!-- // var posting is an object equal to the serialized 'values', we submitted to the '/posts' url
  // the values were serialized by jQuery, and came from the form filled out
  // the filled form is "THIS"
  // "THIS" exists, because AJAX was listening to a DOM element called "form", listening for the .submit event
  // when 'submit' was clicked, AJAX hijacked it, and prevented it from default (submitting data to route '/posts') behavior
  // upon being hijacked, the form became "THIS" and a callback function was executed
- 
+ //  
+
+
+-->
+<script type="text/javascript">
+  $(function(){
+    // $("form").submit(function(event){
+    $("form").on('submit', function(event){
+      event.preventDefault()
+      var values = $(this).serialize()
+      var posting = $.post('/posts', values)      
       posting.done(function(data){
-      // var post = data;
-      $('#postTitle').text(data["title"]);
-      $('#postBody').text(data["description"]);
-      });
-    });
-  });
+
+console.log(data)
+
+      $('#postTitle').text(data["title"])
+      $('#postBody').text(data["description"])
+      })
+    })
+  })
 </script>
