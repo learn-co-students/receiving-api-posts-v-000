@@ -12,6 +12,11 @@
   </div>
 <% end %>
 
+<div id ="postResult">
+    <h2 id="postTitle"></h2>
+    <p id="postBody"></p>
+</div>
+
 <script type="text/javascript" charset="utf-8">
   $(function () {
     $('form').submit(function(event) {
@@ -23,7 +28,7 @@
       var posting = $.post('/posts', values);
 
       posting.done(function(data) {
-        // TODO: handle response
+        console.log(data)
       });
     });
   });
