@@ -2,9 +2,9 @@
 
 ## Objectives
 
-  1. Serialize form values into `params` for AJAX POST requests.
-  2. Use those `params` to create resources.
-  3. Return and consume the created resource as JSON.
+  1. Serialize form values into `params` for AJAX POST requests
+  2. Use those `params` to create resources
+  3. Return and consume the created resource as JSON
 
 ## Lesson
 
