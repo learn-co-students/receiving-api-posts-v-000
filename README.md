@@ -239,8 +239,8 @@ template to handle the response and display it on the page.
 
       posting.done(function(data) {
         var post = data;
-        $("#postTitle").text(post["title"]);
-        $("#postBody").text(post["description"]);
+        $("#postTitle").text(data["title"]);
+        $("#postBody").text(data["description"]);
       });
     });
   });
