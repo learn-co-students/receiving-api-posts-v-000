@@ -20,7 +20,7 @@ button, it will submit as normal and the code in the controller's
 
 What we want to do is set it up so that we use this form, but use jQuery
 and AJAX to submit it, so that we can handle a JSON response and display
-the newly created blog post without redirecting to the post `show` page.
+the newly created blog post wisthout redirecting to the post `show` page.
 
 Our first order of business is to prevent the default form submit action and
 do our own thing. To do this, we need to hook up an event handler to the
