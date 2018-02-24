@@ -11,3 +11,27 @@
     <%= f.submit %>
   </div>
 <% end %>
+
+<div id="postResult">
+  <h2 id="postTitle"></h2>
+  <p id="postDesc"></p>
+</div>
+
+<script>
+  $(function () {
+    $('form').submit(function(event) {
+      // prevent default submit action
+      event.preventDefault()
+      
+      var values = $(this).serialize();
+      
+      var posting = $.post('/posts', values)
+      
+      posting.done(function (data) {
+        
+        $('#postTitle').text(data['title'])
+        $('#postDesc').text(data['description'])
+      })
+    })
+  })
+</script>
