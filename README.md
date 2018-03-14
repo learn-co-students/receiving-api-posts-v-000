@@ -26,7 +26,7 @@ Our first order of business is to prevent the default form submit action and
 do our own thing. To do this, we need to hook up an event handler to the
 form's `submit` event, and then block the form from doing an HTML
 submit as it normally would.
-
+ 
 ```erb
 # posts/new.html.erb
 <%= form_for(@post) do |f| %>

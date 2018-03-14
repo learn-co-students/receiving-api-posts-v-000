@@ -6732,3 +6732,79 @@ Processing by PostsController#show as */*
   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", "14"]]
   Rendered posts/show.html.erb within layouts/application (0.3ms)
 Completed 200 OK in 27ms (Views: 22.9ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/" for ::1 at 2018-03-14 10:53:43 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendered /Users/internetz/.rvm/gems/ruby-2.3.1/gems/railties-4.2.5/lib/rails/templates/rails/welcome/index.html.erb (1.8ms)
+Completed 200 OK in 54ms (Views: 29.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/posts/new" for ::1 at 2018-03-14 10:53:50 -0500
+Processing by PostsController#new as HTML
+  Rendered posts/new.html.erb within layouts/application (79.8ms)
+Completed 200 OK in 631ms (Views: 603.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2018-03-14 11:10:03 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendered /Users/internetz/.rvm/gems/ruby-2.3.1/gems/railties-4.2.5/lib/rails/templates/rails/welcome/index.html.erb (1.9ms)
+Completed 200 OK in 56ms (Views: 45.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/posts/new" for ::1 at 2018-03-14 11:10:09 -0500
+Processing by PostsController#new as HTML
+  Rendered posts/new.html.erb within layouts/application (78.0ms)
+Completed 200 OK in 373ms (Views: 338.4ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/posts" for ::1 at 2018-03-14 11:10:13 -0500
+Processing by PostsController#create as */*
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"mB0pFiWp8b5nnyEsGIv4/2dnGBOJsLGxUjsGkxxqC+jJQXREdo2EWMU/+vVbGExUyMxNKqhuTINQZTcjtVHoVQ==", "post"=>{"title"=>"d", "description"=>"d"}}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "posts" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "d"], ["description", "d"], ["created_at", "2018-03-14 16:10:13.527057"], ["updated_at", "2018-03-14 16:10:13.527057"]]
+  [1m[35m (0.8ms)[0m  commit transaction
+[active_model_serializers] Rendered PostSerializer with ActiveModelSerializers::Adapter::Attributes (0.21ms)
+Completed 201 Created in 63ms (Views: 56.9ms | ActiveRecord: 1.5ms)
+
+
+Started POST "/posts" for ::1 at 2018-03-14 11:10:21 -0500
+Processing by PostsController#create as */*
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"mB0pFiWp8b5nnyEsGIv4/2dnGBOJsLGxUjsGkxxqC+jJQXREdo2EWMU/+vVbGExUyMxNKqhuTINQZTcjtVHoVQ==", "post"=>{"title"=>"efefef", "description"=>"dfdfdsfdsdf"}}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "posts" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["title", "efefef"], ["description", "dfdfdsfdsdf"], ["created_at", "2018-03-14 16:10:21.264315"], ["updated_at", "2018-03-14 16:10:21.264315"]]
+  [1m[36m (1.8ms)[0m  [1mcommit transaction[0m
+[active_model_serializers] Rendered PostSerializer with ActiveModelSerializers::Adapter::Attributes (0.13ms)
+Completed 201 Created in 5ms (Views: 0.6ms | ActiveRecord: 2.2ms)
+
+
+Started POST "/posts" for ::1 at 2018-03-14 11:10:23 -0500
+Processing by PostsController#create as */*
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"mB0pFiWp8b5nnyEsGIv4/2dnGBOJsLGxUjsGkxxqC+jJQXREdo2EWMU/+vVbGExUyMxNKqhuTINQZTcjtVHoVQ==", "post"=>{"title"=>"efefef", "description"=>"dfdfdsfdsdf"}}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "posts" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "efefef"], ["description", "dfdfdsfdsdf"], ["created_at", "2018-03-14 16:10:23.062612"], ["updated_at", "2018-03-14 16:10:23.062612"]]
+  [1m[35m (1.9ms)[0m  commit transaction
+[active_model_serializers] Rendered PostSerializer with ActiveModelSerializers::Adapter::Attributes (0.13ms)
+Completed 201 Created in 5ms (Views: 0.5ms | ActiveRecord: 2.1ms)
+
+
+Started POST "/posts" for ::1 at 2018-03-14 11:10:24 -0500
+Processing by PostsController#create as */*
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"mB0pFiWp8b5nnyEsGIv4/2dnGBOJsLGxUjsGkxxqC+jJQXREdo2EWMU/+vVbGExUyMxNKqhuTINQZTcjtVHoVQ==", "post"=>{"title"=>"efefef", "description"=>"dfdfdsfdsdfd"}}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "posts" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["title", "efefef"], ["description", "dfdfdsfdsdfd"], ["created_at", "2018-03-14 16:10:24.811746"], ["updated_at", "2018-03-14 16:10:24.811746"]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+[active_model_serializers] Rendered PostSerializer with ActiveModelSerializers::Adapter::Attributes (0.1ms)
+Completed 201 Created in 4ms (Views: 0.7ms | ActiveRecord: 1.1ms)
+
+
+Started POST "/posts" for ::1 at 2018-03-14 11:10:26 -0500
+Processing by PostsController#create as */*
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"mB0pFiWp8b5nnyEsGIv4/2dnGBOJsLGxUjsGkxxqC+jJQXREdo2EWMU/+vVbGExUyMxNKqhuTINQZTcjtVHoVQ==", "post"=>{"title"=>"efefef", "description"=>"dfdfdsfdsdfdddd"}}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "posts" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "efefef"], ["description", "dfdfdsfdsdfdddd"], ["created_at", "2018-03-14 16:10:26.203628"], ["updated_at", "2018-03-14 16:10:26.203628"]]
+  [1m[35m (1.9ms)[0m  commit transaction
+[active_model_serializers] Rendered PostSerializer with ActiveModelSerializers::Adapter::Attributes (0.11ms)
+Completed 201 Created in 5ms (Views: 0.5ms | ActiveRecord: 2.2ms)
