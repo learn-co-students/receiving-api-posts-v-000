@@ -6732,3 +6732,85 @@ Processing by PostsController#show as */*
   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", "14"]]
   Rendered posts/show.html.erb within layouts/application (0.3ms)
 Completed 200 OK in 27ms (Views: 22.9ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/posts/new" for ::1 at 2018-03-30 14:46:43 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (1.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PostsController#new as HTML
+  Rendered posts/new.html.erb within layouts/application (41.0ms)
+Completed 200 OK in 471ms (Views: 444.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2018-03-30 14:46:44 -0500
+
+
+Started GET "/assets/turbolinks.self-2db6ec539b9190f75e1d477b305df53d12904d5cafdd47c7ffd91ba25cbec128.js?body=1" for ::1 at 2018-03-30 14:46:44 -0500
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2018-03-30 14:46:49 -0500
+
+
+Started GET "/posts/new" for ::1 at 2018-03-30 14:56:10 -0500
+Processing by PostsController#new as HTML
+  Rendered posts/new.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 48ms (Views: 39.7ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/posts" for ::1 at 2018-03-30 14:56:16 -0500
+Processing by PostsController#create as */*
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"cj45obyxJTLLGQVG0Ts6mTnTwxnmyp8/uax/kYM0/TOPedReRJU+pVD8YEJp/z1brSnGFB6TPMqwgcD7yAS8aQ==", "post"=>{"title"=>"New post", "description"=>"BLAH"}}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (2.5ms)[0m  [1mINSERT INTO "posts" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "New post"], ["description", "BLAH"], ["created_at", "2018-03-30 19:56:16.507203"], ["updated_at", "2018-03-30 19:56:16.507203"]]
+  [1m[35m (1.9ms)[0m  commit transaction
+[active_model_serializers] Rendered PostSerializer with ActiveModelSerializers::Adapter::Attributes (0.23ms)
+Completed 201 Created in 57ms (Views: 47.2ms | ActiveRecord: 4.4ms)
+
+
+Started POST "/posts" for ::1 at 2018-03-30 14:56:19 -0500
+Processing by PostsController#create as */*
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"cj45obyxJTLLGQVG0Ts6mTnTwxnmyp8/uax/kYM0/TOPedReRJU+pVD8YEJp/z1brSnGFB6TPMqwgcD7yAS8aQ==", "post"=>{"title"=>"New post", "description"=>"BLAH"}}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "posts" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["title", "New post"], ["description", "BLAH"], ["created_at", "2018-03-30 19:56:19.807989"], ["updated_at", "2018-03-30 19:56:19.807989"]]
+  [1m[36m (1.8ms)[0m  [1mcommit transaction[0m
+[active_model_serializers] Rendered PostSerializer with ActiveModelSerializers::Adapter::Attributes (0.24ms)
+Completed 201 Created in 7ms (Views: 1.5ms | ActiveRecord: 2.4ms)
+
+
+Started POST "/posts" for ::1 at 2018-03-30 14:56:20 -0500
+Processing by PostsController#create as */*
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"cj45obyxJTLLGQVG0Ts6mTnTwxnmyp8/uax/kYM0/TOPedReRJU+pVD8YEJp/z1brSnGFB6TPMqwgcD7yAS8aQ==", "post"=>{"title"=>"New post", "description"=>"BLAH"}}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "posts" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "New post"], ["description", "BLAH"], ["created_at", "2018-03-30 19:56:20.945469"], ["updated_at", "2018-03-30 19:56:20.945469"]]
+  [1m[35m (2.5ms)[0m  commit transaction
+[active_model_serializers] Rendered PostSerializer with ActiveModelSerializers::Adapter::Attributes (0.17ms)
+Completed 201 Created in 8ms (Views: 1.3ms | ActiveRecord: 2.9ms)
+
+
+Started POST "/posts" for ::1 at 2018-03-30 14:56:21 -0500
+Processing by PostsController#create as */*
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"cj45obyxJTLLGQVG0Ts6mTnTwxnmyp8/uax/kYM0/TOPedReRJU+pVD8YEJp/z1brSnGFB6TPMqwgcD7yAS8aQ==", "post"=>{"title"=>"New post", "description"=>"BLAH"}}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "posts" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["title", "New post"], ["description", "BLAH"], ["created_at", "2018-03-30 19:56:21.630895"], ["updated_at", "2018-03-30 19:56:21.630895"]]
+  [1m[36m (1.8ms)[0m  [1mcommit transaction[0m
+[active_model_serializers] Rendered PostSerializer with ActiveModelSerializers::Adapter::Attributes (0.24ms)
+Completed 201 Created in 7ms (Views: 1.4ms | ActiveRecord: 2.2ms)
+
+
+Started POST "/posts" for ::1 at 2018-03-30 14:56:22 -0500
+Processing by PostsController#create as */*
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"cj45obyxJTLLGQVG0Ts6mTnTwxnmyp8/uax/kYM0/TOPedReRJU+pVD8YEJp/z1brSnGFB6TPMqwgcD7yAS8aQ==", "post"=>{"title"=>"New post", "description"=>"BLAH"}}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "posts" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "New post"], ["description", "BLAH"], ["created_at", "2018-03-30 19:56:22.236286"], ["updated_at", "2018-03-30 19:56:22.236286"]]
+  [1m[35m (1.8ms)[0m  commit transaction
+[active_model_serializers] Rendered PostSerializer with ActiveModelSerializers::Adapter::Attributes (0.15ms)
+Completed 201 Created in 8ms (Views: 0.6ms | ActiveRecord: 2.2ms)
+
+
+Started POST "/posts" for ::1 at 2018-03-30 14:56:27 -0500
+Processing by PostsController#create as */*
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"cj45obyxJTLLGQVG0Ts6mTnTwxnmyp8/uax/kYM0/TOPedReRJU+pVD8YEJp/z1brSnGFB6TPMqwgcD7yAS8aQ==", "post"=>{"title"=>"New post 2", "description"=>"BLAH"}}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "posts" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["title", "New post 2"], ["description", "BLAH"], ["created_at", "2018-03-30 19:56:27.444582"], ["updated_at", "2018-03-30 19:56:27.444582"]]
+  [1m[36m (1.8ms)[0m  [1mcommit transaction[0m
+[active_model_serializers] Rendered PostSerializer with ActiveModelSerializers::Adapter::Attributes (0.87ms)
+Completed 201 Created in 8ms (Views: 1.5ms | ActiveRecord: 2.1ms)
