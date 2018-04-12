@@ -6732,3 +6732,443 @@ Processing by PostsController#show as */*
   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", "14"]]
   Rendered posts/show.html.erb within layouts/application (0.3ms)
 Completed 200 OK in 27ms (Views: 22.9ms | ActiveRecord: 1.1ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mPost Load (0.7ms)[0m  SELECT "posts".* FROM "posts"
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.9ms)[0m  DELETE FROM "posts" WHERE "posts"."id" = ?  [["id", 1]]
+  [1m[36m (19.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mDELETE FROM "posts" WHERE "posts"."id" = ?[0m  [["id", 2]]
+  [1m[35m (6.9ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  DELETE FROM "posts" WHERE "posts"."id" = ?  [["id", 3]]
+  [1m[36m (7.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mDELETE FROM "posts" WHERE "posts"."id" = ?[0m  [["id", 4]]
+  [1m[35m (6.8ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  DELETE FROM "posts" WHERE "posts"."id" = ?  [["id", 5]]
+  [1m[36m (7.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mDELETE FROM "posts" WHERE "posts"."id" = ?[0m  [["id", 6]]
+  [1m[35m (6.5ms)[0m  commit transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  DELETE FROM "posts" WHERE "posts"."id" = ?  [["id", 7]]
+  [1m[36m (6.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.3ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mDELETE FROM "posts" WHERE "posts"."id" = ?[0m  [["id", 8]]
+  [1m[35m (6.6ms)[0m  commit transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  DELETE FROM "posts" WHERE "posts"."id" = ?  [["id", 9]]
+  [1m[36m (7.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.3ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mDELETE FROM "posts" WHERE "posts"."id" = ?[0m  [["id", 10]]
+  [1m[35m (6.7ms)[0m  commit transaction
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  DELETE FROM "posts" WHERE "posts"."id" = ?  [["id", 11]]
+  [1m[36m (7.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.6ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mDELETE FROM "posts" WHERE "posts"."id" = ?[0m  [["id", 12]]
+  [1m[35m (6.7ms)[0m  commit transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  DELETE FROM "posts" WHERE "posts"."id" = ?  [["id", 13]]
+  [1m[36m (6.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mDELETE FROM "posts" WHERE "posts"."id" = ?[0m  [["id", 14]]
+  [1m[35m (6.9ms)[0m  commit transaction
+  [1m[36mAuthor Load (0.4ms)[0m  [1mSELECT "authors".* FROM "authors"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.7ms)[0m  [1mDELETE FROM "authors" WHERE "authors"."id" = ?[0m  [["id", 1]]
+  [1m[35m (7.2ms)[0m  commit transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  DELETE FROM "authors" WHERE "authors"."id" = ?  [["id", 2]]
+  [1m[36m (6.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mDELETE FROM "authors" WHERE "authors"."id" = ?[0m  [["id", 3]]
+  [1m[35m (6.8ms)[0m  commit transaction
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.8ms)[0m  INSERT INTO "authors" ("name", "created_at", "updated_at") VALUES (?, ?, ?)  [["name", "Stephen King"], ["created_at", "2018-04-12 16:29:26.856267"], ["updated_at", "2018-04-12 16:29:26.856267"]]
+  [1m[36m (6.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "authors" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Ariana Huffington"], ["created_at", "2018-04-12 16:29:26.868915"], ["updated_at", "2018-04-12 16:29:26.868915"]]
+  [1m[35m (6.3ms)[0m  commit transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "authors" ("name", "created_at", "updated_at") VALUES (?, ?, ?)  [["name", "Horse Ebooks"], ["created_at", "2018-04-12 16:29:26.879387"], ["updated_at", "2018-04-12 16:29:26.879387"]]
+  [1m[36m (6.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (0.9ms)[0m  [1mINSERT INTO "posts" ("title", "description", "author_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "A Blog Post By Stephen King"], ["description", "This is a blog post by Stephen King. It will probably be a movie soon."], ["author_id", 4], ["created_at", "2018-04-12 16:29:26.926564"], ["updated_at", "2018-04-12 16:29:26.926564"]]
+  [1m[35m (7.0ms)[0m  commit transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "posts" ("title", "description", "author_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["title", "I'm doing Great"], ["description", "I founded an empire but I can still blog on this lesson for funzies."], ["author_id", 5], ["created_at", "2018-04-12 16:29:26.940272"], ["updated_at", "2018-04-12 16:29:26.940272"]]
+  [1m[36m (7.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.3ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "posts" ("title", "description", "author_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "Links Click Links"], ["description", "Last night I dreamt we simply need to realize to be so competitive."], ["author_id", 6], ["created_at", "2018-04-12 16:29:26.951997"], ["updated_at", "2018-04-12 16:29:26.951997"]]
+  [1m[35m (6.3ms)[0m  commit transaction
+
+
+Started GET "/posts/new" for 192.168.0.105 at 2018-04-12 12:30:15 -0400
+Cannot render console from 192.168.0.105! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PostsController#new as HTML
+  Rendered posts/new.html.erb within layouts/application (154.8ms)
+Completed 200 OK in 1821ms (Views: 1707.4ms | ActiveRecord: 1.2ms)
+
+
+Started POST "/posts" for 192.168.0.105 at 2018-04-12 12:30:25 -0400
+Cannot render console from 192.168.0.105! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#create as */*
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"A9b2ekHKf4slwJMLcVN230joCWVXSyJqM+HGFvgxIB08hIgpzeX/D4eS3Wzc5WcFPslLrsl1vwkAALfsc311kg==", "post"=>{"title"=>"fsddf", "description"=>"sdffdf"}}
+  [1m[35m (4.6ms)[0m  begin transaction
+  [1m[36mSQL (0.9ms)[0m  [1mINSERT INTO "posts" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "fsddf"], ["description", "sdffdf"], ["created_at", "2018-04-12 16:30:25.376318"], ["updated_at", "2018-04-12 16:30:25.376318"]]
+  [1m[35m (143.9ms)[0m  commit transaction
+[active_model_serializers] Rendered PostSerializer with ActiveModelSerializers::Adapter::Attributes (7.03ms)
+Completed 201 Created in 351ms (Views: 168.1ms | ActiveRecord: 149.4ms)
+
+
+Started POST "/posts" for 192.168.0.105 at 2018-04-12 12:30:50 -0400
+Cannot render console from 192.168.0.105! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#create as */*
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"A9b2ekHKf4slwJMLcVN230joCWVXSyJqM+HGFvgxIB08hIgpzeX/D4eS3Wzc5WcFPslLrsl1vwkAALfsc311kg==", "post"=>{"title"=>"fsddf", "description"=>""}}
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "posts" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["title", "fsddf"], ["description", ""], ["created_at", "2018-04-12 16:30:50.987695"], ["updated_at", "2018-04-12 16:30:50.987695"]]
+  [1m[36m (29.1ms)[0m  [1mcommit transaction[0m
+[active_model_serializers] Rendered PostSerializer with ActiveModelSerializers::Adapter::Attributes (0.46ms)
+Completed 201 Created in 52ms (Views: 4.7ms | ActiveRecord: 29.8ms)
+
+
+Started POST "/posts" for 192.168.0.105 at 2018-04-12 12:30:51 -0400
+Cannot render console from 192.168.0.105! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#create as */*
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"A9b2ekHKf4slwJMLcVN230joCWVXSyJqM+HGFvgxIB08hIgpzeX/D4eS3Wzc5WcFPslLrsl1vwkAALfsc311kg==", "post"=>{"title"=>"fsddf", "description"=>""}}
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "posts" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "fsddf"], ["description", ""], ["created_at", "2018-04-12 16:30:51.783803"], ["updated_at", "2018-04-12 16:30:51.783803"]]
+  [1m[35m (6.3ms)[0m  commit transaction
+[active_model_serializers] Rendered PostSerializer with ActiveModelSerializers::Adapter::Attributes (5.41ms)
+Completed 201 Created in 35ms (Views: 9.1ms | ActiveRecord: 7.0ms)
+
+
+Started POST "/posts" for 192.168.0.105 at 2018-04-12 12:30:52 -0400
+Cannot render console from 192.168.0.105! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#create as */*
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"A9b2ekHKf4slwJMLcVN230joCWVXSyJqM+HGFvgxIB08hIgpzeX/D4eS3Wzc5WcFPslLrsl1vwkAALfsc311kg==", "post"=>{"title"=>"fsddf", "description"=>""}}
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (5.5ms)[0m  INSERT INTO "posts" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["title", "fsddf"], ["description", ""], ["created_at", "2018-04-12 16:30:52.184250"], ["updated_at", "2018-04-12 16:30:52.184250"]]
+  [1m[36m (13.7ms)[0m  [1mcommit transaction[0m
+[active_model_serializers] Rendered PostSerializer with ActiveModelSerializers::Adapter::Attributes (0.78ms)
+Completed 201 Created in 38ms (Views: 6.7ms | ActiveRecord: 19.4ms)
+
+
+Started POST "/posts" for 192.168.0.105 at 2018-04-12 12:30:52 -0400
+Cannot render console from 192.168.0.105! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#create as */*
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"A9b2ekHKf4slwJMLcVN230joCWVXSyJqM+HGFvgxIB08hIgpzeX/D4eS3Wzc5WcFPslLrsl1vwkAALfsc311kg==", "post"=>{"title"=>"fsddf", "description"=>""}}
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "posts" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "fsddf"], ["description", ""], ["created_at", "2018-04-12 16:30:52.423338"], ["updated_at", "2018-04-12 16:30:52.423338"]]
+  [1m[35m (6.4ms)[0m  commit transaction
+[active_model_serializers] Rendered PostSerializer with ActiveModelSerializers::Adapter::Attributes (0.65ms)
+Completed 201 Created in 29ms (Views: 4.0ms | ActiveRecord: 7.1ms)
+
+
+Started POST "/posts" for 192.168.0.105 at 2018-04-12 12:30:52 -0400
+Cannot render console from 192.168.0.105! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#create as */*
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"A9b2ekHKf4slwJMLcVN230joCWVXSyJqM+HGFvgxIB08hIgpzeX/D4eS3Wzc5WcFPslLrsl1vwkAALfsc311kg==", "post"=>{"title"=>"fsddf", "description"=>""}}
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (8.7ms)[0m  INSERT INTO "posts" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["title", "fsddf"], ["description", ""], ["created_at", "2018-04-12 16:30:52.626795"], ["updated_at", "2018-04-12 16:30:52.626795"]]
+  [1m[36m (32.1ms)[0m  [1mcommit transaction[0m
+[active_model_serializers] Rendered PostSerializer with ActiveModelSerializers::Adapter::Attributes (0.39ms)
+Completed 201 Created in 51ms (Views: 1.5ms | ActiveRecord: 41.0ms)
+
+
+Started POST "/posts" for 192.168.0.105 at 2018-04-12 12:30:52 -0400
+Cannot render console from 192.168.0.105! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#create as */*
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"A9b2ekHKf4slwJMLcVN230joCWVXSyJqM+HGFvgxIB08hIgpzeX/D4eS3Wzc5WcFPslLrsl1vwkAALfsc311kg==", "post"=>{"title"=>"fsddf", "description"=>""}}
+  [1m[35m (0.3ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "posts" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "fsddf"], ["description", ""], ["created_at", "2018-04-12 16:30:52.844756"], ["updated_at", "2018-04-12 16:30:52.844756"]]
+  [1m[35m (6.4ms)[0m  commit transaction
+[active_model_serializers] Rendered PostSerializer with ActiveModelSerializers::Adapter::Attributes (0.32ms)
+Completed 201 Created in 34ms (Views: 9.0ms | ActiveRecord: 7.2ms)
+
+
+Started POST "/posts" for 192.168.0.105 at 2018-04-12 12:30:52 -0400
+Cannot render console from 192.168.0.105! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#create as */*
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"A9b2ekHKf4slwJMLcVN230joCWVXSyJqM+HGFvgxIB08hIgpzeX/D4eS3Wzc5WcFPslLrsl1vwkAALfsc311kg==", "post"=>{"title"=>"fsddf", "description"=>""}}
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "posts" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["title", "fsddf"], ["description", ""], ["created_at", "2018-04-12 16:30:53.012044"], ["updated_at", "2018-04-12 16:30:53.012044"]]
+  [1m[36m (20.6ms)[0m  [1mcommit transaction[0m
+[active_model_serializers] Rendered PostSerializer with ActiveModelSerializers::Adapter::Attributes (1.84ms)
+Completed 201 Created in 53ms (Views: 3.7ms | ActiveRecord: 21.3ms)
+
+
+Started POST "/posts" for 192.168.0.105 at 2018-04-12 12:30:53 -0400
+Cannot render console from 192.168.0.105! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#create as */*
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"A9b2ekHKf4slwJMLcVN230joCWVXSyJqM+HGFvgxIB08hIgpzeX/D4eS3Wzc5WcFPslLrsl1vwkAALfsc311kg==", "post"=>{"title"=>"fsddf", "description"=>""}}
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "posts" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "fsddf"], ["description", ""], ["created_at", "2018-04-12 16:30:53.163905"], ["updated_at", "2018-04-12 16:30:53.163905"]]
+  [1m[35m (6.3ms)[0m  commit transaction
+[active_model_serializers] Rendered PostSerializer with ActiveModelSerializers::Adapter::Attributes (0.42ms)
+Completed 201 Created in 24ms (Views: 1.7ms | ActiveRecord: 7.0ms)
+
+
+Started GET "/posts/new" for 192.168.0.105 at 2018-04-12 12:32:23 -0400
+Cannot render console from 192.168.0.105! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#new as HTML
+  Rendered posts/_form.html.erb (24.4ms)
+  Rendered posts/new.html.erb within layouts/application (66.6ms)
+Completed 200 OK in 168ms (Views: 161.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/posts" for 192.168.0.105 at 2018-04-12 12:32:24 -0400
+Cannot render console from 192.168.0.105! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#create as */*
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"0NrXMwCnGEP/jZULLPXRhcbwPkyrYEzF7hItWiZ3BabviKlgjIiYx13f22yBQ8BfsNF8hzVe0abd81ygrTtQKQ==", "post"=>{"title"=>"", "description"=>""}}
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "posts" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["title", ""], ["description", ""], ["created_at", "2018-04-12 16:32:24.754575"], ["updated_at", "2018-04-12 16:32:24.754575"]]
+  [1m[36m (7.3ms)[0m  [1mcommit transaction[0m
+[active_model_serializers] Rendered PostSerializer with ActiveModelSerializers::Adapter::Attributes (1.0ms)
+Completed 201 Created in 24ms (Views: 2.5ms | ActiveRecord: 7.9ms)
+
+
+Started POST "/posts" for 192.168.0.105 at 2018-04-12 12:32:28 -0400
+Cannot render console from 192.168.0.105! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#create as */*
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"0NrXMwCnGEP/jZULLPXRhcbwPkyrYEzF7hItWiZ3BabviKlgjIiYx13f22yBQ8BfsNF8hzVe0abd81ygrTtQKQ==", "post"=>{"title"=>"sdfsfs", "description"=>"sdfdff"}}
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "posts" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "sdfsfs"], ["description", "sdfdff"], ["created_at", "2018-04-12 16:32:28.972787"], ["updated_at", "2018-04-12 16:32:28.972787"]]
+  [1m[35m (6.4ms)[0m  commit transaction
+[active_model_serializers] Rendered PostSerializer with ActiveModelSerializers::Adapter::Attributes (0.93ms)
+Completed 201 Created in 25ms (Views: 2.3ms | ActiveRecord: 7.0ms)
+
+
+Started GET "/posts/new" for 192.168.0.105 at 2018-04-12 12:33:38 -0400
+Cannot render console from 192.168.0.105! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#new as HTML
+Completed 500 Internal Server Error in 25ms (ActiveRecord: 0.0ms)
+
+SyntaxError (/home/learn/receiving-api-posts-v-000/app/models/post.rb:17: syntax error, unexpected keyword_end):
+  app/models/post.rb:17: syntax error, unexpected keyword_end
+  app/controllers/posts_controller.rb:17:in `new'
+
+
+  Rendered /home/learn/.rvm/gems/ruby-2.3.6/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (28.1ms)
+  Rendered /home/learn/.rvm/gems/ruby-2.3.6/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (15.8ms)
+  Rendered /home/learn/.rvm/gems/ruby-2.3.6/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (6.2ms)
+  Rendered /home/learn/.rvm/gems/ruby-2.3.6/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (184.2ms)
+
+
+Started GET "/posts/new" for 192.168.0.105 at 2018-04-12 12:33:46 -0400
+Cannot render console from 192.168.0.105! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#new as HTML
+Completed 500 Internal Server Error in 20ms (ActiveRecord: 0.0ms)
+
+ArgumentError (You need to supply at least one validation):
+  app/models/post.rb:15:in `<class:Post>'
+  app/models/post.rb:13:in `<top (required)>'
+  app/controllers/posts_controller.rb:17:in `new'
+
+
+  Rendered /home/learn/.rvm/gems/ruby-2.3.6/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (22.3ms)
+  Rendered /home/learn/.rvm/gems/ruby-2.3.6/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (16.5ms)
+  Rendered /home/learn/.rvm/gems/ruby-2.3.6/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (3.3ms)
+  Rendered /home/learn/.rvm/gems/ruby-2.3.6/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (126.2ms)
+
+
+Started GET "/posts/new" for 192.168.0.105 at 2018-04-12 12:34:09 -0400
+Cannot render console from 192.168.0.105! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#new as HTML
+Completed 500 Internal Server Error in 28ms (ActiveRecord: 0.0ms)
+
+SyntaxError (/home/learn/receiving-api-posts-v-000/app/models/post.rb:15: syntax error, unexpected tIDENTIFIER, expecting keyword_end
+  validates :title presence: true
+                           ^):
+  app/models/post.rb:15: syntax error, unexpected tIDENTIFIER, expecting keyword_end
+  app/controllers/posts_controller.rb:17:in `new'
+
+
+  Rendered /home/learn/.rvm/gems/ruby-2.3.6/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (16.9ms)
+  Rendered /home/learn/.rvm/gems/ruby-2.3.6/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (10.6ms)
+  Rendered /home/learn/.rvm/gems/ruby-2.3.6/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (6.2ms)
+  Rendered /home/learn/.rvm/gems/ruby-2.3.6/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (123.2ms)
+
+
+Started GET "/posts/new" for 192.168.0.105 at 2018-04-12 12:34:20 -0400
+Cannot render console from 192.168.0.105! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#new as HTML
+  Rendered posts/_form.html.erb (14.5ms)
+  Rendered posts/new.html.erb within layouts/application (17.1ms)
+Completed 200 OK in 162ms (Views: 99.5ms | ActiveRecord: 2.0ms)
+
+
+Started POST "/posts" for 192.168.0.105 at 2018-04-12 12:34:21 -0400
+Cannot render console from 192.168.0.105! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#create as */*
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"GnvcMG8eB4KUtWLFlxtn+C5EFVXUZpEUu2yKnoESZ34lKaJj4zGHBjbnLKI6rXYiWGVXnkpYDHeIjftkCl4y8Q==", "post"=>{"title"=>"", "description"=>""}}
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  rollback transaction
+[active_model_serializers] Rendered PostSerializer with ActiveModelSerializers::Adapter::Attributes (0.45ms)
+Completed 201 Created in 20ms (Views: 6.2ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/posts" for 192.168.0.105 at 2018-04-12 12:34:27 -0400
+Cannot render console from 192.168.0.105! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#create as */*
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"GnvcMG8eB4KUtWLFlxtn+C5EFVXUZpEUu2yKnoESZ34lKaJj4zGHBjbnLKI6rXYiWGVXnkpYDHeIjftkCl4y8Q==", "post"=>{"title"=>"zxczxxc", "description"=>"xzczxc"}}
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "posts" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["title", "zxczxxc"], ["description", "xzczxc"], ["created_at", "2018-04-12 16:34:27.258264"], ["updated_at", "2018-04-12 16:34:27.258264"]]
+  [1m[36m (8.3ms)[0m  [1mcommit transaction[0m
+[active_model_serializers] Rendered PostSerializer with ActiveModelSerializers::Adapter::Attributes (0.54ms)
+Completed 201 Created in 33ms (Views: 6.2ms | ActiveRecord: 9.2ms)
+
+
+Started POST "/posts" for 192.168.0.105 at 2018-04-12 12:34:32 -0400
+Cannot render console from 192.168.0.105! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#create as */*
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"GnvcMG8eB4KUtWLFlxtn+C5EFVXUZpEUu2yKnoESZ34lKaJj4zGHBjbnLKI6rXYiWGVXnkpYDHeIjftkCl4y8Q==", "post"=>{"title"=>"", "description"=>"xzczxc"}}
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36m (0.3ms)[0m  [1mrollback transaction[0m
+[active_model_serializers] Rendered PostSerializer with ActiveModelSerializers::Adapter::Attributes (0.43ms)
+Completed 201 Created in 18ms (Views: 1.7ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/posts" for 192.168.0.105 at 2018-04-12 12:34:33 -0400
+Cannot render console from 192.168.0.105! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#create as */*
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"GnvcMG8eB4KUtWLFlxtn+C5EFVXUZpEUu2yKnoESZ34lKaJj4zGHBjbnLKI6rXYiWGVXnkpYDHeIjftkCl4y8Q==", "post"=>{"title"=>"", "description"=>"xzczxc"}}
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+[active_model_serializers] Rendered PostSerializer with ActiveModelSerializers::Adapter::Attributes (0.43ms)
+Completed 201 Created in 15ms (Views: 3.6ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/posts" for 192.168.0.105 at 2018-04-12 12:34:33 -0400
+Cannot render console from 192.168.0.105! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#create as */*
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"GnvcMG8eB4KUtWLFlxtn+C5EFVXUZpEUu2yKnoESZ34lKaJj4zGHBjbnLKI6rXYiWGVXnkpYDHeIjftkCl4y8Q==", "post"=>{"title"=>"", "description"=>"xzczxc"}}
+  [1m[35m (0.3ms)[0m  begin transaction
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+[active_model_serializers] Rendered PostSerializer with ActiveModelSerializers::Adapter::Attributes (0.38ms)
+Completed 201 Created in 20ms (Views: 8.5ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/posts" for 192.168.0.105 at 2018-04-12 12:34:34 -0400
+Cannot render console from 192.168.0.105! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#create as */*
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"GnvcMG8eB4KUtWLFlxtn+C5EFVXUZpEUu2yKnoESZ34lKaJj4zGHBjbnLKI6rXYiWGVXnkpYDHeIjftkCl4y8Q==", "post"=>{"title"=>"", "description"=>"xzczxc"}}
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+[active_model_serializers] Rendered PostSerializer with ActiveModelSerializers::Adapter::Attributes (0.33ms)
+Completed 201 Created in 19ms (Views: 8.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/posts" for 192.168.0.105 at 2018-04-12 12:35:39 -0400
+Cannot render console from 192.168.0.105! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (8.0ms)[0m  SELECT "posts".* FROM "posts"
+  Rendered posts/_post.html.erb (2.9ms)
+  Rendered posts/_post.html.erb (0.7ms)
+  Rendered posts/_post.html.erb (0.5ms)
+  Rendered posts/_post.html.erb (0.6ms)
+  Rendered posts/_post.html.erb (0.5ms)
+  Rendered posts/_post.html.erb (0.4ms)
+  Rendered posts/_post.html.erb (0.5ms)
+  Rendered posts/_post.html.erb (0.5ms)
+  Rendered posts/_post.html.erb (0.7ms)
+  Rendered posts/_post.html.erb (0.5ms)
+  Rendered posts/_post.html.erb (0.4ms)
+  Rendered posts/_post.html.erb (4.7ms)
+  Rendered posts/_post.html.erb (0.5ms)
+  Rendered posts/_post.html.erb (0.4ms)
+  Rendered posts/_post.html.erb (0.4ms)
+  Rendered posts/index.html.erb within layouts/application (124.7ms)
+Completed 200 OK in 230ms (Views: 209.3ms | ActiveRecord: 8.9ms)
+
+
+Started GET "/posts/15" for 192.168.0.105 at 2018-04-12 12:35:40 -0400
+Cannot render console from 192.168.0.105! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"15"}
+  [1m[36mPost Load (0.5ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 15]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", "15"]]
+  Rendered posts/show.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 113ms (Views: 65.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/posts/16.json" for 192.168.0.105 at 2018-04-12 12:35:42 -0400
+Cannot render console from 192.168.0.105! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#show as JSON
+  Parameters: {"id"=>"16"}
+  [1m[36mPost Load (0.4ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 16]]
+  [1m[35mCACHE (0.1ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", "16"]]
+[active_model_serializers] Rendered PostSerializer with ActiveModelSerializers::Adapter::Attributes (0.52ms)
+Completed 200 OK in 24ms (Views: 10.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/posts/17.json" for 192.168.0.105 at 2018-04-12 12:35:43 -0400
+Cannot render console from 192.168.0.105! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#show as JSON
+  Parameters: {"id"=>"17"}
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 17]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", "17"]]
+[active_model_serializers] Rendered PostSerializer with ActiveModelSerializers::Adapter::Attributes (0.37ms)
+Completed 200 OK in 9ms (Views: 4.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/posts/18.json" for 192.168.0.105 at 2018-04-12 12:35:43 -0400
+Cannot render console from 192.168.0.105! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#show as JSON
+  Parameters: {"id"=>"18"}
+  [1m[36mPost Load (0.4ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 18]]
+  [1m[35mCACHE (0.1ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", "18"]]
+[active_model_serializers] Rendered PostSerializer with ActiveModelSerializers::Adapter::Attributes (0.63ms)
+Completed 200 OK in 15ms (Views: 7.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/posts/19.json" for 192.168.0.105 at 2018-04-12 12:35:43 -0400
+Cannot render console from 192.168.0.105! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#show as JSON
+  Parameters: {"id"=>"19"}
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 19]]
+  [1m[35mCACHE (0.1ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", "19"]]
+[active_model_serializers] Rendered PostSerializer with ActiveModelSerializers::Adapter::Attributes (0.36ms)
+Completed 200 OK in 15ms (Views: 5.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/posts/20.json" for 192.168.0.105 at 2018-04-12 12:35:44 -0400
+Cannot render console from 192.168.0.105! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#show as JSON
+  Parameters: {"id"=>"20"}
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 20]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", "20"]]
+[active_model_serializers] Rendered PostSerializer with ActiveModelSerializers::Adapter::Attributes (0.4ms)
+Completed 200 OK in 8ms (Views: 1.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/posts/21.json" for 192.168.0.105 at 2018-04-12 12:35:44 -0400
+Cannot render console from 192.168.0.105! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#show as JSON
+  Parameters: {"id"=>"21"}
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 21]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", "21"]]
+[active_model_serializers] Rendered PostSerializer with ActiveModelSerializers::Adapter::Attributes (0.4ms)
+Completed 200 OK in 13ms (Views: 5.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/posts/new" for 192.168.0.105 at 2018-04-12 12:35:50 -0400
+Cannot render console from 192.168.0.105! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#new as HTML
+  Rendered posts/_form.html.erb (10.9ms)
+  Rendered posts/new.html.erb within layouts/application (28.9ms)
+Completed 200 OK in 108ms (Views: 105.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/posts" for 192.168.0.105 at 2018-04-12 12:35:52 -0400
+Cannot render console from 192.168.0.105! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#create as */*
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"+ZTI46NIK/96ENVoOYdChSqQRCf+F1DVFbvVvZOFp5bGxrawL2ere9hCmw+UMVNfXLEG7GApzbYmWqRHGMnyGQ==", "post"=>{"title"=>"", "description"=>""}}
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  rollback transaction
+[active_model_serializers] Rendered PostSerializer with ActiveModelSerializers::Adapter::Attributes (0.54ms)
+Completed 201 Created in 27ms (Views: 7.6ms | ActiveRecord: 0.5ms)
