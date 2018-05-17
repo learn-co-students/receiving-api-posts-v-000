@@ -11,3 +11,57 @@
     <%= f.submit %>
   </div>
 <% end %>
+
+<!-- 3rd example -->
+<div id="postResult">
+  <h2 id="postTitle"></h2>
+  <p id="postBody"></p>
+</div>
+
+<script type="text/javascript" charset="utf-8">
+  $(function () {
+    $('form').submit(function(event) {
+      // prevent form from submitting the default way
+      event.preventDefault();
+
+      var values = $(this).serialize();
+
+      var posting = $.post('/posts', values);
+
+      posting.done(function(data) {
+        var post = data;
+        $("#postTitle").text(post["title"]);
+        $("#postBody").text(post["description"]);
+      });
+    });
+  });
+</script>
+
+<!-- 2nd example
+<script type="text/javascript" charset="utf-8">
+  $(function () {
+    $('form').submit(function(event) {
+      // prevent form from submitting the default way
+      event.preventDefault();
+
+      var values = $(this).serialize();
+
+      var posting = $.post('/posts', values);
+
+      posting.done(function(data) {
+        // TODO: handle response
+      });
+    });
+  });
+</script> -->
+
+<!-- 1st example
+<script type="text/javascript" charset="utf-8">
+  $(function () {
+    $('form').submit(function(event) {
+      // prevent form from submitting the default way
+      event.preventDefault();
+      alert("we r hack3rz");
+    });
+  });
+</script> -->
