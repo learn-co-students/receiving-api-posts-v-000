@@ -6732,3 +6732,85 @@ Processing by PostsController#show as */*
   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", "14"]]
   Rendered posts/show.html.erb within layouts/application (0.3ms)
 Completed 200 OK in 27ms (Views: 22.9ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2018-05-19 14:54:14 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.6ms)[0m  SELECT "posts".* FROM "posts"
+  Rendered posts/_post.html.erb (6.1ms)
+  Rendered posts/_post.html.erb (0.5ms)
+  Rendered posts/_post.html.erb (6.1ms)
+  Rendered posts/_post.html.erb (0.5ms)
+  Rendered posts/_post.html.erb (0.5ms)
+  Rendered posts/_post.html.erb (0.9ms)
+  Rendered posts/_post.html.erb (0.6ms)
+  Rendered posts/_post.html.erb (0.4ms)
+  Rendered posts/_post.html.erb (0.5ms)
+  Rendered posts/_post.html.erb (0.5ms)
+  Rendered posts/_post.html.erb (0.6ms)
+  Rendered posts/_post.html.erb (0.4ms)
+  Rendered posts/_post.html.erb (0.8ms)
+  Rendered posts/_post.html.erb (0.5ms)
+  Rendered posts/index.html.erb within layouts/application (196.4ms)
+Completed 200 OK in 3098ms (Views: 2995.2ms | ActiveRecord: 7.1ms)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2018-05-19 14:54:38 -0700
+Processing by PostsController#new as HTML
+  Rendered posts/new.html.erb within layouts/application (185.8ms)
+Completed 200 OK in 368ms (Views: 364.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/posts" for 127.0.0.1 at 2018-05-19 14:54:45 -0700
+Processing by PostsController#create as */*
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"PE3xX7OzA6ZcT6FQdMrW92xhkx7Vvpr3q0f+gzyj7/sirt7r+bvdtStz4au9gu2p84tnTlh/3wJFp0NMxRq1jg==", "post"=>{"title"=>"testing ", "description"=>"testing "}}
+  [1m[36m (0.4ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (5.2ms)[0m  INSERT INTO "posts" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["title", "testing "], ["description", "testing "], ["created_at", "2018-05-19 21:54:45.220988"], ["updated_at", "2018-05-19 21:54:45.220988"]]
+  [1m[36m (14.3ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/posts/15
+Completed 302 Found in 65ms (ActiveRecord: 19.9ms)
+
+
+Started GET "/posts/15" for 127.0.0.1 at 2018-05-19 14:54:45 -0700
+Processing by PostsController#show as */*
+  Parameters: {"id"=>"15"}
+  [1m[35mPost Load (0.6ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 15]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", "15"]]
+  Rendered posts/show.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 232ms (Views: 165.3ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/posts" for 127.0.0.1 at 2018-05-19 14:54:49 -0700
+Processing by PostsController#create as */*
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"PE3xX7OzA6ZcT6FQdMrW92xhkx7Vvpr3q0f+gzyj7/sirt7r+bvdtStz4au9gu2p84tnTlh/3wJFp0NMxRq1jg==", "post"=>{"title"=>"testing ", "description"=>"testing "}}
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (18.1ms)[0m  [1mINSERT INTO "posts" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "testing "], ["description", "testing "], ["created_at", "2018-05-19 21:54:49.372131"], ["updated_at", "2018-05-19 21:54:49.372131"]]
+  [1m[35m (7.7ms)[0m  commit transaction
+Redirected to http://localhost:3000/posts/16
+Completed 302 Found in 40ms (ActiveRecord: 26.0ms)
+
+
+Started GET "/posts/16" for 127.0.0.1 at 2018-05-19 14:54:49 -0700
+Processing by PostsController#show as */*
+  Parameters: {"id"=>"16"}
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 16]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", "16"]]
+  Rendered posts/show.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 141ms (Views: 132.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2018-05-19 15:00:05 -0700
+Processing by PostsController#new as HTML
+  Rendered posts/new.html.erb within layouts/application (14.2ms)
+Completed 200 OK in 190ms (Views: 132.8ms | ActiveRecord: 12.0ms)
+
+
+Started POST "/posts" for 127.0.0.1 at 2018-05-19 15:00:11 -0700
+Processing by PostsController#create as */*
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"6o9MA4usOC0hHRH6rIk2G9Tcf0iZXKGugSKwiU0mahz0bGO3waTmPlYhUQFlwQ1FSzaLGBSd5Ftvwg1GtJ8waQ==", "post"=>{"title"=>"testing ", "description"=>"testing"}}
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.1ms)[0m  INSERT INTO "posts" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["title", "testing "], ["description", "testing"], ["created_at", "2018-05-19 22:00:11.591250"], ["updated_at", "2018-05-19 22:00:11.591250"]]
+  [1m[36m (13.2ms)[0m  [1mcommit transaction[0m
+[active_model_serializers] Rendered PostSerializer with ActiveModelSerializers::Adapter::Attributes (0.6ms)
+Completed 201 Created in 136ms (Views: 104.3ms | ActiveRecord: 14.5ms)
