@@ -1,13 +1,41 @@
 <%= form_for(@post) do |f| %>
   <div class="field">
     <%= f.label :title %><br>
-    <%= f.text_field :title %>
+    <%= f.text_field :title %><br><br>
   </div>
   <div class="field">
     <%= f.label :description %><br>
-    <%= f.text_field :description %>
+    <%= f.text_field :description %><br><br>
   </div>
   <div class="actions">
     <%= f.submit %>
   </div>
 <% end %>
+<!-- place holder for the parsed JSON data -->
+<div id="postResult">
+  <h2 id="postTitle"></h2>
+  <p id="postBody"></p>
+</div>
+<!-- prevent the default form submit action by hooking up an event handler to the form's 
+submit event, and then block the form from doing an HTML submit as it normally would.
+-->
+<script type="text/javascript" charset="utf-8">
+  $(function () {
+    $('form').submit(function(event) {
+      //prevent form from submitting the default way
+      event.preventDefault();
+      //take the form data and serializes it 
+      var values = $(this).serialize(); 
+      //use jQuery post() to retrieve the data by passing it the URL and the values
+      //The jQuery post() method returns a jqXHR object, which we're storing in our posting variable. These 
+      //jqXHR objects implement the Promise interface, which is used for deferred or asynchronous operations
+      var posting = $.post('/posts', values);
+      //parse the JSON data and add it to the DOM
+      posting.done(function(data) {
+        var post = data;
+        $("#postTitle").text(post["title"]);
+        $("#postBody").text(post["description"]);
+      });
+    });
+  });
+</script>
