@@ -11,3 +11,26 @@
     <%= f.submit %>
   </div>
 <% end %>
+
+<script type="text/javascript" charset="utf-8">
+  $(function () {
+    $('form').submit(function(event) {
+      //prevent form from submitting the default way
+      event.preventDefault();
+
+      var values = $(this).serialize();
+      // In here, we're making use of the very handy jQuery serialize() method, which takes our 
+      // form data and serializes it for us. Sure, we could individually select each form element
+      // and build our own JSON data, but we've done enough of that in this unit, so we've earned
+      // this shortcut!
+
+
+
+      var posting = $.post('/posts', values);
+
+      posting.done(function(data) {
+        // TODO: handle response
+      });
+    });
+  });
+</script>
