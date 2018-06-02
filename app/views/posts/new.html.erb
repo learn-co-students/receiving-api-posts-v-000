@@ -11,3 +11,26 @@
     <%= f.submit %>
   </div>
 <% end %>
+
+<div id="postResult">
+  <h2 id="postTitle"></h2>
+  <p id="postBody"></p>
+</div>
+
+<script type="text/javascript" charset="utf-8">
+  $(function () {
+    $('form').submit(function(event) {
+      event.preventDefault();
+      // jquery method that serialize our form for us
+      var values = $(this).serialize();
+      // we are using post instead of get and pass it our url and values
+      // we are using a posting object to specify what should happen when the AJAX request is done
+      // posting is a jqXHR object
+      var posting = $.post('/posts', values);
+      posting.done(function(data) {
+        $("#postTitle").text(data["title"]);
+        $("#postBody").text(data["description"]);
+      });
+    });
+  });
+</script>
