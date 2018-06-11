@@ -18,9 +18,11 @@ class PostsController < ApplicationController
   end
 
   def create
-    @post = Post.create(post_params)
-    redirect_to post_path(@post)
+      @post = Post.create(post_params)
+      render json: @post, status: 201
   end
+
+  # get a JSON representation of the post we just created so that we can use it to display the new post without redirecting or refreshing the page.
 
   def edit
   end

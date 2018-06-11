@@ -6732,3 +6732,44 @@ Processing by PostsController#show as */*
   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", "14"]]
   Rendered posts/show.html.erb within layouts/application (0.3ms)
 Completed 200 OK in 27ms (Views: 22.9ms | ActiveRecord: 1.1ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+
+
+Started GET "/" for ::1 at 2018-06-11 00:46:49 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (1.8ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendered /Users/evancandler/.rvm/gems/ruby-2.3.3/gems/railties-4.2.5/lib/rails/templates/rails/welcome/index.html.erb (4.4ms)
+Completed 200 OK in 51ms (Views: 31.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/posts/new" for ::1 at 2018-06-11 00:47:08 -0400
+Processing by PostsController#new as HTML
+  Rendered posts/new.html.erb within layouts/application (41.5ms)
+Completed 200 OK in 543ms (Views: 525.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/posts/new" for ::1 at 2018-06-11 00:53:10 -0400
+Processing by PostsController#new as HTML
+  Rendered posts/new.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 33ms (Views: 24.5ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/posts" for ::1 at 2018-06-11 00:53:17 -0400
+Processing by PostsController#create as */*
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"mXM1vG/k9JWM8lMRXOBy5/JW/jlWQSBT2c+NlqU8typ0WQw5wepcuQ998Ebde7GZuqdgMvyGWaU4csSWgeIYEQ==", "post"=>{"title"=>"literally", "description"=>"bye"}}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "posts" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "literally"], ["description", "bye"], ["created_at", "2018-06-11 04:53:17.594290"], ["updated_at", "2018-06-11 04:53:17.594290"]]
+  [1m[35m (2.2ms)[0m  commit transaction
+[active_model_serializers] Rendered PostSerializer with ActiveModelSerializers::Adapter::Attributes (0.32ms)
+Completed 201 Created in 57ms (Views: 34.8ms | ActiveRecord: 2.8ms)
+
+
+Started POST "/posts" for ::1 at 2018-06-11 00:53:18 -0400
+Processing by PostsController#create as */*
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"mXM1vG/k9JWM8lMRXOBy5/JW/jlWQSBT2c+NlqU8typ0WQw5wepcuQ998Ebde7GZuqdgMvyGWaU4csSWgeIYEQ==", "post"=>{"title"=>"literally", "description"=>"bye"}}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "posts" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["title", "literally"], ["description", "bye"], ["created_at", "2018-06-11 04:53:18.959129"], ["updated_at", "2018-06-11 04:53:18.959129"]]
+  [1m[36m (1.9ms)[0m  [1mcommit transaction[0m
+[active_model_serializers] Rendered PostSerializer with ActiveModelSerializers::Adapter::Attributes (0.14ms)
+Completed 201 Created in 7ms (Views: 0.8ms | ActiveRecord: 2.4ms)
