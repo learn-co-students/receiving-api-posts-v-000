@@ -6732,3 +6732,36 @@ Processing by PostsController#show as */*
   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", "14"]]
   Rendered posts/show.html.erb within layouts/application (0.3ms)
 Completed 200 OK in 27ms (Views: 22.9ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/posts/new" for ::1 at 2018-06-15 17:07:55 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PostsController#new as HTML
+  Rendered posts/new.html.erb within layouts/application (27.8ms)
+Completed 200 OK in 714ms (Views: 670.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/posts/new" for ::1 at 2018-06-15 17:20:35 -0400
+Processing by PostsController#new as HTML
+  Rendered posts/new.html.erb within layouts/application (9.5ms)
+Completed 200 OK in 104ms (Views: 73.0ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/posts" for ::1 at 2018-06-15 17:20:39 -0400
+Processing by PostsController#create as */*
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"645Q0KQ46rGOk5+/NOVywULpbtNsBNOs5qFNLPhdTRNslFtTQSJ3F4kMdaxlVPNSS+22xqd03tBeE5TjqJVh4g==", "post"=>{"title"=>"woah", "description"=>""}}
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "posts" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "woah"], ["description", ""], ["created_at", "2018-06-15 21:20:39.921934"], ["updated_at", "2018-06-15 21:20:39.921934"]]
+  [1m[35m (1.1ms)[0m  commit transaction
+[active_model_serializers] Rendered PostSerializer with ActiveModelSerializers::Adapter::Attributes (0.36ms)
+Completed 201 Created in 78ms (Views: 64.2ms | ActiveRecord: 1.9ms)
+
+
+Started POST "/posts" for ::1 at 2018-06-15 17:20:44 -0400
+Processing by PostsController#create as */*
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"645Q0KQ46rGOk5+/NOVywULpbtNsBNOs5qFNLPhdTRNslFtTQSJ3F4kMdaxlVPNSS+22xqd03tBeE5TjqJVh4g==", "post"=>{"title"=>"woah", "description"=>"we did it"}}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "posts" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["title", "woah"], ["description", "we did it"], ["created_at", "2018-06-15 21:20:44.161936"], ["updated_at", "2018-06-15 21:20:44.161936"]]
+  [1m[36m (3.0ms)[0m  [1mcommit transaction[0m
+[active_model_serializers] Rendered PostSerializer with ActiveModelSerializers::Adapter::Attributes (0.28ms)
+Completed 201 Created in 8ms (Views: 1.0ms | ActiveRecord: 3.6ms)
