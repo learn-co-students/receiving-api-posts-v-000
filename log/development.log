@@ -6732,3 +6732,462 @@ Processing by PostsController#show as */*
   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", "14"]]
   Rendered posts/show.html.erb within layouts/application (0.3ms)
 Completed 200 OK in 27ms (Views: 22.9ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/posts/new" for ::1 at 2018-06-17 11:44:16 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PostsController#new as HTML
+  Rendered posts/new.html.erb within layouts/application (20.9ms)
+Completed 200 OK in 405ms (Views: 389.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/posts/new" for ::1 at 2018-06-17 11:47:26 -0400
+Processing by PostsController#new as HTML
+  Rendered posts/new.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 22ms (Views: 20.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/posts" for ::1 at 2018-06-17 11:47:30 -0400
+Processing by PostsController#create as */*
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"A6zMPsp81yferQ4nrbrLWsgIhqcekUJEsY3FCu65TRntzkP2tq6IdLaLIgiJRF2uLigNc0onpWfBJz4FZt0ZPQ==", "post"=>{"title"=>"thing", "description"=>"thing"}}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "posts" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "thing"], ["description", "thing"], ["created_at", "2018-06-17 15:47:30.817729"], ["updated_at", "2018-06-17 15:47:30.817729"]]
+  [1m[35m (0.9ms)[0m  commit transaction
+Redirected to http://localhost:3000/posts/15
+Completed 302 Found in 7ms (ActiveRecord: 1.4ms)
+
+
+Started GET "/posts/15" for ::1 at 2018-06-17 11:47:30 -0400
+Processing by PostsController#show as */*
+  Parameters: {"id"=>"15"}
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 15]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", "15"]]
+  Rendered posts/show.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 33ms (Views: 23.5ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/posts" for ::1 at 2018-06-17 11:47:32 -0400
+Processing by PostsController#create as */*
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"A6zMPsp81yferQ4nrbrLWsgIhqcekUJEsY3FCu65TRntzkP2tq6IdLaLIgiJRF2uLigNc0onpWfBJz4FZt0ZPQ==", "post"=>{"title"=>"thing", "description"=>"thing"}}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "posts" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["title", "thing"], ["description", "thing"], ["created_at", "2018-06-17 15:47:32.088148"], ["updated_at", "2018-06-17 15:47:32.088148"]]
+  [1m[36m (2.7ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/posts/16
+Completed 302 Found in 6ms (ActiveRecord: 3.1ms)
+
+
+Started GET "/posts/16" for ::1 at 2018-06-17 11:47:32 -0400
+Processing by PostsController#show as */*
+  Parameters: {"id"=>"16"}
+  [1m[35mPost Load (0.1ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 16]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", "16"]]
+  Rendered posts/show.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 14ms (Views: 12.5ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/posts" for ::1 at 2018-06-17 11:48:09 -0400
+Processing by PostsController#create as */*
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"A6zMPsp81yferQ4nrbrLWsgIhqcekUJEsY3FCu65TRntzkP2tq6IdLaLIgiJRF2uLigNc0onpWfBJz4FZt0ZPQ==", "post"=>{"title"=>"thing", "description"=>"thing"}}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "posts" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "thing"], ["description", "thing"], ["created_at", "2018-06-17 15:48:09.409152"], ["updated_at", "2018-06-17 15:48:09.409152"]]
+  [1m[35m (1.0ms)[0m  commit transaction
+Redirected to http://localhost:3000/posts/17
+Completed 302 Found in 16ms (ActiveRecord: 1.3ms)
+
+
+Started GET "/posts/17" for ::1 at 2018-06-17 11:48:09 -0400
+Processing by PostsController#show as */*
+  Parameters: {"id"=>"17"}
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 17]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", "17"]]
+  Rendered posts/show.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 14ms (Views: 12.4ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/posts" for ::1 at 2018-06-17 11:48:11 -0400
+Processing by PostsController#create as */*
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"A6zMPsp81yferQ4nrbrLWsgIhqcekUJEsY3FCu65TRntzkP2tq6IdLaLIgiJRF2uLigNc0onpWfBJz4FZt0ZPQ==", "post"=>{"title"=>"thing", "description"=>"thing"}}
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "posts" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["title", "thing"], ["description", "thing"], ["created_at", "2018-06-17 15:48:11.494606"], ["updated_at", "2018-06-17 15:48:11.494606"]]
+  [1m[36m (2.5ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/posts/18
+Completed 302 Found in 5ms (ActiveRecord: 3.1ms)
+
+
+Started GET "/posts/18" for ::1 at 2018-06-17 11:48:11 -0400
+Processing by PostsController#show as */*
+  Parameters: {"id"=>"18"}
+  [1m[35mPost Load (0.1ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 18]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", "18"]]
+  Rendered posts/show.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 13ms (Views: 12.5ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/posts" for ::1 at 2018-06-17 11:48:12 -0400
+Processing by PostsController#create as */*
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"A6zMPsp81yferQ4nrbrLWsgIhqcekUJEsY3FCu65TRntzkP2tq6IdLaLIgiJRF2uLigNc0onpWfBJz4FZt0ZPQ==", "post"=>{"title"=>"thing", "description"=>"thing"}}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "posts" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "thing"], ["description", "thing"], ["created_at", "2018-06-17 15:48:12.238995"], ["updated_at", "2018-06-17 15:48:12.238995"]]
+  [1m[35m (2.2ms)[0m  commit transaction
+Redirected to http://localhost:3000/posts/19
+Completed 302 Found in 5ms (ActiveRecord: 2.6ms)
+
+
+Started GET "/posts/19" for ::1 at 2018-06-17 11:48:12 -0400
+Processing by PostsController#show as */*
+  Parameters: {"id"=>"19"}
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 19]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", "19"]]
+  Rendered posts/show.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 16ms (Views: 14.1ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/posts" for ::1 at 2018-06-17 11:48:16 -0400
+Processing by PostsController#create as */*
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"A6zMPsp81yferQ4nrbrLWsgIhqcekUJEsY3FCu65TRntzkP2tq6IdLaLIgiJRF2uLigNc0onpWfBJz4FZt0ZPQ==", "post"=>{"title"=>"thing", "description"=>"thing"}}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "posts" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["title", "thing"], ["description", "thing"], ["created_at", "2018-06-17 15:48:16.448216"], ["updated_at", "2018-06-17 15:48:16.448216"]]
+  [1m[36m (2.4ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/posts/20
+Completed 302 Found in 5ms (ActiveRecord: 2.8ms)
+
+
+Started GET "/posts/20" for ::1 at 2018-06-17 11:48:16 -0400
+Processing by PostsController#show as */*
+  Parameters: {"id"=>"20"}
+  [1m[35mPost Load (0.1ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 20]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", "20"]]
+  Rendered posts/show.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 14ms (Views: 12.8ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/posts" for ::1 at 2018-06-17 11:48:17 -0400
+Processing by PostsController#create as */*
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"A6zMPsp81yferQ4nrbrLWsgIhqcekUJEsY3FCu65TRntzkP2tq6IdLaLIgiJRF2uLigNc0onpWfBJz4FZt0ZPQ==", "post"=>{"title"=>"thing", "description"=>"thing"}}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "posts" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "thing"], ["description", "thing"], ["created_at", "2018-06-17 15:48:17.135666"], ["updated_at", "2018-06-17 15:48:17.135666"]]
+  [1m[35m (2.7ms)[0m  commit transaction
+Redirected to http://localhost:3000/posts/21
+Completed 302 Found in 5ms (ActiveRecord: 3.0ms)
+
+
+Started GET "/posts/21" for ::1 at 2018-06-17 11:48:17 -0400
+Processing by PostsController#show as */*
+  Parameters: {"id"=>"21"}
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 21]]
+  [1m[35mCACHE (0.1ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", "21"]]
+  Rendered posts/show.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 20ms (Views: 18.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/posts/new" for ::1 at 2018-06-17 11:49:41 -0400
+Processing by PostsController#new as HTML
+  Rendered posts/new.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 20ms (Views: 18.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/posts" for ::1 at 2018-06-17 11:49:48 -0400
+Processing by PostsController#create as */*
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"1HXWo+TplsmQkdQfejTfq3DiwVcPgCiDZPeWSf8escw6F1lrmDvJmvi3+DBeyklflsJKg1s2z6AUXW1Gd3rl6A==", "post"=>{"title"=>"thing", "description"=>"thing"}}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "posts" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["title", "thing"], ["description", "thing"], ["created_at", "2018-06-17 15:49:48.770961"], ["updated_at", "2018-06-17 15:49:48.770961"]]
+  [1m[36m (1.3ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/posts/22
+Completed 302 Found in 5ms (ActiveRecord: 1.7ms)
+
+
+Started GET "/posts/22" for ::1 at 2018-06-17 11:49:48 -0400
+Processing by PostsController#show as */*
+  Parameters: {"id"=>"22"}
+  [1m[35mPost Load (0.1ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 22]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", "22"]]
+  Rendered posts/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 15ms (Views: 13.7ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/posts" for ::1 at 2018-06-17 11:49:50 -0400
+Processing by PostsController#create as */*
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"1HXWo+TplsmQkdQfejTfq3DiwVcPgCiDZPeWSf8escw6F1lrmDvJmvi3+DBeyklflsJKg1s2z6AUXW1Gd3rl6A==", "post"=>{"title"=>"thing", "description"=>"thing"}}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "posts" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "thing"], ["description", "thing"], ["created_at", "2018-06-17 15:49:50.195476"], ["updated_at", "2018-06-17 15:49:50.195476"]]
+  [1m[35m (1.1ms)[0m  commit transaction
+Redirected to http://localhost:3000/posts/23
+Completed 302 Found in 4ms (ActiveRecord: 1.4ms)
+
+
+Started GET "/posts/23" for ::1 at 2018-06-17 11:49:50 -0400
+Processing by PostsController#show as */*
+  Parameters: {"id"=>"23"}
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 23]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", "23"]]
+  Rendered posts/show.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 14ms (Views: 12.6ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/posts" for ::1 at 2018-06-17 11:49:51 -0400
+Processing by PostsController#create as */*
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"1HXWo+TplsmQkdQfejTfq3DiwVcPgCiDZPeWSf8escw6F1lrmDvJmvi3+DBeyklflsJKg1s2z6AUXW1Gd3rl6A==", "post"=>{"title"=>"thing", "description"=>"thing"}}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "posts" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["title", "thing"], ["description", "thing"], ["created_at", "2018-06-17 15:49:51.183869"], ["updated_at", "2018-06-17 15:49:51.183869"]]
+  [1m[36m (2.6ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/posts/24
+Completed 302 Found in 5ms (ActiveRecord: 3.0ms)
+
+
+Started GET "/posts/24" for ::1 at 2018-06-17 11:49:51 -0400
+Processing by PostsController#show as */*
+  Parameters: {"id"=>"24"}
+  [1m[35mPost Load (0.2ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 24]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", "24"]]
+  Rendered posts/show.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 18ms (Views: 16.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/posts/new" for ::1 at 2018-06-17 11:50:39 -0400
+Processing by PostsController#new as HTML
+  Rendered posts/new.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 24ms (Views: 23.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/posts" for ::1 at 2018-06-17 11:50:46 -0400
+Processing by PostsController#create as */*
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"rKQtrZgmpXADsuaWEEp04N7Vs9qwPLEUL7Wbd7TFwetCxqJl5PT6I2uUyrk0tOIUOPU4DuSKVjdfH2B4PKGVzw==", "post"=>{"title"=>"thing", "description"=>"malicious description"}}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "posts" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "thing"], ["description", "malicious description"], ["created_at", "2018-06-17 15:50:46.252553"], ["updated_at", "2018-06-17 15:50:46.252553"]]
+  [1m[35m (1.6ms)[0m  commit transaction
+Redirected to http://localhost:3000/posts/25
+Completed 302 Found in 5ms (ActiveRecord: 2.0ms)
+
+
+Started GET "/posts/25" for ::1 at 2018-06-17 11:50:46 -0400
+Processing by PostsController#show as */*
+  Parameters: {"id"=>"25"}
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 25]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", "25"]]
+  Rendered posts/show.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 19ms (Views: 17.3ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/posts" for ::1 at 2018-06-17 11:50:47 -0400
+Processing by PostsController#create as */*
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"rKQtrZgmpXADsuaWEEp04N7Vs9qwPLEUL7Wbd7TFwetCxqJl5PT6I2uUyrk0tOIUOPU4DuSKVjdfH2B4PKGVzw==", "post"=>{"title"=>"thing", "description"=>"malicious description"}}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "posts" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["title", "thing"], ["description", "malicious description"], ["created_at", "2018-06-17 15:50:47.127649"], ["updated_at", "2018-06-17 15:50:47.127649"]]
+  [1m[36m (2.4ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/posts/26
+Completed 302 Found in 5ms (ActiveRecord: 2.7ms)
+
+
+Started GET "/posts/26" for ::1 at 2018-06-17 11:50:47 -0400
+Processing by PostsController#show as */*
+  Parameters: {"id"=>"26"}
+  [1m[35mPost Load (0.1ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 26]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", "26"]]
+  Rendered posts/show.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 14ms (Views: 12.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/posts/new" for ::1 at 2018-06-17 11:52:50 -0400
+Processing by PostsController#new as HTML
+  Rendered posts/new.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 15ms (Views: 14.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/posts" for ::1 at 2018-06-17 11:52:55 -0400
+Processing by PostsController#create as */*
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"mEcOoN7/qZP0lzYqm5CRppj1/SeklfJgi2rGhXAWlfd2JYFooi32wJyxGgW/bgdSftV28/AjFUP7wD2K+HLB0w==", "post"=>{"title"=>"thing", "description"=>"malicious description"}}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "posts" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "thing"], ["description", "malicious description"], ["created_at", "2018-06-17 15:52:55.157601"], ["updated_at", "2018-06-17 15:52:55.157601"]]
+  [1m[35m (1.2ms)[0m  commit transaction
+Redirected to http://localhost:3000/posts/27
+Completed 302 Found in 4ms (ActiveRecord: 1.5ms)
+
+
+Started GET "/posts/27" for ::1 at 2018-06-17 11:52:55 -0400
+Processing by PostsController#show as */*
+  Parameters: {"id"=>"27"}
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 27]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", "27"]]
+  Rendered posts/show.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 12ms (Views: 11.1ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/posts" for ::1 at 2018-06-17 11:52:57 -0400
+Processing by PostsController#create as */*
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"mEcOoN7/qZP0lzYqm5CRppj1/SeklfJgi2rGhXAWlfd2JYFooi32wJyxGgW/bgdSftV28/AjFUP7wD2K+HLB0w==", "post"=>{"title"=>"thing", "description"=>"malicious description"}}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "posts" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["title", "thing"], ["description", "malicious description"], ["created_at", "2018-06-17 15:52:57.522916"], ["updated_at", "2018-06-17 15:52:57.522916"]]
+  [1m[36m (2.1ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/posts/28
+Completed 302 Found in 5ms (ActiveRecord: 2.4ms)
+
+
+Started GET "/posts/28" for ::1 at 2018-06-17 11:52:57 -0400
+Processing by PostsController#show as */*
+  Parameters: {"id"=>"28"}
+  [1m[35mPost Load (0.1ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 28]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", "28"]]
+  Rendered posts/show.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 13ms (Views: 11.5ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/posts" for ::1 at 2018-06-17 11:52:58 -0400
+Processing by PostsController#create as */*
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"mEcOoN7/qZP0lzYqm5CRppj1/SeklfJgi2rGhXAWlfd2JYFooi32wJyxGgW/bgdSftV28/AjFUP7wD2K+HLB0w==", "post"=>{"title"=>"thing", "description"=>"malicious description"}}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "posts" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "thing"], ["description", "malicious description"], ["created_at", "2018-06-17 15:52:58.459072"], ["updated_at", "2018-06-17 15:52:58.459072"]]
+  [1m[35m (3.1ms)[0m  commit transaction
+Redirected to http://localhost:3000/posts/29
+Completed 302 Found in 6ms (ActiveRecord: 3.5ms)
+
+
+Started GET "/posts/29" for ::1 at 2018-06-17 11:52:58 -0400
+Processing by PostsController#show as */*
+  Parameters: {"id"=>"29"}
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 29]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", "29"]]
+  Rendered posts/show.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 13ms (Views: 11.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/posts/new" for ::1 at 2018-06-17 11:53:19 -0400
+Processing by PostsController#new as HTML
+  Rendered posts/new.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 14ms (Views: 13.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/posts" for ::1 at 2018-06-17 11:53:23 -0400
+Processing by PostsController#create as */*
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"8d10cQEk+D8jAyzJ92gj+QhUpQf2wkk8/G06Xh65RqEfv/u5ffanbEslAObTlrUN7nQu06J0rh+Mx8FRlt0ShQ==", "post"=>{"title"=>"thing", "description"=>"malicious description"}}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "posts" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["title", "thing"], ["description", "malicious description"], ["created_at", "2018-06-17 15:53:23.554846"], ["updated_at", "2018-06-17 15:53:23.554846"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/posts/30
+Completed 302 Found in 3ms (ActiveRecord: 0.9ms)
+
+
+Started GET "/posts/30" for ::1 at 2018-06-17 11:53:23 -0400
+Processing by PostsController#show as */*
+  Parameters: {"id"=>"30"}
+  [1m[35mPost Load (0.1ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 30]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", "30"]]
+  Rendered posts/show.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 19ms (Views: 17.4ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/posts" for ::1 at 2018-06-17 11:53:25 -0400
+Processing by PostsController#create as */*
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"8d10cQEk+D8jAyzJ92gj+QhUpQf2wkk8/G06Xh65RqEfv/u5ffanbEslAObTlrUN7nQu06J0rh+Mx8FRlt0ShQ==", "post"=>{"title"=>"thing", "description"=>"malicious description"}}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "posts" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "thing"], ["description", "malicious description"], ["created_at", "2018-06-17 15:53:25.951262"], ["updated_at", "2018-06-17 15:53:25.951262"]]
+  [1m[35m (2.3ms)[0m  commit transaction
+Redirected to http://localhost:3000/posts/31
+Completed 302 Found in 5ms (ActiveRecord: 2.7ms)
+
+
+Started GET "/posts/31" for ::1 at 2018-06-17 11:53:25 -0400
+Processing by PostsController#show as */*
+  Parameters: {"id"=>"31"}
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 31]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", "31"]]
+  Rendered posts/show.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 13ms (Views: 11.5ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/posts" for ::1 at 2018-06-17 11:53:26 -0400
+Processing by PostsController#create as */*
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"8d10cQEk+D8jAyzJ92gj+QhUpQf2wkk8/G06Xh65RqEfv/u5ffanbEslAObTlrUN7nQu06J0rh+Mx8FRlt0ShQ==", "post"=>{"title"=>"thing", "description"=>"malicious description"}}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "posts" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["title", "thing"], ["description", "malicious description"], ["created_at", "2018-06-17 15:53:26.713056"], ["updated_at", "2018-06-17 15:53:26.713056"]]
+  [1m[36m (2.9ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/posts/32
+Completed 302 Found in 5ms (ActiveRecord: 3.2ms)
+
+
+Started GET "/posts/32" for ::1 at 2018-06-17 11:53:26 -0400
+Processing by PostsController#show as */*
+  Parameters: {"id"=>"32"}
+  [1m[35mPost Load (0.1ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 32]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", "32"]]
+  Rendered posts/show.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 13ms (Views: 11.4ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/posts" for ::1 at 2018-06-17 11:53:27 -0400
+Processing by PostsController#create as */*
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"8d10cQEk+D8jAyzJ92gj+QhUpQf2wkk8/G06Xh65RqEfv/u5ffanbEslAObTlrUN7nQu06J0rh+Mx8FRlt0ShQ==", "post"=>{"title"=>"thing", "description"=>"malicious description"}}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "posts" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "thing"], ["description", "malicious description"], ["created_at", "2018-06-17 15:53:27.718659"], ["updated_at", "2018-06-17 15:53:27.718659"]]
+  [1m[35m (2.2ms)[0m  commit transaction
+Redirected to http://localhost:3000/posts/33
+Completed 302 Found in 5ms (ActiveRecord: 2.6ms)
+
+
+Started GET "/posts/33" for ::1 at 2018-06-17 11:53:27 -0400
+Processing by PostsController#show as */*
+  Parameters: {"id"=>"33"}
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 33]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", "33"]]
+  Rendered posts/show.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 13ms (Views: 12.2ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/posts" for ::1 at 2018-06-17 11:53:29 -0400
+Processing by PostsController#create as */*
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"8d10cQEk+D8jAyzJ92gj+QhUpQf2wkk8/G06Xh65RqEfv/u5ffanbEslAObTlrUN7nQu06J0rh+Mx8FRlt0ShQ==", "post"=>{"title"=>"thing", "description"=>"malicious description"}}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "posts" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["title", "thing"], ["description", "malicious description"], ["created_at", "2018-06-17 15:53:29.618347"], ["updated_at", "2018-06-17 15:53:29.618347"]]
+  [1m[36m (2.3ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/posts/34
+Completed 302 Found in 6ms (ActiveRecord: 2.6ms)
+
+
+Started GET "/posts/34" for ::1 at 2018-06-17 11:53:29 -0400
+Processing by PostsController#show as */*
+  Parameters: {"id"=>"34"}
+  [1m[35mPost Load (0.1ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 34]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", "34"]]
+  Rendered posts/show.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 12ms (Views: 10.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/posts/new" for ::1 at 2018-06-17 11:59:26 -0400
+Processing by PostsController#new as HTML
+  Rendered posts/new.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 22ms (Views: 17.5ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/posts" for ::1 at 2018-06-17 11:59:31 -0400
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"IdUyvMlTJ5hKgGIn6ef0EhyuJNd8r0y0gLHuI3DvJO7Pt710tYF4yyKmTgjNGWLm+o6vAygZq5fwGxUs+Itwyg==", "post"=>{"title"=>"thing", "description"=>"thing"}, "commit"=>"Create Post"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "posts" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "thing"], ["description", "thing"], ["created_at", "2018-06-17 15:59:31.535513"], ["updated_at", "2018-06-17 15:59:31.535513"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+[active_model_serializers] Rendered PostSerializer with ActiveModelSerializers::Adapter::Attributes (0.78ms)
+Completed 201 Created in 30ms (Views: 25.9ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/posts/new" for ::1 at 2018-06-17 12:01:57 -0400
+Processing by PostsController#new as HTML
+  Rendered posts/new.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 14ms (Views: 13.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/posts" for ::1 at 2018-06-17 12:02:02 -0400
+Processing by PostsController#create as */*
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"oLfXpZbuiO9RIaQfOX9CDER7Ob6uu2wx4Hifiit/UMRO1Vht6jzXvDkHiDAdgdT4oluyavoNixKQ0mSFoxsE4A==", "post"=>{"title"=>"thing", "description"=>"thing"}}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "posts" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["title", "thing"], ["description", "thing"], ["created_at", "2018-06-17 16:02:02.180096"], ["updated_at", "2018-06-17 16:02:02.180096"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+[active_model_serializers] Rendered PostSerializer with ActiveModelSerializers::Adapter::Attributes (0.21ms)
+Completed 201 Created in 4ms (Views: 0.6ms | ActiveRecord: 1.1ms)
+
+
+Started POST "/posts" for ::1 at 2018-06-17 12:02:03 -0400
+Processing by PostsController#create as */*
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"oLfXpZbuiO9RIaQfOX9CDER7Ob6uu2wx4Hifiit/UMRO1Vht6jzXvDkHiDAdgdT4oluyavoNixKQ0mSFoxsE4A==", "post"=>{"title"=>"thing", "description"=>"thing"}}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "posts" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "thing"], ["description", "thing"], ["created_at", "2018-06-17 16:02:03.848779"], ["updated_at", "2018-06-17 16:02:03.848779"]]
+  [1m[35m (2.5ms)[0m  commit transaction
+[active_model_serializers] Rendered PostSerializer with ActiveModelSerializers::Adapter::Attributes (0.13ms)
+Completed 201 Created in 6ms (Views: 0.8ms | ActiveRecord: 2.9ms)
