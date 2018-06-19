@@ -6732,3 +6732,29 @@ Processing by PostsController#show as */*
   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", "14"]]
   Rendered posts/show.html.erb within layouts/application (0.3ms)
 Completed 200 OK in 27ms (Views: 22.9ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/posts/new" for ::1 at 2018-06-19 16:25:02 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (17.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PostsController#new as HTML
+  Rendered posts/new.html.erb within layouts/application (99.3ms)
+Completed 200 OK in 858ms (Views: 797.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2018-06-19 16:25:03 -0400
+
+
+Started GET "/assets/turbolinks.self-2db6ec539b9190f75e1d477b305df53d12904d5cafdd47c7ffd91ba25cbec128.js?body=1" for ::1 at 2018-06-19 16:25:03 -0400
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2018-06-19 16:25:03 -0400
+
+
+Started POST "/posts" for ::1 at 2018-06-19 16:25:20 -0400
+Processing by PostsController#create as */*
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"OyaVE4g09zXy7fLs0CXAokJwKdRCH/dNebHV2HhDdKZ7bLxCvjVo14i1rr5+4akrnX7GwCV4KZk1PikHEIuaEw==", "post"=>{"title"=>"were getting married!!!", "description"=>"hope it goes well"}}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (39.3ms)[0m  [1mINSERT INTO "posts" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "were getting married!!!"], ["description", "hope it goes well"], ["created_at", "2018-06-19 20:25:20.516738"], ["updated_at", "2018-06-19 20:25:20.516738"]]
+  [1m[35m (1.3ms)[0m  commit transaction
+[active_model_serializers] Rendered PostSerializer with ActiveModelSerializers::Adapter::Attributes (14.51ms)
+Completed 201 Created in 175ms (Views: 110.9ms | ActiveRecord: 40.7ms)
