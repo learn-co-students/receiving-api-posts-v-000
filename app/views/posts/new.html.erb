@@ -21,10 +21,10 @@
   $(function () {
     $('form').submit(function(event) {
       event.preventDefault();
-      <%# this refers to the form %>
       var values = $(this).serialize();
       var posting = $.post('/posts', values);
       posting.done(function(data) {
+        var post = data;
         $("#postTitle").text(post["title"]);
         $("#postBody").text(post["description"]);
       })
