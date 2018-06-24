@@ -19,7 +19,11 @@ class PostsController < ApplicationController
 
   def create
     @post = Post.create(post_params)
-    redirect_to post_path(@post)
+    #this line doesn't work with AJAX
+    # redirect_to post_path(@post)
+    # so we use ActiveModel::Serializer
+    render json: @post, status: 201
+    # 201 means ok, the resource was created
   end
 
   def edit
