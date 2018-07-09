@@ -7529,3 +7529,20 @@ Processing by PostsController#create as */*
   [1m[36m (43.1ms)[0m  [1mcommit transaction[0m
 [active_model_serializers] Rendered PostSerializer with ActiveModelSerializers::Adapter::Attributes (0.26ms)
 Completed 201 Created in 72ms (Views: 1.1ms | ActiveRecord: 50.7ms)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2018-07-09 05:21:48 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PostsController#new as HTML
+  Rendered posts/new.html.erb within layouts/application (34.2ms)
+Completed 200 OK in 510ms (Views: 470.4ms | ActiveRecord: 1.9ms)
+
+
+Started POST "/posts" for 127.0.0.1 at 2018-07-09 05:21:52 -0700
+Processing by PostsController#create as */*
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"OHOcJHnqJo1T+eTazyrpdB1jdzFfmBcfPaN0E7SPhih/vILp8QfHo9uRU64/n+AZXyV8rX/p6hm7Hy/SHqEXVw==", "post"=>{"title"=>"dsaf", "description"=>"sadfsdafsadfsdf"}}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "posts" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "dsaf"], ["description", "sadfsdafsadfsdf"], ["created_at", "2018-07-09 12:21:53.001657"], ["updated_at", "2018-07-09 12:21:53.001657"]]
+  [1m[35m (27.3ms)[0m  commit transaction
+[active_model_serializers] Rendered PostSerializer with ActiveModelSerializers::Adapter::Attributes (0.2ms)
+Completed 201 Created in 65ms (Views: 24.2ms | ActiveRecord: 27.9ms)
