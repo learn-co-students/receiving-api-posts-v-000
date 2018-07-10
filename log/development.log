@@ -6732,3 +6732,251 @@ Processing by PostsController#show as */*
   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", "14"]]
   Rendered posts/show.html.erb within layouts/application (0.3ms)
 Completed 200 OK in 27ms (Views: 22.9ms | ActiveRecord: 1.1ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mPost Load (0.5ms)[0m  SELECT "posts".* FROM "posts"
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  DELETE FROM "posts" WHERE "posts"."id" = ?  [["id", 1]]
+  [1m[36m (1.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mDELETE FROM "posts" WHERE "posts"."id" = ?[0m  [["id", 2]]
+  [1m[35m (1.0ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  DELETE FROM "posts" WHERE "posts"."id" = ?  [["id", 3]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mDELETE FROM "posts" WHERE "posts"."id" = ?[0m  [["id", 4]]
+  [1m[35m (0.9ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM "posts" WHERE "posts"."id" = ?  [["id", 5]]
+  [1m[36m (1.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mDELETE FROM "posts" WHERE "posts"."id" = ?[0m  [["id", 6]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  DELETE FROM "posts" WHERE "posts"."id" = ?  [["id", 7]]
+  [1m[36m (0.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mDELETE FROM "posts" WHERE "posts"."id" = ?[0m  [["id", 8]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  DELETE FROM "posts" WHERE "posts"."id" = ?  [["id", 9]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mDELETE FROM "posts" WHERE "posts"."id" = ?[0m  [["id", 10]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  DELETE FROM "posts" WHERE "posts"."id" = ?  [["id", 11]]
+  [1m[36m (0.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mDELETE FROM "posts" WHERE "posts"."id" = ?[0m  [["id", 12]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  DELETE FROM "posts" WHERE "posts"."id" = ?  [["id", 13]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mDELETE FROM "posts" WHERE "posts"."id" = ?[0m  [["id", 14]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36mAuthor Load (0.5ms)[0m  [1mSELECT "authors".* FROM "authors"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mDELETE FROM "authors" WHERE "authors"."id" = ?[0m  [["id", 1]]
+  [1m[35m (1.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  DELETE FROM "authors" WHERE "authors"."id" = ?  [["id", 2]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "authors" WHERE "authors"."id" = ?[0m  [["id", 3]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "authors" ("name", "created_at", "updated_at") VALUES (?, ?, ?)  [["name", "Stephen King"], ["created_at", "2018-07-10 18:15:38.423018"], ["updated_at", "2018-07-10 18:15:38.423018"]]
+  [1m[36m (0.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "authors" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Ariana Huffington"], ["created_at", "2018-07-10 18:15:38.426633"], ["updated_at", "2018-07-10 18:15:38.426633"]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "authors" ("name", "created_at", "updated_at") VALUES (?, ?, ?)  [["name", "Horse Ebooks"], ["created_at", "2018-07-10 18:15:38.429000"], ["updated_at", "2018-07-10 18:15:38.429000"]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "posts" ("title", "description", "author_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "A Blog Post By Stephen King"], ["description", "This is a blog post by Stephen King. It will probably be a movie soon."], ["author_id", 4], ["created_at", "2018-07-10 18:15:38.438223"], ["updated_at", "2018-07-10 18:15:38.438223"]]
+  [1m[35m (0.9ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "posts" ("title", "description", "author_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["title", "I'm doing Great"], ["description", "I founded an empire but I can still blog on this lesson for funzies."], ["author_id", 5], ["created_at", "2018-07-10 18:15:38.441597"], ["updated_at", "2018-07-10 18:15:38.441597"]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "posts" ("title", "description", "author_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "Links Click Links"], ["description", "Last night I dreamt we simply need to realize to be so competitive."], ["author_id", 6], ["created_at", "2018-07-10 18:15:38.444074"], ["updated_at", "2018-07-10 18:15:38.444074"]]
+  [1m[35m (0.8ms)[0m  commit transaction
+
+
+Started GET "/posts" for ::1 at 2018-07-10 11:30:39 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.4ms)[0m  SELECT "posts".* FROM "posts"
+  Rendered posts/_post.html.erb (0.8ms)
+  Rendered posts/_post.html.erb (0.2ms)
+  Rendered posts/_post.html.erb (0.5ms)
+  Rendered posts/index.html.erb within layouts/application (22.3ms)
+Completed 200 OK in 508ms (Views: 490.4ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2018-07-10 11:30:39 -0700
+
+
+Started GET "/assets/jquery.self-c64a74367bda6ef8b860f19e74df08927ca99d2be2ac934e9e92d5fd361e0da4.js?body=1" for ::1 at 2018-07-10 11:30:39 -0700
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2018-07-10 11:30:39 -0700
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2018-07-10 11:30:39 -0700
+
+
+Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" for ::1 at 2018-07-10 11:30:39 -0700
+
+
+Started GET "/posts/16/post_data" for ::1 at 2018-07-10 11:30:43 -0700
+Processing by PostsController#post_data as */*
+  Parameters: {"id"=>"16"}
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 16]]
+  [1m[35mAuthor Load (0.3ms)[0m  SELECT  "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT 1  [["id", 5]]
+Completed 200 OK in 49ms (Views: 6.7ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/posts/15/post_data" for ::1 at 2018-07-10 11:30:44 -0700
+Processing by PostsController#post_data as */*
+  Parameters: {"id"=>"15"}
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 15]]
+  [1m[35mAuthor Load (0.2ms)[0m  SELECT  "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT 1  [["id", 4]]
+Completed 200 OK in 4ms (Views: 0.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/posts/new" for ::1 at 2018-07-10 11:32:33 -0700
+Processing by PostsController#new as HTML
+  Rendered posts/new.html.erb within layouts/application (26.5ms)
+Completed 200 OK in 59ms (Views: 58.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/posts/new" for ::1 at 2018-07-10 11:50:52 -0700
+Processing by PostsController#new as HTML
+  Rendered posts/new.html.erb within layouts/application (10.5ms)
+Completed 200 OK in 78ms (Views: 49.5ms | ActiveRecord: 1.3ms)
+
+
+Started POST "/posts" for ::1 at 2018-07-10 11:51:03 -0700
+Processing by PostsController#create as */*
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"+kW/AytEtfDk44ZaOSNSzSRER9mchIBSTgZBvKXvAQTbdxpAMnui+QTJ6npYiTUsiuWd7JJixT+4bcGpdBcOxQ==", "post"=>{"title"=>"Title", "description"=>"Descropta;sjfma'ps spfj aw;lf  asdfj as;ldfkj a;osdfg / :Dfi jawlf "}}
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "posts" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["title", "Title"], ["description", "Descropta;sjfma'ps spfj aw;lf  asdfj as;ldfkj a;osdfg / :Dfi jawlf "], ["created_at", "2018-07-10 18:51:03.904164"], ["updated_at", "2018-07-10 18:51:03.904164"]]
+  [1m[36m (2.6ms)[0m  [1mcommit transaction[0m
+[active_model_serializers] Rendered PostSerializer with ActiveModelSerializers::Adapter::Attributes (0.53ms)
+Completed 201 Created in 61ms (Views: 48.3ms | ActiveRecord: 3.4ms)
+
+
+Started GET "/posts/new" for ::1 at 2018-07-10 11:52:01 -0700
+Processing by PostsController#new as HTML
+  Rendered posts/new.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 26ms (Views: 24.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/posts" for ::1 at 2018-07-10 11:52:06 -0700
+Processing by PostsController#create as */*
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"1142m1HMJe8oAehT5WU+kx6OiKcQDnAGMtQ1IXr3yyb2bJPYSPMy5sgrhHOEz1lysC9Skh7oNWvEv7U0qw/E5w==", "post"=>{"title"=>"Title", "description"=>"Descropta;sjfma'ps spfj aw;lf  asdfj as;ldfkj a;osdfg / :Dfi jawlf "}}
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "posts" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Title"], ["description", "Descropta;sjfma'ps spfj aw;lf  asdfj as;ldfkj a;osdfg / :Dfi jawlf "], ["created_at", "2018-07-10 18:52:06.740782"], ["updated_at", "2018-07-10 18:52:06.740782"]]
+  [1m[35m (1.2ms)[0m  commit transaction
+[active_model_serializers] Rendered PostSerializer with ActiveModelSerializers::Adapter::Attributes (0.26ms)
+Completed 201 Created in 7ms (Views: 0.8ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/posts/new" for ::1 at 2018-07-10 11:52:17 -0700
+Processing by PostsController#new as HTML
+  Rendered posts/new.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 26ms (Views: 23.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/posts" for ::1 at 2018-07-10 11:52:21 -0700
+Processing by PostsController#create as */*
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"80zYBSpsHSzBRqveemiId+WUW4jL5qbd3Sh66X3nh0zSfn1GM1MKJSFsx/4bwu+WSzWBvcUA47ArQ/r8rB+IjQ==", "post"=>{"title"=>"Title", "description"=>"Descropta;sjfma'ps spfj aw;lf  asdfj as;ldfkj a;osdfg / :Dfi jawlf "}}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "posts" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["title", "Title"], ["description", "Descropta;sjfma'ps spfj aw;lf  asdfj as;ldfkj a;osdfg / :Dfi jawlf "], ["created_at", "2018-07-10 18:52:21.526568"], ["updated_at", "2018-07-10 18:52:21.526568"]]
+  [1m[36m (1.5ms)[0m  [1mcommit transaction[0m
+[active_model_serializers] Rendered PostSerializer with ActiveModelSerializers::Adapter::Attributes (0.3ms)
+Completed 201 Created in 5ms (Views: 0.8ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/posts/new" for ::1 at 2018-07-10 11:52:23 -0700
+Processing by PostsController#new as HTML
+  Rendered posts/new.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 26ms (Views: 24.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/posts" for ::1 at 2018-07-10 11:53:09 -0700
+Processing by PostsController#create as */*
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"kqs5kRP2CLTKdGaEWHGiT094zOauG7UYZkev7HzYE1+zmZzSCskfvSpeCqQ528Wu4dkW06D98HWQLC/5rSAcng==", "post"=>{"title"=>"Title", "description"=>"Descropta;sjfma'ps spfj aw;lf  asdfj as;ldfkj a;osdfg / :Dfi jawlf "}}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (1.4ms)[0m  [1mINSERT INTO "posts" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Title"], ["description", "Descropta;sjfma'ps spfj aw;lf  asdfj as;ldfkj a;osdfg / :Dfi jawlf "], ["created_at", "2018-07-10 18:53:09.415062"], ["updated_at", "2018-07-10 18:53:09.415062"]]
+  [1m[35m (3.5ms)[0m  commit transaction
+[active_model_serializers] Rendered PostSerializer with ActiveModelSerializers::Adapter::Attributes (0.27ms)
+Completed 201 Created in 11ms (Views: 1.4ms | ActiveRecord: 5.0ms)
+
+
+Started GET "/posts/new" for ::1 at 2018-07-10 11:53:11 -0700
+Processing by PostsController#new as HTML
+  Rendered posts/new.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 33ms (Views: 32.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/posts" for ::1 at 2018-07-10 11:53:17 -0700
+Processing by PostsController#create as */*
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"QXglYoMqqyV4v3uFlclVVgketj9r21hAN2eAcvlzAW9gSoAhmhW8LJiVF6X0YzK3p79sCmU9HS3BDABnKIsOrg==", "post"=>{"title"=>"Title", "description"=>"Descropta;sjfma'ps spfj aw;lf  asdfj as;ldfkj a;osdfg / :Dfi jawlf "}}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "posts" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["title", "Title"], ["description", "Descropta;sjfma'ps spfj aw;lf  asdfj as;ldfkj a;osdfg / :Dfi jawlf "], ["created_at", "2018-07-10 18:53:18.000360"], ["updated_at", "2018-07-10 18:53:18.000360"]]
+  [1m[36m (1.4ms)[0m  [1mcommit transaction[0m
+[active_model_serializers] Rendered PostSerializer with ActiveModelSerializers::Adapter::Attributes (0.21ms)
+Completed 201 Created in 6ms (Views: 1.0ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/posts/new" for ::1 at 2018-07-10 11:53:28 -0700
+Processing by PostsController#new as HTML
+  Rendered posts/new.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 19ms (Views: 17.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/posts" for ::1 at 2018-07-10 11:53:32 -0700
+Processing by PostsController#create as */*
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"S1VjgmcI7FtYuYZ9hMw5V1qZ7VI60RqmSPpB1oW5YCJqZ8bBfjf7UriT6l3lZl629Dg3ZzQ3X8u+kcHDVEFv4w==", "post"=>{"title"=>"Title", "description"=>"Descropta;sjfma'ps spfj aw;lf  asdfj as;ldfkj a;osdfg / :Dfi jawlf "}}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "posts" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Title"], ["description", "Descropta;sjfma'ps spfj aw;lf  asdfj as;ldfkj a;osdfg / :Dfi jawlf "], ["created_at", "2018-07-10 18:53:32.943116"], ["updated_at", "2018-07-10 18:53:32.943116"]]
+  [1m[35m (2.3ms)[0m  commit transaction
+[active_model_serializers] Rendered PostSerializer with ActiveModelSerializers::Adapter::Attributes (0.13ms)
+Completed 201 Created in 6ms (Views: 0.7ms | ActiveRecord: 2.8ms)
+
+
+Started POST "/posts" for ::1 at 2018-07-10 11:54:46 -0700
+Processing by PostsController#create as */*
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"S1VjgmcI7FtYuYZ9hMw5V1qZ7VI60RqmSPpB1oW5YCJqZ8bBfjf7UriT6l3lZl629Dg3ZzQ3X8u+kcHDVEFv4w==", "post"=>{"title"=>"Title", "description"=>"Descropta;sjfma'ps spfj aw;lf  asdfj as;ldfkj a;osdfg / :Dfi jawlf "}}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "posts" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["title", "Title"], ["description", "Descropta;sjfma'ps spfj aw;lf  asdfj as;ldfkj a;osdfg / :Dfi jawlf "], ["created_at", "2018-07-10 18:54:46.798148"], ["updated_at", "2018-07-10 18:54:46.798148"]]
+  [1m[36m (2.1ms)[0m  [1mcommit transaction[0m
+[active_model_serializers] Rendered PostSerializer with ActiveModelSerializers::Adapter::Attributes (0.22ms)
+Completed 201 Created in 6ms (Views: 0.9ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/posts/new" for ::1 at 2018-07-10 11:54:47 -0700
+Processing by PostsController#new as HTML
+  Rendered posts/new.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 24ms (Views: 23.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/posts" for ::1 at 2018-07-10 11:54:51 -0700
+Processing by PostsController#create as */*
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"tUeu9m+3ur/6Db1WQ1g8DPNUiwzl7B/RL1oxx1PQNe+UdQu1doitthon0XYi8lvtXfVROesKWrzZMbHSgig6Lg==", "post"=>{"title"=>"Title", "description"=>"Descropta;sjfma'ps spfj aw;lf  asdfj as;ldfkj a;osdfg / :Dfi jawlf "}}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "posts" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Title"], ["description", "Descropta;sjfma'ps spfj aw;lf  asdfj as;ldfkj a;osdfg / :Dfi jawlf "], ["created_at", "2018-07-10 18:54:51.828696"], ["updated_at", "2018-07-10 18:54:51.828696"]]
+  [1m[35m (1.2ms)[0m  commit transaction
+[active_model_serializers] Rendered PostSerializer with ActiveModelSerializers::Adapter::Attributes (0.19ms)
+Completed 201 Created in 5ms (Views: 0.9ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/posts/new" for ::1 at 2018-07-10 11:56:38 -0700
+Processing by PostsController#new as HTML
+  Rendered posts/new.html.erb within layouts/application (11.7ms)
+Completed 200 OK in 63ms (Views: 53.1ms | ActiveRecord: 0.0ms)
