@@ -6732,3 +6732,243 @@ Processing by PostsController#show as */*
   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", "14"]]
   Rendered posts/show.html.erb within layouts/application (0.3ms)
 Completed 200 OK in 27ms (Views: 22.9ms | ActiveRecord: 1.1ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+
+
+Started GET "/" for 10.0.0.88 at 2018-07-19 10:32:04 -0400
+Cannot render console from 10.0.0.88! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendered /home/learn/.rvm/gems/ruby-2.3.6/gems/railties-4.2.5/lib/rails/templates/rails/welcome/index.html.erb (2.4ms)
+Completed 200 OK in 27ms (Views: 15.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/posts" for 10.0.0.88 at 2018-07-19 10:32:14 -0400
+Cannot render console from 10.0.0.88! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.3ms)[0m  SELECT "posts".* FROM "posts"
+  Rendered posts/_post.html.erb (1.1ms)
+  Rendered posts/_post.html.erb (0.2ms)
+  Rendered posts/_post.html.erb (0.5ms)
+  Rendered posts/_post.html.erb (1.7ms)
+  Rendered posts/_post.html.erb (0.2ms)
+  Rendered posts/_post.html.erb (0.3ms)
+  Rendered posts/_post.html.erb (0.2ms)
+  Rendered posts/_post.html.erb (0.3ms)
+  Rendered posts/_post.html.erb (0.2ms)
+  Rendered posts/_post.html.erb (0.4ms)
+  Rendered posts/_post.html.erb (0.4ms)
+  Rendered posts/_post.html.erb (2.6ms)
+  Rendered posts/_post.html.erb (0.5ms)
+  Rendered posts/_post.html.erb (0.2ms)
+  Rendered posts/index.html.erb within layouts/application (72.1ms)
+Completed 200 OK in 502ms (Views: 487.3ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 10.0.0.88 at 2018-07-19 10:32:14 -0400
+Cannot render console from 10.0.0.88! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/turbolinks.self-2db6ec539b9190f75e1d477b305df53d12904d5cafdd47c7ffd91ba25cbec128.js?body=1" for 10.0.0.88 at 2018-07-19 10:32:14 -0400
+Cannot render console from 10.0.0.88! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 10.0.0.88 at 2018-07-19 10:32:14 -0400
+Cannot render console from 10.0.0.88! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/posts/new" for 10.0.0.88 at 2018-07-19 10:32:15 -0400
+Cannot render console from 10.0.0.88! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#new as HTML
+  Rendered posts/new.html.erb within layouts/application (42.6ms)
+Completed 200 OK in 70ms (Views: 65.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/posts/new" for 10.0.0.88 at 2018-07-19 10:34:58 -0400
+Cannot render console from 10.0.0.88! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#new as HTML
+  Rendered posts/new.html.erb within layouts/application (5.6ms)
+Completed 200 OK in 33ms (Views: 31.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/posts/new" for 10.0.0.88 at 2018-07-19 10:39:53 -0400
+Cannot render console from 10.0.0.88! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#new as HTML
+  Rendered posts/new.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 39ms (Views: 38.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/posts" for 10.0.0.88 at 2018-07-19 10:39:55 -0400
+Cannot render console from 10.0.0.88! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#create as */*
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"91H79ZEBSDGQN97dK3ZX9uY90yWU1bUpw1qr3FAy3mAGHYsR/i67C+UfkuXJdJPsfsCw5dSKWi05ngCUFXaZbA==", "post"=>{"title"=>"", "description"=>""}}
+  [1m[36m (0.8ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (4.3ms)[0m  INSERT INTO "posts" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["title", ""], ["description", ""], ["created_at", "2018-07-19 14:39:55.475675"], ["updated_at", "2018-07-19 14:39:55.475675"]]
+  [1m[36m (17.3ms)[0m  [1mcommit transaction[0m
+Redirected to http://10.0.0.238:3000/posts/15
+Completed 200 OK in 44ms (ActiveRecord: 22.4ms)
+
+
+Started GET "/posts/new" for 10.0.0.88 at 2018-07-19 10:40:00 -0400
+Cannot render console from 10.0.0.88! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#new as HTML
+  Rendered posts/new.html.erb within layouts/application (10.6ms)
+Completed 200 OK in 57ms (Views: 54.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/posts/15" for 10.0.0.88 at 2018-07-19 10:40:00 -0400
+Cannot render console from 10.0.0.88! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"15"}
+  [1m[35mPost Load (0.3ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 15]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", "15"]]
+  Rendered posts/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 108ms (Views: 65.8ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/posts" for 10.0.0.88 at 2018-07-19 10:40:08 -0400
+Cannot render console from 10.0.0.88! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#create as */*
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"49d/RmNj4ioxApPPNdc1yXJNbaEsLHNL6Cor6CttNM0Smw+iDEwREEQq3/fX1fHT6rAOYWxznE8S7oCgbilzwQ==", "post"=>{"title"=>"My post", "description"=>"A different description"}}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "posts" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "My post"], ["description", "A different description"], ["created_at", "2018-07-19 14:40:08.997755"], ["updated_at", "2018-07-19 14:40:08.997755"]]
+  [1m[35m (12.6ms)[0m  commit transaction
+Redirected to http://10.0.0.238:3000/posts/16
+Completed 200 OK in 22ms (ActiveRecord: 13.1ms)
+
+
+Started GET "/posts/new" for 10.0.0.88 at 2018-07-19 10:42:47 -0400
+Cannot render console from 10.0.0.88! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#new as HTML
+  Rendered posts/new.html.erb within layouts/application (6.6ms)
+Completed 200 OK in 69ms (Views: 68.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/posts/16" for 10.0.0.88 at 2018-07-19 10:42:47 -0400
+Cannot render console from 10.0.0.88! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"16"}
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 16]]
+  [1m[35mCACHE (0.3ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", "16"]]
+  Rendered posts/show.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 133ms (Views: 112.3ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/posts" for 10.0.0.88 at 2018-07-19 10:42:58 -0400
+Cannot render console from 10.0.0.88! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#create as */*
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"i/K+b2SikMC6IHxTkBrOvk9T0iGLJX5/+5J+Q/Y1HNh6vs6LC41j+s8IMGtyGAqk166x4ct6kXsBVtULs3Fb1A==", "post"=>{"title"=>"My post", "description"=>"A different description"}}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (2.7ms)[0m  INSERT INTO "posts" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["title", "My post"], ["description", "A different description"], ["created_at", "2018-07-19 14:42:58.939560"], ["updated_at", "2018-07-19 14:42:58.939560"]]
+  [1m[36m (6.6ms)[0m  [1mcommit transaction[0m
+Redirected to http://10.0.0.238:3000/posts/17
+Completed 200 OK in 16ms (ActiveRecord: 9.3ms)
+
+
+Started GET "/posts/17" for 10.0.0.88 at 2018-07-19 10:42:59 -0400
+Cannot render console from 10.0.0.88! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"17"}
+  [1m[35mPost Load (0.2ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 17]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", "17"]]
+  Rendered posts/show.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 54ms (Views: 45.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/posts/17" for 10.0.0.88 at 2018-07-19 10:45:23 -0400
+Cannot render console from 10.0.0.88! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"17"}
+  [1m[35mPost Load (0.2ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 17]]
+  [1m[36mCACHE (0.7ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", "17"]]
+  Rendered posts/show.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 52ms (Views: 44.4ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/posts/new" for 10.0.0.88 at 2018-07-19 10:48:45 -0400
+Cannot render console from 10.0.0.88! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#new as HTML
+  Rendered posts/new.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 34ms (Views: 32.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/posts" for 10.0.0.88 at 2018-07-19 10:48:54 -0400
+Cannot render console from 10.0.0.88! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#create as */*
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Og6tahzH4MUzAeccw5C/Hi7+OQm1CvOKig4inWh9mevLQt2Oc+gT/0YpqyQhknsEtgNayfVVHI5wyonVLTne5w==", "post"=>{"title"=>"wow", "description"=>"cool"}}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "posts" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "wow"], ["description", "cool"], ["created_at", "2018-07-19 14:48:54.844458"], ["updated_at", "2018-07-19 14:48:54.844458"]]
+  [1m[35m (7.7ms)[0m  commit transaction
+Redirected to http://10.0.0.238:3000/posts/18
+Completed 200 OK in 15ms (ActiveRecord: 8.0ms)
+
+
+Started GET "/posts/18" for 10.0.0.88 at 2018-07-19 10:48:54 -0400
+Cannot render console from 10.0.0.88! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"18"}
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 18]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", "18"]]
+  Rendered posts/show.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 49ms (Views: 40.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/posts/17" for 10.0.0.88 at 2018-07-19 10:56:57 -0400
+Cannot render console from 10.0.0.88! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"17"}
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 17]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", "17"]]
+  Rendered posts/show.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 42ms (Views: 27.5ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/posts/new" for 10.0.0.88 at 2018-07-19 10:57:04 -0400
+Cannot render console from 10.0.0.88! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#new as HTML
+  Rendered posts/new.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 38ms (Views: 35.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/posts/new" for 10.0.0.88 at 2018-07-19 10:57:52 -0400
+Cannot render console from 10.0.0.88! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#new as HTML
+  Rendered posts/new.html.erb within layouts/application (6.9ms)
+Completed 200 OK in 43ms (Views: 40.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/posts/new" for 10.0.0.88 at 2018-07-19 11:00:12 -0400
+Cannot render console from 10.0.0.88! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#new as HTML
+  Rendered posts/new.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 36ms (Views: 35.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/posts" for 10.0.0.88 at 2018-07-19 11:00:27 -0400
+Cannot render console from 10.0.0.88! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#create as */*
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"aBEyspiN9SPpQSrUYzhFoDMpoy1iZEVMdU3u0n3I3CyZXUJW96IGGZxpZuyBOoG6q9TA7SI7qkiPiUWaOIybIA==", "post"=>{"title"=>"Post", "description"=>"mcpost"}}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "posts" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["title", "Post"], ["description", "mcpost"], ["created_at", "2018-07-19 15:00:27.579050"], ["updated_at", "2018-07-19 15:00:27.579050"]]
+  [1m[36m (8.5ms)[0m  [1mcommit transaction[0m
+[active_model_serializers] Rendered PostSerializer with ActiveModelSerializers::Adapter::Attributes (0.26ms)
+Completed 201 Created in 43ms (Views: 26.6ms | ActiveRecord: 8.8ms)
+
+
+Started GET "/posts/new" for 10.0.0.88 at 2018-07-19 11:01:10 -0400
+Cannot render console from 10.0.0.88! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#new as HTML
+  Rendered posts/new.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 42ms (Views: 40.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/posts" for 10.0.0.88 at 2018-07-19 11:01:20 -0400
+Cannot render console from 10.0.0.88! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#create as */*
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"FEUCGtOzJhKYeQoLZrczQ0ytmUu6rO/PQ27j9u7dyhjlCXL+vJzVKO1RRjOEtfdZ1FD6i/rzAMu5qki+q5mNFA==", "post"=>{"title"=>"Post", "description"=>"mcpost"}}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (2.8ms)[0m  [1mINSERT INTO "posts" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Post"], ["description", "mcpost"], ["created_at", "2018-07-19 15:01:20.446266"], ["updated_at", "2018-07-19 15:01:20.446266"]]
+  [1m[35m (5.7ms)[0m  commit transaction
+[active_model_serializers] Rendered PostSerializer with ActiveModelSerializers::Adapter::Attributes (0.15ms)
+Completed 201 Created in 15ms (Views: 0.7ms | ActiveRecord: 8.5ms)
