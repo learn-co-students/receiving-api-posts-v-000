@@ -11,3 +11,39 @@
     <%= f.submit %>
   </div>
 <% end %>
+
+<!-- NOTE : Used to display the new information courtesy of AJAX updates -->
+<div id="postResult">
+  <h2 id="postTitle"></h2>
+  <p id="postBody"></p>
+</div>
+
+
+<!-- NOTE : Block HTML submit -->
+<script type="text/javascript" charset="utf-8">
+  $(function () {
+    $('form').submit(function(event) {
+      //prevent form from submitting the default way
+      event.preventDefault();
+      
+      // NOTE : Testing alert
+        // alert("we r hack3rz");
+        
+      // NOTE : Shortcut to seralize form data
+      var values = $(this).serialize();
+ 
+      var posting = $.post('/posts', values);
+ 
+      // NOTE : This occurs on the front end while the "routing" occurs on the backend (sans actual redirecting as it is impossible with AJAX) -- instead, AJAX captures the 'rendered' data here
+      posting.done(function(data) {
+        // TODO: handle response
+        console.log(data);
+        
+        // NOTE : Added to update the newly added postResult div
+        var post = data;
+        $("#postTitle").text(post["title"]);
+        $("#postBody").text(post["description"]);
+      });
+    });
+  });
+</script>
