@@ -19,7 +19,9 @@ class PostsController < ApplicationController
 
   def create
     @post = Post.create(post_params)
-    redirect_to post_path(@post)
+    # 200 means 'ok'; 201 means 'ok, resource created'
+    render json: @post, status: 201
+    # redirect_to post_path(@post)
   end
 
   def edit
