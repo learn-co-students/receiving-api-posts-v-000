@@ -22,16 +22,19 @@ $(function(){
   $("form").submit(function(event){
     //prevent default form submission
     event.preventDefault();
-
+    //serialize form data
     let values = $(this).serialize();
-
+    //send post request
     let posting = $.post('/posts', values);
-
+    //handle response data when post request finishes
     posting.done(function(data){
+      //insert the data into the placeholders
       $("#postTitle").text(data["title"]);
       $("#postBody").text(data["description"]);
+      //clear the form values
       $("#post_title").val("");
       $("#post_description").val("");
+      //return focus on title input field
       $("#post_title").focus();
     });
   });
