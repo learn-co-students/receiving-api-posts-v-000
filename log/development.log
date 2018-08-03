@@ -6732,3 +6732,169 @@ Processing by PostsController#show as */*
   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", "14"]]
   Rendered posts/show.html.erb within layouts/application (0.3ms)
 Completed 200 OK in 27ms (Views: 22.9ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/" for 76.245.251.194 at 2018-08-03 01:31:43 +0000
+Cannot render console from 76.245.251.194! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/railties-4.2.5/lib/rails/templates/rails/welcome/index.html.erb (2.9ms)
+Completed 200 OK in 32ms (Views: 20.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 76.245.251.194 at 2018-08-03 01:31:44 +0000
+Cannot render console from 76.245.251.194! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Rails::WelcomeController#index as HTML
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/railties-4.2.5/lib/rails/templates/rails/welcome/index.html.erb (0.1ms)
+Completed 200 OK in 2ms (Views: 1.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/posts/new" for 76.245.251.194 at 2018-08-03 01:31:49 +0000
+Cannot render console from 76.245.251.194! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#new as HTML
+  Rendered posts/new.html.erb within layouts/application (34.1ms)
+Completed 200 OK in 577ms (Views: 563.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/jquery.self-c64a74367bda6ef8b860f19e74df08927ca99d2be2ac934e9e92d5fd361e0da4.js?body=1" for 76.245.251.194 at 2018-08-03 01:31:50 +0000
+Cannot render console from 76.245.251.194! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 76.245.251.194 at 2018-08-03 01:31:50 +0000
+Cannot render console from 76.245.251.194! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" for 76.245.251.194 at 2018-08-03 01:31:50 +0000
+Cannot render console from 76.245.251.194! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 76.245.251.194 at 2018-08-03 01:31:50 +0000
+Cannot render console from 76.245.251.194! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 76.245.251.194 at 2018-08-03 01:31:50 +0000
+Cannot render console from 76.245.251.194! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/posts/new" for 76.245.251.194 at 2018-08-03 01:33:16 +0000
+Cannot render console from 76.245.251.194! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#new as HTML
+  Rendered posts/new.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 15ms (Views: 14.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery.self-c64a74367bda6ef8b860f19e74df08927ca99d2be2ac934e9e92d5fd361e0da4.js?body=1" for 76.245.251.194 at 2018-08-03 01:33:16 +0000
+Cannot render console from 76.245.251.194! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 76.245.251.194 at 2018-08-03 01:33:16 +0000
+Cannot render console from 76.245.251.194! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 76.245.251.194 at 2018-08-03 01:33:16 +0000
+Cannot render console from 76.245.251.194! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" for 76.245.251.194 at 2018-08-03 01:33:16 +0000
+Cannot render console from 76.245.251.194! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 76.245.251.194 at 2018-08-03 01:33:16 +0000
+Cannot render console from 76.245.251.194! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started POST "/posts" for 76.245.251.194 at 2018-08-03 01:33:31 +0000
+Cannot render console from 76.245.251.194! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#create as */*
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"hGAFfeEoIOeN/lc1bXgJN/ivwi8gJxndrs1gpSREkpS9vxvvUuR9CJ5N38p7YEJRdKk+Ul+/vom98wO4AyWyJA==", "post"=>{"title"=>"Hello", "description"=>"Is it me you're looking for?"}}
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "posts" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Hello"], ["description", "Is it me you're looking for?"], ["created_at", "2018-08-03 01:33:31.940612"], ["updated_at", "2018-08-03 01:33:31.940612"]]
+  [1m[35m (15.4ms)[0m  commit transaction
+Redirected to https://flatiron-work-mrfarmer7771.c9users.io/posts/15
+Completed 302 Found in 27ms (ActiveRecord: 16.3ms)
+
+
+Started GET "/posts/15" for 76.245.251.194 at 2018-08-03 01:33:32 +0000
+Cannot render console from 76.245.251.194! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#show as */*
+  Parameters: {"id"=>"15"}
+  [1m[36mPost Load (0.4ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 15]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", "15"]]
+  Rendered posts/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 81ms (Views: 16.9ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/posts" for 76.245.251.194 at 2018-08-03 01:41:07 +0000
+Cannot render console from 76.245.251.194! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#create as */*
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"hGAFfeEoIOeN/lc1bXgJN/ivwi8gJxndrs1gpSREkpS9vxvvUuR9CJ5N38p7YEJRdKk+Ul+/vom98wO4AyWyJA==", "post"=>{"title"=>"Hello", "description"=>"Is it me you're looking for?"}}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (2.2ms)[0m  INSERT INTO "posts" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["title", "Hello"], ["description", "Is it me you're looking for?"], ["created_at", "2018-08-03 01:41:07.359048"], ["updated_at", "2018-08-03 01:41:07.359048"]]
+  [1m[36m (10.8ms)[0m  [1mcommit transaction[0m
+[active_model_serializers] Rendered PostSerializer with ActiveModelSerializers::Adapter::Attributes (0.35ms)
+Completed 201 Created in 47ms (Views: 22.2ms | ActiveRecord: 14.0ms)
+
+
+Started GET "/posts/new" for 76.245.251.194 at 2018-08-03 01:41:09 +0000
+Cannot render console from 76.245.251.194! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#new as HTML
+  Rendered posts/new.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 21ms (Views: 20.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery.self-c64a74367bda6ef8b860f19e74df08927ca99d2be2ac934e9e92d5fd361e0da4.js?body=1" for 76.245.251.194 at 2018-08-03 01:41:09 +0000
+Cannot render console from 76.245.251.194! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 76.245.251.194 at 2018-08-03 01:41:09 +0000
+Cannot render console from 76.245.251.194! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" for 76.245.251.194 at 2018-08-03 01:41:09 +0000
+Cannot render console from 76.245.251.194! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 76.245.251.194 at 2018-08-03 01:41:09 +0000
+Cannot render console from 76.245.251.194! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 76.245.251.194 at 2018-08-03 01:41:09 +0000
+Cannot render console from 76.245.251.194! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/posts/new" for 76.245.251.194 at 2018-08-03 01:41:34 +0000
+Cannot render console from 76.245.251.194! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#new as HTML
+  Rendered posts/new.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 17ms (Views: 15.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 76.245.251.194 at 2018-08-03 01:41:34 +0000
+Cannot render console from 76.245.251.194! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery.self-c64a74367bda6ef8b860f19e74df08927ca99d2be2ac934e9e92d5fd361e0da4.js?body=1" for 76.245.251.194 at 2018-08-03 01:41:34 +0000
+Cannot render console from 76.245.251.194! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 76.245.251.194 at 2018-08-03 01:41:34 +0000
+Cannot render console from 76.245.251.194! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 76.245.251.194 at 2018-08-03 01:41:34 +0000
+Cannot render console from 76.245.251.194! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" for 76.245.251.194 at 2018-08-03 01:41:34 +0000
+Cannot render console from 76.245.251.194! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started POST "/posts" for 76.245.251.194 at 2018-08-03 01:41:40 +0000
+Cannot render console from 76.245.251.194! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#create as */*
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"JoW8zHkHygRez+zTfmvkKJuVaOKKvR/V2LiRwJnV0VEfWqJeysuX6018ZCxoc69OF5OUn/UluIHLhvLdvrTx4Q==", "post"=>{"title"=>"Blokus", "description"=>"Shmokus"}}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "posts" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Blokus"], ["description", "Shmokus"], ["created_at", "2018-08-03 01:41:40.837044"], ["updated_at", "2018-08-03 01:41:40.837044"]]
+  [1m[35m (8.5ms)[0m  commit transaction
+[active_model_serializers] Rendered PostSerializer with ActiveModelSerializers::Adapter::Attributes (0.27ms)
+Completed 201 Created in 13ms (Views: 1.0ms | ActiveRecord: 9.0ms)
