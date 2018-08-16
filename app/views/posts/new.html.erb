@@ -11,3 +11,27 @@
     <%= f.submit %>
   </div>
 <% end %>
+
+<div id="new_post">
+  <h1 id="postTitle"></h1>
+  <p id="postDescription"></p>
+</div>
+
+<script type="text/javascript">
+  $(function(){
+    $("form").submit(function(e){
+      e.preventDefault()
+      alert("Muahaha nope, no submitting for you!")
+
+      var values = $(this).serialize()
+      var posting = $.post('/posts', values)
+
+      posting.done(function(data){
+        console.log(data)
+        // debugger
+        $("#postTitle").text(data["title"]);
+        $("#postDescription").text(data["description"])
+      })
+    })
+  })
+</script>
