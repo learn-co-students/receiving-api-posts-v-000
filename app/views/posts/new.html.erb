@@ -19,18 +19,15 @@
  
 <script type="text/javascript" charset="utf-8">
   $(function () {
-    $('form').submit(function(event) {
-      //prevent form from submitting the default way
-      event.preventDefault();
- 
-      var values = $(this).serialize();
- 
-      var posting = $.post('/posts', values);
+    $('form').submit(function(event) { //capturing submit event
+      event.preventDefault(); //prevent form from submitting the default way
+      var values = $(this).serialize(); //convert data into JSON
+      var posting = $.post('/posts', values); //capture the values 
  
       posting.done(function(data) {
-        var post = data;
-        $("#postTitle").text(post["title"]);
-        $("#postBody").text(post["description"]);
+        var post = data; //set object data to variable
+        $("#postTitle").text(post["title"]); //object[title] will be injected into postTitle id
+        $("#postBody").text(post["description"]); //object[description] will be injected into postBody id
       });
     });
   });
