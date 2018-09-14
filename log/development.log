@@ -6732,3 +6732,829 @@ Processing by PostsController#show as */*
   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", "14"]]
   Rendered posts/show.html.erb within layouts/application (0.3ms)
 Completed 200 OK in 27ms (Views: 22.9ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/" for 4.30.5.194 at 2018-09-14 21:40:25 +0000
+Cannot render console from 4.30.5.194! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendered /usr/local/rvm/gems/ruby-2.3.1/gems/railties-4.2.10/lib/rails/templates/rails/welcome/index.html.erb (2.7ms)
+Completed 200 OK in 28ms (Views: 15.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/posts/new" for 4.30.5.194 at 2018-09-14 21:40:30 +0000
+Cannot render console from 4.30.5.194! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#new as HTML
+  Rendered posts/new.html.erb within layouts/application (27.9ms)
+Completed 200 OK in 502ms (Views: 486.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 4.30.5.194 at 2018-09-14 21:40:31 +0000
+Cannot render console from 4.30.5.194! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 4.30.5.194 at 2018-09-14 21:40:31 +0000
+Cannot render console from 4.30.5.194! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 4.30.5.194 at 2018-09-14 21:40:31 +0000
+Cannot render console from 4.30.5.194! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/turbolinks.self-569ee74eaa15c1e2019317ff770b8769b1ec033a0f572a485f64c82ddc8f989e.js?body=1" for 4.30.5.194 at 2018-09-14 21:40:31 +0000
+Cannot render console from 4.30.5.194! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 4.30.5.194 at 2018-09-14 21:40:31 +0000
+Cannot render console from 4.30.5.194! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/posts/new" for 4.30.5.194 at 2018-09-14 21:44:51 +0000
+Cannot render console from 4.30.5.194! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#new as HTML
+  Rendered posts/new.html.erb within layouts/application (6.5ms)
+Completed 200 OK in 37ms (Views: 36.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/posts" for 4.30.5.194 at 2018-09-14 21:45:10 +0000
+Cannot render console from 4.30.5.194! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#create as */*
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"KEVmEh3VRsown+cQm+yTDqoJmobs7ZPdkWOBB6R2Em6sOUudi2vj2dPqVR6Xd2buCukuHh4nGkoP2+my5tU2Sw==", "post"=>{"title"=>"Posty Title", "description"=>"Posty Description with more text"}}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "posts" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Posty Title"], ["description", "Posty Description with more text"], ["created_at", "2018-09-14 21:45:10.257947"], ["updated_at", "2018-09-14 21:45:10.257947"]]
+  [1m[35m (2.0ms)[0m  commit transaction
+Redirected to http://165.227.16.205:47984/posts/15
+Completed 200 OK in 7ms (ActiveRecord: 2.5ms)
+
+
+Started GET "/posts/15" for 4.30.5.194 at 2018-09-14 21:45:10 +0000
+Cannot render console from 4.30.5.194! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"15"}
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 15]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", "15"]]
+  Rendered posts/show.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 42ms (Views: 24.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/posts/16.json" for 4.30.5.194 at 2018-09-14 21:45:21 +0000
+Cannot render console from 4.30.5.194! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#show as JSON
+  Parameters: {"id"=>"16"}
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 16]]
+Completed 404 Not Found in 4ms (ActiveRecord: 0.2ms)
+
+ActiveRecord::RecordNotFound (Couldn't find Post with 'id'=16):
+  app/controllers/posts_controller.rb:43:in `set_post'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.1/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (2.4ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.1/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb (0.7ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.1/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.text.erb (0.9ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.1/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.text.erb (39.8ms)
+
+
+Started GET "/posts/15" for 4.30.5.194 at 2018-09-14 21:45:21 +0000
+Cannot render console from 4.30.5.194! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"15"}
+  [1m[35mPost Load (0.2ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 15]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", "15"]]
+  Rendered posts/show.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 16ms (Views: 13.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/posts/16.json" for 4.30.5.194 at 2018-09-14 21:45:21 +0000
+Cannot render console from 4.30.5.194! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#show as JSON
+  Parameters: {"id"=>"16"}
+  [1m[35mPost Load (0.2ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 16]]
+Completed 404 Not Found in 2ms (ActiveRecord: 0.2ms)
+
+ActiveRecord::RecordNotFound (Couldn't find Post with 'id'=16):
+  app/controllers/posts_controller.rb:43:in `set_post'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.1/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (2.4ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.1/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb (0.6ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.1/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.text.erb (0.8ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.1/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.text.erb (36.5ms)
+
+
+Started GET "/posts/15" for 4.30.5.194 at 2018-09-14 21:45:22 +0000
+Cannot render console from 4.30.5.194! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"15"}
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 15]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", "15"]]
+  Rendered posts/show.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 11ms (Views: 10.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/posts/16.json" for 4.30.5.194 at 2018-09-14 21:45:22 +0000
+Cannot render console from 4.30.5.194! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#show as JSON
+  Parameters: {"id"=>"16"}
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 16]]
+Completed 404 Not Found in 3ms (ActiveRecord: 0.1ms)
+
+ActiveRecord::RecordNotFound (Couldn't find Post with 'id'=16):
+  app/controllers/posts_controller.rb:43:in `set_post'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.1/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (2.7ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.1/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb (1.4ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.1/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.text.erb (0.8ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.1/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.text.erb (35.5ms)
+
+
+Started GET "/posts/15" for 4.30.5.194 at 2018-09-14 21:45:22 +0000
+Cannot render console from 4.30.5.194! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"15"}
+  [1m[35mPost Load (0.1ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 15]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", "15"]]
+  Rendered posts/show.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 13ms (Views: 12.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/posts/15" for 4.30.5.194 at 2018-09-14 21:46:54 +0000
+Cannot render console from 4.30.5.194! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"15"}
+  [1m[35mPost Load (0.2ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 15]]
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", "15"]]
+  Rendered posts/show.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 35ms (Views: 30.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/posts/new" for 4.30.5.194 at 2018-09-14 21:46:58 +0000
+Cannot render console from 4.30.5.194! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#new as HTML
+  Rendered posts/new.html.erb within layouts/application (22.9ms)
+Completed 200 OK in 65ms (Views: 55.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/posts" for 4.30.5.194 at 2018-09-14 21:47:05 +0000
+Cannot render console from 4.30.5.194! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#create as */*
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"+mOybbTindDPZlS7BP1bcyhf2HFVK28ge46L6z2f2P9+H5/iIlw4wywT5rUIZq6TiL9s6afh5rflNuNefzz82g==", "post"=>{"title"=>"banana", "description"=>"super tasty fruit"}}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (3.7ms)[0m  [1mINSERT INTO "posts" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "banana"], ["description", "super tasty fruit"], ["created_at", "2018-09-14 21:47:05.810602"], ["updated_at", "2018-09-14 21:47:05.810602"]]
+  [1m[35m (10.6ms)[0m  commit transaction
+Redirected to http://165.227.16.205:47984/posts/16
+Completed 200 OK in 20ms (ActiveRecord: 14.5ms)
+
+
+Started GET "/posts/16" for 4.30.5.194 at 2018-09-14 21:47:06 +0000
+Cannot render console from 4.30.5.194! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"16"}
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 16]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", "16"]]
+  Rendered posts/show.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 19ms (Views: 16.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/posts/16" for 4.30.5.194 at 2018-09-14 21:47:36 +0000
+Cannot render console from 4.30.5.194! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"16"}
+  [1m[35mPost Load (0.2ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 16]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", "16"]]
+  Rendered posts/show.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 410ms (Views: 366.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/posts/new" for 4.30.5.194 at 2018-09-14 21:47:41 +0000
+Cannot render console from 4.30.5.194! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#new as HTML
+  Rendered posts/new.html.erb within layouts/application (69.8ms)
+Completed 200 OK in 89ms (Views: 88.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/posts" for 4.30.5.194 at 2018-09-14 21:48:11 +0000
+Cannot render console from 4.30.5.194! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#create as */*
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"WqIRuZks6wXjRzxdOva0O71+3dIcgIEPc7zabnACd6be3jw2D5JOFgAyjlM2bUHbHZ5pSu5KCJjtBLLbMqFTgw==", "post"=>{"title"=>"post title", "description"=>"post desrptiosngn"}}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "posts" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "post title"], ["description", "post desrptiosngn"], ["created_at", "2018-09-14 21:48:11.734013"], ["updated_at", "2018-09-14 21:48:11.734013"]]
+  [1m[35m (59.6ms)[0m  commit transaction
+Redirected to http://165.227.16.205:47984/posts/17
+Completed 200 OK in 69ms (ActiveRecord: 60.3ms)
+
+
+Started GET "/posts/17" for 4.30.5.194 at 2018-09-14 21:48:11 +0000
+Cannot render console from 4.30.5.194! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"17"}
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 17]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", "17"]]
+  Rendered posts/show.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 57ms (Views: 53.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/posts/17" for 4.30.5.194 at 2018-09-14 21:49:04 +0000
+Cannot render console from 4.30.5.194! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"17"}
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 17]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", "17"]]
+  Rendered posts/show.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 38ms (Views: 35.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/posts/new" for 4.30.5.194 at 2018-09-14 21:49:07 +0000
+Cannot render console from 4.30.5.194! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#new as HTML
+  Rendered posts/new.html.erb within layouts/application (5.2ms)
+Completed 200 OK in 40ms (Views: 38.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/posts" for 4.30.5.194 at 2018-09-14 21:49:10 +0000
+Cannot render console from 4.30.5.194! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#create as */*
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ovgiG0C7pzfoCJPiPKXHEznWGyUkfgMuzpvBC5vJ3BAmhA+U1gUCJAt9IewwPjLzmTavvda0irlQI6m+2Wr4NQ==", "post"=>{"title"=>"ksnbjdv", "description"=>"ksdvln"}}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "posts" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["title", "ksnbjdv"], ["description", "ksdvln"], ["created_at", "2018-09-14 21:49:10.471827"], ["updated_at", "2018-09-14 21:49:10.471827"]]
+  [1m[36m (2.4ms)[0m  [1mcommit transaction[0m
+Redirected to http://165.227.16.205:47984/posts/18
+Completed 200 OK in 29ms (ActiveRecord: 2.8ms)
+
+
+Started GET "/posts/18" for 4.30.5.194 at 2018-09-14 21:49:10 +0000
+Cannot render console from 4.30.5.194! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"18"}
+  [1m[35mPost Load (0.2ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 18]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", "18"]]
+  Rendered posts/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 24ms (Views: 21.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/posts/new" for 4.30.5.194 at 2018-09-14 21:51:04 +0000
+Cannot render console from 4.30.5.194! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#new as HTML
+  Rendered posts/new.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 25ms (Views: 23.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/posts" for 4.30.5.194 at 2018-09-14 21:51:09 +0000
+Cannot render console from 4.30.5.194! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#create as */*
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"JwTWTtowp22eXiB7L3/V0Livu2tGmBDdnP7TA5cU/qOjePvBTI4Cfn0rknUj5CAwGE8P87RSmUoCRru21bfahg==", "post"=>{"title"=>"ladvlnsv", "description"=>"lnsdvlk"}}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "posts" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "ladvlnsv"], ["description", "lnsdvlk"], ["created_at", "2018-09-14 21:51:09.743229"], ["updated_at", "2018-09-14 21:51:09.743229"]]
+  [1m[35m (1.9ms)[0m  commit transaction
+Redirected to http://165.227.16.205:47984/posts/19
+Completed 200 OK in 5ms (ActiveRecord: 2.2ms)
+
+
+Started GET "/posts/19" for 4.30.5.194 at 2018-09-14 21:51:09 +0000
+Cannot render console from 4.30.5.194! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"19"}
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 19]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", "19"]]
+  Rendered posts/show.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 14ms (Views: 12.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/posts/19" for 4.30.5.194 at 2018-09-14 21:53:04 +0000
+Cannot render console from 4.30.5.194! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"19"}
+  [1m[35mPost Load (0.2ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 19]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", "19"]]
+  Rendered posts/show.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 330ms (Views: 296.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/posts/19" for 4.30.5.194 at 2018-09-14 21:53:05 +0000
+Cannot render console from 4.30.5.194! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"19"}
+  [1m[35mPost Load (0.3ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 19]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", "19"]]
+  Rendered posts/show.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 24ms (Views: 19.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/posts/19" for 4.30.5.194 at 2018-09-14 21:53:05 +0000
+Cannot render console from 4.30.5.194! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"19"}
+  [1m[35mPost Load (0.1ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 19]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", "19"]]
+  Rendered posts/show.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 14ms (Views: 12.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/posts/new" for 4.30.5.194 at 2018-09-14 21:53:08 +0000
+Cannot render console from 4.30.5.194! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#new as HTML
+  Rendered posts/new.html.erb within layouts/application (53.2ms)
+Completed 200 OK in 74ms (Views: 72.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/posts" for 4.30.5.194 at 2018-09-14 21:53:12 +0000
+Cannot render console from 4.30.5.194! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#create as */*
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Jcu/LNhuXdWBI8xyb1Zt1cvuj+7brqNHFFD9D1Nrx5Kht5KjTtD4xmJWfnxjzZg1aw47dilkKtCK6JW6Ecjjtw==", "post"=>{"title"=>"kjsdbvjnl", "description"=>"kjsndvn"}}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "posts" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "kjsdbvjnl"], ["description", "kjsndvn"], ["created_at", "2018-09-14 21:53:12.826474"], ["updated_at", "2018-09-14 21:53:12.826474"]]
+  [1m[35m (2.5ms)[0m  commit transaction
+Redirected to http://165.227.16.205:47984/posts/20
+Completed 200 OK in 8ms (ActiveRecord: 3.1ms)
+
+
+Started GET "/posts/20" for 4.30.5.194 at 2018-09-14 21:53:12 +0000
+Cannot render console from 4.30.5.194! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"20"}
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 20]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", "20"]]
+  Rendered posts/show.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 29ms (Views: 27.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/posts/21.json" for 4.30.5.194 at 2018-09-14 21:53:23 +0000
+Cannot render console from 4.30.5.194! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#show as JSON
+  Parameters: {"id"=>"21"}
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 21]]
+Completed 404 Not Found in 2ms (ActiveRecord: 0.1ms)
+
+ActiveRecord::RecordNotFound (Couldn't find Post with 'id'=21):
+  app/controllers/posts_controller.rb:43:in `set_post'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.1/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (2.5ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.1/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb (0.6ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.1/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.text.erb (0.8ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.1/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.text.erb (35.0ms)
+
+
+Started GET "/posts/20" for 4.30.5.194 at 2018-09-14 21:53:23 +0000
+Cannot render console from 4.30.5.194! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"20"}
+  [1m[35mPost Load (0.1ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 20]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", "20"]]
+  Rendered posts/show.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 16ms (Views: 14.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/posts/21.json" for 4.30.5.194 at 2018-09-14 21:53:25 +0000
+Cannot render console from 4.30.5.194! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#show as JSON
+  Parameters: {"id"=>"21"}
+  [1m[35mPost Load (0.1ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 21]]
+Completed 404 Not Found in 1ms (ActiveRecord: 0.1ms)
+
+ActiveRecord::RecordNotFound (Couldn't find Post with 'id'=21):
+  app/controllers/posts_controller.rb:43:in `set_post'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.1/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (2.5ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.1/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb (0.6ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.1/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.text.erb (0.8ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.1/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.text.erb (36.2ms)
+
+
+Started GET "/posts/20" for 4.30.5.194 at 2018-09-14 21:53:25 +0000
+Cannot render console from 4.30.5.194! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"20"}
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 20]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", "20"]]
+  Rendered posts/show.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 11ms (Views: 10.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/posts/10" for 4.30.5.194 at 2018-09-14 21:53:31 +0000
+Cannot render console from 4.30.5.194! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 10]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", "10"]]
+  Rendered posts/show.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 20ms (Views: 18.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/posts/11.json" for 4.30.5.194 at 2018-09-14 21:53:33 +0000
+Cannot render console from 4.30.5.194! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#show as JSON
+  Parameters: {"id"=>"11"}
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 11]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", "11"]]
+[active_model_serializers] Rendered PostSerializer with ActiveModelSerializers::Adapter::Attributes (0.29ms)
+Completed 200 OK in 22ms (Views: 20.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/posts/10" for 4.30.5.194 at 2018-09-14 21:53:33 +0000
+Cannot render console from 4.30.5.194! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 10]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", "10"]]
+  Rendered posts/show.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 15ms (Views: 13.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/posts/11.json" for 4.30.5.194 at 2018-09-14 21:53:34 +0000
+Cannot render console from 4.30.5.194! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#show as JSON
+  Parameters: {"id"=>"11"}
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 11]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", "11"]]
+[active_model_serializers] Rendered PostSerializer with ActiveModelSerializers::Adapter::Attributes (0.26ms)
+Completed 200 OK in 2ms (Views: 0.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/posts/10" for 4.30.5.194 at 2018-09-14 21:53:34 +0000
+Cannot render console from 4.30.5.194! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 10]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", "10"]]
+  Rendered posts/show.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 13ms (Views: 11.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/posts/11.json" for 4.30.5.194 at 2018-09-14 21:53:35 +0000
+Cannot render console from 4.30.5.194! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#show as JSON
+  Parameters: {"id"=>"11"}
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 11]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", "11"]]
+[active_model_serializers] Rendered PostSerializer with ActiveModelSerializers::Adapter::Attributes (0.18ms)
+Completed 200 OK in 11ms (Views: 0.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/posts/10" for 4.30.5.194 at 2018-09-14 21:53:35 +0000
+Cannot render console from 4.30.5.194! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 10]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", "10"]]
+  Rendered posts/show.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 15ms (Views: 14.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/posts/10" for 4.30.5.194 at 2018-09-14 21:54:25 +0000
+Cannot render console from 4.30.5.194! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[35mPost Load (0.2ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 10]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", "10"]]
+  Rendered posts/show.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 317ms (Views: 284.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/posts/11.json" for 4.30.5.194 at 2018-09-14 21:54:28 +0000
+Cannot render console from 4.30.5.194! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#show as JSON
+  Parameters: {"id"=>"11"}
+  [1m[35mPost Load (0.1ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 11]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", "11"]]
+[active_model_serializers] Rendered PostSerializer with ActiveModelSerializers::Adapter::Attributes (0.38ms)
+Completed 200 OK in 26ms (Views: 24.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/posts/10" for 4.30.5.194 at 2018-09-14 21:54:28 +0000
+Cannot render console from 4.30.5.194! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[35mPost Load (0.2ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 10]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", "10"]]
+  Rendered posts/show.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 16ms (Views: 14.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/posts/11.json" for 4.30.5.194 at 2018-09-14 21:54:28 +0000
+Cannot render console from 4.30.5.194! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#show as JSON
+  Parameters: {"id"=>"11"}
+  [1m[35mPost Load (0.1ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 11]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", "11"]]
+[active_model_serializers] Rendered PostSerializer with ActiveModelSerializers::Adapter::Attributes (0.19ms)
+Completed 200 OK in 2ms (Views: 0.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/posts/10" for 4.30.5.194 at 2018-09-14 21:54:28 +0000
+Cannot render console from 4.30.5.194! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[35mPost Load (0.1ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 10]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", "10"]]
+  Rendered posts/show.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 31ms (Views: 28.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/posts/new" for 4.30.5.194 at 2018-09-14 21:54:31 +0000
+Cannot render console from 4.30.5.194! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#new as HTML
+  Rendered posts/new.html.erb within layouts/application (44.6ms)
+Completed 200 OK in 81ms (Views: 79.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/posts" for 4.30.5.194 at 2018-09-14 21:54:35 +0000
+Cannot render console from 4.30.5.194! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#create as */*
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"usqT3tU230jQNXyCPGIu3WjYnl/2b4dVERcoZj07bDQ+tr5RQ4h6WzNAzoww+ds9yDgqxwSlDsKPr0DTf5hIEQ==", "post"=>{"title"=>"lsndglkn", "description"=>"sldnvblkn"}}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "posts" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "lsndglkn"], ["description", "sldnvblkn"], ["created_at", "2018-09-14 21:54:35.229357"], ["updated_at", "2018-09-14 21:54:35.229357"]]
+  [1m[35m (2.2ms)[0m  commit transaction
+Redirected to http://165.227.16.205:47984/posts/21
+Completed 200 OK in 71ms (ActiveRecord: 2.6ms)
+
+
+Started GET "/posts/21" for 4.30.5.194 at 2018-09-14 21:54:35 +0000
+Cannot render console from 4.30.5.194! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"21"}
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 21]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", "21"]]
+  Rendered posts/show.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 18ms (Views: 16.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/posts/21" for 4.30.5.194 at 2018-09-14 21:55:15 +0000
+Cannot render console from 4.30.5.194! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"21"}
+  [1m[35mPost Load (0.3ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 21]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", "21"]]
+  Rendered posts/show.html.erb within layouts/application (2.7ms)
+Completed 500 Internal Server Error in 277ms (ActiveRecord: 0.7ms)
+
+ActionView::Template::Error (couldn't find file 'turbolinks' with type 'application/javascript'
+Checked in these paths: 
+  /home/jedpeek/receiving-api-posts-v-000/app/assets/images
+  /home/jedpeek/receiving-api-posts-v-000/app/assets/javascripts
+  /home/jedpeek/receiving-api-posts-v-000/app/assets/stylesheets
+  /home/jedpeek/receiving-api-posts-v-000/vendor/assets/javascripts
+  /home/jedpeek/receiving-api-posts-v-000/vendor/assets/stylesheets
+  /usr/local/rvm/gems/ruby-2.3.1/gems/jquery-rails-4.3.3/vendor/assets/javascripts
+  /usr/local/rvm/gems/ruby-2.3.1/gems/coffee-rails-4.1.1/lib/assets/javascripts):
+    2: <html>
+    3: <head>
+    4:   <title>BlogFlash</title>
+    5:   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => false %>
+    6:   <%= javascript_include_tag 'application', 'data-turbolinks-track' => false %>
+    7:   <%= csrf_meta_tags %>
+    8: </head>
+  app/assets/javascripts/application.js:15
+  app/views/layouts/application.html.erb:5:in `_app_views_layouts_application_html_erb__1145542964016075986_37758900'
+  app/controllers/posts_controller.rb:11:in `block (2 levels) in show'
+  app/controllers/posts_controller.rb:10:in `show'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.1/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (12.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.1/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (5.8ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.1/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (12.9ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.1/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (78.8ms)
+
+
+Started GET "/posts/new" for 4.30.5.194 at 2018-09-14 21:55:20 +0000
+Cannot render console from 4.30.5.194! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#new as HTML
+  Rendered posts/new.html.erb within layouts/application (28.6ms)
+Completed 500 Internal Server Error in 40ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (couldn't find file 'turbolinks' with type 'application/javascript'
+Checked in these paths: 
+  /home/jedpeek/receiving-api-posts-v-000/app/assets/images
+  /home/jedpeek/receiving-api-posts-v-000/app/assets/javascripts
+  /home/jedpeek/receiving-api-posts-v-000/app/assets/stylesheets
+  /home/jedpeek/receiving-api-posts-v-000/vendor/assets/javascripts
+  /home/jedpeek/receiving-api-posts-v-000/vendor/assets/stylesheets
+  /usr/local/rvm/gems/ruby-2.3.1/gems/jquery-rails-4.3.3/vendor/assets/javascripts
+  /usr/local/rvm/gems/ruby-2.3.1/gems/coffee-rails-4.1.1/lib/assets/javascripts):
+    2: <html>
+    3: <head>
+    4:   <title>BlogFlash</title>
+    5:   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => false %>
+    6:   <%= javascript_include_tag 'application', 'data-turbolinks-track' => false %>
+    7:   <%= csrf_meta_tags %>
+    8: </head>
+  app/assets/javascripts/application.js:15
+  app/views/layouts/application.html.erb:5:in `_app_views_layouts_application_html_erb__1145542964016075986_37758900'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.1/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (9.8ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.1/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.1/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.1/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (48.1ms)
+
+
+Started GET "/posts/new" for 4.30.5.194 at 2018-09-14 21:55:21 +0000
+Cannot render console from 4.30.5.194! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#new as HTML
+  Rendered posts/new.html.erb within layouts/application (2.1ms)
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (couldn't find file 'turbolinks' with type 'application/javascript'
+Checked in these paths: 
+  /home/jedpeek/receiving-api-posts-v-000/app/assets/images
+  /home/jedpeek/receiving-api-posts-v-000/app/assets/javascripts
+  /home/jedpeek/receiving-api-posts-v-000/app/assets/stylesheets
+  /home/jedpeek/receiving-api-posts-v-000/vendor/assets/javascripts
+  /home/jedpeek/receiving-api-posts-v-000/vendor/assets/stylesheets
+  /usr/local/rvm/gems/ruby-2.3.1/gems/jquery-rails-4.3.3/vendor/assets/javascripts
+  /usr/local/rvm/gems/ruby-2.3.1/gems/coffee-rails-4.1.1/lib/assets/javascripts):
+    2: <html>
+    3: <head>
+    4:   <title>BlogFlash</title>
+    5:   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => false %>
+    6:   <%= javascript_include_tag 'application', 'data-turbolinks-track' => false %>
+    7:   <%= csrf_meta_tags %>
+    8: </head>
+  app/assets/javascripts/application.js:15
+  app/views/layouts/application.html.erb:5:in `_app_views_layouts_application_html_erb__1145542964016075986_37758900'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.1/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (7.5ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.1/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.4ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.1/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.1/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (46.5ms)
+
+
+Started GET "/posts/new" for 4.30.5.194 at 2018-09-14 21:55:41 +0000
+Cannot render console from 4.30.5.194! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#new as HTML
+  Rendered posts/new.html.erb within layouts/application (2.4ms)
+Completed 500 Internal Server Error in 22ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (couldn't find file 'turbolinks' with type 'application/javascript'
+Checked in these paths: 
+  /home/jedpeek/receiving-api-posts-v-000/app/assets/images
+  /home/jedpeek/receiving-api-posts-v-000/app/assets/javascripts
+  /home/jedpeek/receiving-api-posts-v-000/app/assets/stylesheets
+  /home/jedpeek/receiving-api-posts-v-000/vendor/assets/javascripts
+  /home/jedpeek/receiving-api-posts-v-000/vendor/assets/stylesheets
+  /usr/local/rvm/gems/ruby-2.3.1/gems/jquery-rails-4.3.3/vendor/assets/javascripts
+  /usr/local/rvm/gems/ruby-2.3.1/gems/coffee-rails-4.1.1/lib/assets/javascripts):
+    2: <html>
+    3: <head>
+    4:   <title>BlogFlash</title>
+    5:   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => false %>
+    6:   <%= javascript_include_tag 'application', 'data-turbolinks-track' => false %>
+    7:   <%= csrf_meta_tags %>
+    8: </head>
+  app/assets/javascripts/application.js:15
+  app/views/layouts/application.html.erb:5:in `_app_views_layouts_application_html_erb__1145542964016075986_37758900'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.1/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (8.9ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.1/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.4ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.1/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.1/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (50.0ms)
+
+
+Started GET "/posts/new" for 4.30.5.194 at 2018-09-14 21:55:42 +0000
+Cannot render console from 4.30.5.194! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#new as HTML
+  Rendered posts/new.html.erb within layouts/application (1.8ms)
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (couldn't find file 'turbolinks' with type 'application/javascript'
+Checked in these paths: 
+  /home/jedpeek/receiving-api-posts-v-000/app/assets/images
+  /home/jedpeek/receiving-api-posts-v-000/app/assets/javascripts
+  /home/jedpeek/receiving-api-posts-v-000/app/assets/stylesheets
+  /home/jedpeek/receiving-api-posts-v-000/vendor/assets/javascripts
+  /home/jedpeek/receiving-api-posts-v-000/vendor/assets/stylesheets
+  /usr/local/rvm/gems/ruby-2.3.1/gems/jquery-rails-4.3.3/vendor/assets/javascripts
+  /usr/local/rvm/gems/ruby-2.3.1/gems/coffee-rails-4.1.1/lib/assets/javascripts):
+    2: <html>
+    3: <head>
+    4:   <title>BlogFlash</title>
+    5:   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => false %>
+    6:   <%= javascript_include_tag 'application', 'data-turbolinks-track' => false %>
+    7:   <%= csrf_meta_tags %>
+    8: </head>
+  app/assets/javascripts/application.js:15
+  app/views/layouts/application.html.erb:5:in `_app_views_layouts_application_html_erb__1145542964016075986_37758900'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.1/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (8.7ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.1/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.4ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.1/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.1/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (47.9ms)
+
+
+Started GET "/posts/new" for 4.30.5.194 at 2018-09-14 21:55:53 +0000
+Cannot render console from 4.30.5.194! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PostsController#new as HTML
+  Rendered posts/new.html.erb within layouts/application (37.1ms)
+Completed 500 Internal Server Error in 274ms (ActiveRecord: 0.4ms)
+
+ActionView::Template::Error (couldn't find file 'turbolinks' with type 'application/javascript'
+Checked in these paths: 
+  /home/jedpeek/receiving-api-posts-v-000/app/assets/images
+  /home/jedpeek/receiving-api-posts-v-000/app/assets/javascripts
+  /home/jedpeek/receiving-api-posts-v-000/app/assets/stylesheets
+  /home/jedpeek/receiving-api-posts-v-000/vendor/assets/javascripts
+  /home/jedpeek/receiving-api-posts-v-000/vendor/assets/stylesheets
+  /usr/local/rvm/gems/ruby-2.3.1/gems/jquery-rails-4.3.3/vendor/assets/javascripts
+  /usr/local/rvm/gems/ruby-2.3.1/gems/coffee-rails-4.1.1/lib/assets/javascripts):
+    2: <html>
+    3: <head>
+    4:   <title>BlogFlash</title>
+    5:   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => false %>
+    6:   <%= javascript_include_tag 'application', 'data-turbolinks-track' => false %>
+    7:   <%= csrf_meta_tags %>
+    8: </head>
+  app/assets/javascripts/application.js:15
+  app/views/layouts/application.html.erb:5:in `_app_views_layouts_application_html_erb__3100690040314043776_33620940'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.1/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (9.8ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.1/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.7ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.1/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.1/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (59.3ms)
+
+
+Started GET "/posts/new" for 4.30.5.194 at 2018-09-14 21:56:08 +0000
+Cannot render console from 4.30.5.194! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#new as HTML
+  Rendered posts/new.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 183ms (Views: 182.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-377610cd7c1509e934744c810e3b4cf672dfbcacac3274e7d039827e2ae0fcc7.js?body=1" for 4.30.5.194 at 2018-09-14 21:56:09 +0000
+Cannot render console from 4.30.5.194! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started POST "/posts" for 4.30.5.194 at 2018-09-14 21:56:13 +0000
+Cannot render console from 4.30.5.194! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#create as */*
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"UKW8KTFqK5Uffgohwen5zqTuhFTthzBzC/9tykFI+SbU2ZGmp9SOhvwLuC/NcgwuBA4wzB9NueSVRwV/A+vdAw==", "post"=>{"title"=>"sdgln", "description"=>"lnjsdglknsdvl"}}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "posts" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "sdgln"], ["description", "lnjsdglknsdvl"], ["created_at", "2018-09-14 21:56:13.275777"], ["updated_at", "2018-09-14 21:56:13.275777"]]
+  [1m[35m (4.6ms)[0m  commit transaction
+Redirected to http://165.227.16.205:47984/posts/22
+Completed 302 Found in 24ms (ActiveRecord: 5.1ms)
+
+
+Started GET "/posts/22" for 4.30.5.194 at 2018-09-14 21:56:13 +0000
+Cannot render console from 4.30.5.194! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#show as */*
+  Parameters: {"id"=>"22"}
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 22]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", "22"]]
+  Rendered posts/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 32ms (Views: 14.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/posts/new" for 4.30.5.194 at 2018-09-14 21:56:46 +0000
+Cannot render console from 4.30.5.194! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#new as HTML
+  Rendered posts/new.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 18ms (Views: 17.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/posts" for 4.30.5.194 at 2018-09-14 21:56:49 +0000
+Cannot render console from 4.30.5.194! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#create as */*
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"sQ/HqnZ8AH00NOLOp7in3qdrjw5msHrMCzWdQl337pM1c+ol4MKlbtdBUMCrI1I+B4s7lpR681uVjfX3H1TKtg==", "post"=>{"title"=>"lsndgksg", "description"=>"jnsdgvlsdvlkn"}}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "posts" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["title", "lsndgksg"], ["description", "jnsdgvlsdvlkn"], ["created_at", "2018-09-14 21:56:49.477286"], ["updated_at", "2018-09-14 21:56:49.477286"]]
+  [1m[36m (4.9ms)[0m  [1mcommit transaction[0m
+Redirected to http://165.227.16.205:47984/posts/23
+Completed 302 Found in 10ms (ActiveRecord: 5.2ms)
+
+
+Started GET "/posts/23" for 4.30.5.194 at 2018-09-14 21:56:49 +0000
+Cannot render console from 4.30.5.194! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#show as */*
+  Parameters: {"id"=>"23"}
+  [1m[35mPost Load (0.1ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 23]]
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", "23"]]
+  Rendered posts/show.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 20ms (Views: 18.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/posts/new" for 4.30.5.194 at 2018-09-14 22:04:13 +0000
+Cannot render console from 4.30.5.194! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#new as HTML
+  Rendered posts/new.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 33ms (Views: 24.7ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/posts" for 4.30.5.194 at 2018-09-14 22:04:17 +0000
+Cannot render console from 4.30.5.194! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#create as */*
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Kz/mqLpCPYtAHRlo2M/wL5VyaBIiHJyFwUYX+6CCXtyvQ8snLPyYmKNoq2bUVAXPNZLcitDWFRJf/n9O4iF6+Q==", "post"=>{"title"=>"ksbjdvk", "description"=>"ks dv "}}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "posts" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "ksbjdvk"], ["description", "ks dv "], ["created_at", "2018-09-14 22:04:17.872528"], ["updated_at", "2018-09-14 22:04:17.872528"]]
+  [1m[35m (2.4ms)[0m  commit transaction
+[active_model_serializers] Rendered PostSerializer with ActiveModelSerializers::Adapter::Attributes (0.35ms)
+Completed 201 Created in 48ms (Views: 22.4ms | ActiveRecord: 2.8ms)
