@@ -6981,3 +6981,22 @@ Processing by PostsController#show as HTML
   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", "20"]]
   Rendered posts/show.html.erb within layouts/application (0.1ms)
 Completed 200 OK in 19ms (Views: 16.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/posts/new" for 98.155.218.104 at 2018-09-23 00:31:06 +0000
+Cannot render console from 98.155.218.104! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PostsController#new as HTML
+  Rendered posts/new.html.erb within layouts/application (30.3ms)
+Completed 200 OK in 346ms (Views: 314.4ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/posts" for 98.155.218.104 at 2018-09-23 00:31:18 +0000
+Cannot render console from 98.155.218.104! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#create as */*
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Lx0UuXyLlO9Vq5Xjmu2GmCMy8Xs4TWmweSYjfazduNQHQDUXtkTWnMliDi8LoW7dJe/a9pskqC/Ql3SCTuBuWQ==", "post"=>{"title"=>"test ajax", "description"=>"update screen"}}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "posts" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "test ajax"], ["description", "update screen"], ["created_at", "2018-09-23 00:31:18.351388"], ["updated_at", "2018-09-23 00:31:18.351388"]]
+  [1m[35m (2.5ms)[0m  commit transaction
+[active_model_serializers] Rendered PostSerializer with ActiveModelSerializers::Adapter::Attributes (0.31ms)
+Completed 201 Created in 68ms (Views: 61.3ms | ActiveRecord: 3.2ms)
