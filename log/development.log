@@ -6732,3 +6732,338 @@ Processing by PostsController#show as */*
   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", "14"]]
   Rendered posts/show.html.erb within layouts/application (0.3ms)
 Completed 200 OK in 27ms (Views: 22.9ms | ActiveRecord: 1.1ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mPost Load (0.3ms)[0m  SELECT "posts".* FROM "posts"
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  DELETE FROM "posts" WHERE "posts"."id" = ?  [["id", 1]]
+  [1m[36m (2.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mDELETE FROM "posts" WHERE "posts"."id" = ?[0m  [["id", 2]]
+  [1m[35m (2.4ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM "posts" WHERE "posts"."id" = ?  [["id", 3]]
+  [1m[36m (2.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "posts" WHERE "posts"."id" = ?[0m  [["id", 4]]
+  [1m[35m (2.2ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  DELETE FROM "posts" WHERE "posts"."id" = ?  [["id", 5]]
+  [1m[36m (2.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "posts" WHERE "posts"."id" = ?[0m  [["id", 6]]
+  [1m[35m (2.9ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM "posts" WHERE "posts"."id" = ?  [["id", 7]]
+  [1m[36m (2.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mDELETE FROM "posts" WHERE "posts"."id" = ?[0m  [["id", 8]]
+  [1m[35m (2.3ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  DELETE FROM "posts" WHERE "posts"."id" = ?  [["id", 9]]
+  [1m[36m (2.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "posts" WHERE "posts"."id" = ?[0m  [["id", 10]]
+  [1m[35m (2.2ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  DELETE FROM "posts" WHERE "posts"."id" = ?  [["id", 11]]
+  [1m[36m (2.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "posts" WHERE "posts"."id" = ?[0m  [["id", 12]]
+  [1m[35m (2.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM "posts" WHERE "posts"."id" = ?  [["id", 13]]
+  [1m[36m (2.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mDELETE FROM "posts" WHERE "posts"."id" = ?[0m  [["id", 14]]
+  [1m[35m (2.1ms)[0m  commit transaction
+  [1m[36mAuthor Load (0.3ms)[0m  [1mSELECT "authors".* FROM "authors"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mDELETE FROM "authors" WHERE "authors"."id" = ?[0m  [["id", 1]]
+  [1m[35m (2.7ms)[0m  commit transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  DELETE FROM "authors" WHERE "authors"."id" = ?  [["id", 2]]
+  [1m[36m (2.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mDELETE FROM "authors" WHERE "authors"."id" = ?[0m  [["id", 3]]
+  [1m[35m (2.5ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "authors" ("name", "created_at", "updated_at") VALUES (?, ?, ?)  [["name", "Stephen King"], ["created_at", "2018-10-04 21:10:53.959923"], ["updated_at", "2018-10-04 21:10:53.959923"]]
+  [1m[36m (2.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "authors" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Ariana Huffington"], ["created_at", "2018-10-04 21:10:53.966584"], ["updated_at", "2018-10-04 21:10:53.966584"]]
+  [1m[35m (2.3ms)[0m  commit transaction
+  [1m[36m (0.5ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "authors" ("name", "created_at", "updated_at") VALUES (?, ?, ?)  [["name", "Horse Ebooks"], ["created_at", "2018-10-04 21:10:53.971667"], ["updated_at", "2018-10-04 21:10:53.971667"]]
+  [1m[36m (2.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "posts" ("title", "description", "author_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "A Blog Post By Stephen King"], ["description", "This is a blog post by Stephen King. It will probably be a movie soon."], ["author_id", 4], ["created_at", "2018-10-04 21:10:53.990267"], ["updated_at", "2018-10-04 21:10:53.990267"]]
+  [1m[35m (2.4ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "posts" ("title", "description", "author_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["title", "I'm doing Great"], ["description", "I founded an empire but I can still blog on this lesson for funzies."], ["author_id", 5], ["created_at", "2018-10-04 21:10:53.996479"], ["updated_at", "2018-10-04 21:10:53.996479"]]
+  [1m[36m (2.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "posts" ("title", "description", "author_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "Links Click Links"], ["description", "Last night I dreamt we simply need to realize to be so competitive."], ["author_id", 6], ["created_at", "2018-10-04 21:10:54.001842"], ["updated_at", "2018-10-04 21:10:54.001842"]]
+  [1m[35m (2.1ms)[0m  commit transaction
+
+
+Started GET "/" for 8.47.97.101 at 2018-10-04 21:11:13 +0000
+Cannot render console from 8.47.97.101! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendered /usr/local/rvm/gems/ruby-2.3.1/gems/railties-4.2.10/lib/rails/templates/rails/welcome/index.html.erb (3.8ms)
+Completed 200 OK in 38ms (Views: 21.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/posts/new" for 8.47.97.101 at 2018-10-04 21:11:19 +0000
+Cannot render console from 8.47.97.101! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#new as HTML
+  Rendered posts/new.html.erb within layouts/application (33.0ms)
+Completed 200 OK in 581ms (Views: 564.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 8.47.97.101 at 2018-10-04 21:11:20 +0000
+Cannot render console from 8.47.97.101! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 8.47.97.101 at 2018-10-04 21:11:20 +0000
+Cannot render console from 8.47.97.101! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 8.47.97.101 at 2018-10-04 21:11:20 +0000
+Cannot render console from 8.47.97.101! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/turbolinks.self-569ee74eaa15c1e2019317ff770b8769b1ec033a0f572a485f64c82ddc8f989e.js?body=1" for 8.47.97.101 at 2018-10-04 21:11:20 +0000
+Cannot render console from 8.47.97.101! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 8.47.97.101 at 2018-10-04 21:11:20 +0000
+Cannot render console from 8.47.97.101! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/posts/new" for 8.47.97.101 at 2018-10-04 21:17:21 +0000
+Cannot render console from 8.47.97.101! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#new as HTML
+  Rendered posts/new.html.erb within layouts/application (65.4ms)
+Completed 200 OK in 101ms (Views: 99.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/posts/new" for 8.47.97.101 at 2018-10-04 21:17:53 +0000
+Cannot render console from 8.47.97.101! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#new as HTML
+  Rendered posts/new.html.erb within layouts/application (5.7ms)
+Completed 200 OK in 38ms (Views: 36.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/posts" for 8.47.97.101 at 2018-10-04 21:17:58 +0000
+Cannot render console from 8.47.97.101! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#create as */*
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"CM2wLIkCYeblno7FTnVEZ1lIUCLrvlVv5C9trNqUxL8w2ZhaVBnGOvWGKtw1Ni6imwSMoZLJy10JZKjGQSXt2Q==", "post"=>{"title"=>"A new Post", "description"=>"malicious description -added"}}
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "posts" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "A new Post"], ["description", "malicious description -added"], ["created_at", "2018-10-04 21:17:58.909388"], ["updated_at", "2018-10-04 21:17:58.909388"]]
+  [1m[35m (2.9ms)[0m  commit transaction
+Redirected to http://67.205.130.239:54349/posts/18
+Completed 200 OK in 14ms (ActiveRecord: 3.7ms)
+
+
+Started GET "/posts/18" for 8.47.97.101 at 2018-10-04 21:17:59 +0000
+Cannot render console from 8.47.97.101! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"18"}
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 18]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", "18"]]
+  Rendered posts/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 38ms (Views: 17.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/posts/18" for 8.47.97.101 at 2018-10-04 21:19:13 +0000
+Cannot render console from 8.47.97.101! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"18"}
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 18]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", "18"]]
+  Rendered posts/show.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 84ms (Views: 82.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.self-377610cd7c1509e934744c810e3b4cf672dfbcacac3274e7d039827e2ae0fcc7.js?body=1" for 8.47.97.101 at 2018-10-04 21:19:13 +0000
+Cannot render console from 8.47.97.101! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/posts/new" for 8.47.97.101 at 2018-10-04 21:19:19 +0000
+Cannot render console from 8.47.97.101! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#new as HTML
+  Rendered posts/new.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 16ms (Views: 14.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/posts" for 8.47.97.101 at 2018-10-04 21:19:24 +0000
+Cannot render console from 8.47.97.101! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#create as */*
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"JAYmmQJvCOKboz5xThRsDsj8eHZwijGBDZChERsl9G4cEg7v33SvPou7mmg1VwbLCrCk9Qn9r7Pg22R7gJTdCA==", "post"=>{"title"=>"Post Title - New Post", "description"=>"  Last night I blah dreamt there is more to life than to bully friends.  What has that got to do with Democrats, you probably wonder...  The answer is here. Right here. Back in school my hair was silly.  Nevermind about the details, but... In a nut-shell: And still,  it was strange. Using Google, I found a 12-sided dice.  Which would be nothing special but..."}}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "posts" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["title", "Post Title - New Post"], ["description", "  Last night I blah dreamt there is more to life than to bully friends.  What has that got to do with Democrats, you probably wonder...  The answer is here. Right here. Back in school my hair was silly.  Nevermind about the details, but... In a nut-shell: And still,  it was strange. Using Google, I found a 12-sided dice.  Which would be nothing special but..."], ["created_at", "2018-10-04 21:19:24.664416"], ["updated_at", "2018-10-04 21:19:24.664416"]]
+  [1m[36m (34.5ms)[0m  [1mcommit transaction[0m
+Redirected to http://67.205.130.239:54349/posts/19
+Completed 200 OK in 42ms (ActiveRecord: 34.9ms)
+
+
+Started GET "/posts/new" for 8.47.97.101 at 2018-10-04 21:20:43 +0000
+Cannot render console from 8.47.97.101! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#new as HTML
+  Rendered posts/new.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 29ms (Views: 28.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/posts" for 8.47.97.101 at 2018-10-04 21:20:49 +0000
+Cannot render console from 8.47.97.101! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#create as */*
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"iPOx2qg3P2cn4XgVQNbjpooMV2+Vg2gAwcDR1LiBNqmw55msdSyYuzf53Aw7lYljSECL7Oz09jIsixS+IzAfzw==", "post"=>{"title"=>"Why can I only change the title", "description"=>"Testing AJAX"}}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "posts" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Why can I only change the title"], ["description", "Testing AJAX"], ["created_at", "2018-10-04 21:20:49.046295"], ["updated_at", "2018-10-04 21:20:49.046295"]]
+  [1m[35m (3.0ms)[0m  commit transaction
+Redirected to http://67.205.130.239:54349/posts/20
+Completed 200 OK in 57ms (ActiveRecord: 3.6ms)
+
+
+Started POST "/posts" for 8.47.97.101 at 2018-10-04 21:21:03 +0000
+Cannot render console from 8.47.97.101! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#create as */*
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"iPOx2qg3P2cn4XgVQNbjpooMV2+Vg2gAwcDR1LiBNqmw55msdSyYuzf53Aw7lYljSECL7Oz09jIsixS+IzAfzw==", "post"=>{"title"=>"Why can I only change the title", "description"=>"Testing AJAX"}}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "posts" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["title", "Why can I only change the title"], ["description", "Testing AJAX"], ["created_at", "2018-10-04 21:21:03.133325"], ["updated_at", "2018-10-04 21:21:03.133325"]]
+  [1m[36m (2.4ms)[0m  [1mcommit transaction[0m
+Redirected to http://67.205.130.239:54349/posts/21
+Completed 200 OK in 69ms (ActiveRecord: 2.7ms)
+
+
+Started GET "/posts/new" for 8.47.97.101 at 2018-10-04 21:21:21 +0000
+Cannot render console from 8.47.97.101! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#new as HTML
+  Rendered posts/new.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 15ms (Views: 14.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/posts" for 8.47.97.101 at 2018-10-04 21:21:40 +0000
+Cannot render console from 8.47.97.101! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PostsController#create as */*
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Fkt0veMT4Iln4hlEwPsRPRYXD8syS5YjJwVhQ5HasAouX1zLPghHVXf6vV27uHv41FvTSEs8CBHKTqQpCmuZbA==", "post"=>{"title"=>"Rails Introduction Quiz", "description"=>"Testing AJAX"}}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "posts" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Rails Introduction Quiz"], ["description", "Testing AJAX"], ["created_at", "2018-10-04 21:21:40.811206"], ["updated_at", "2018-10-04 21:21:40.811206"]]
+  [1m[35m (3.3ms)[0m  commit transaction
+Redirected to http://67.205.130.239:54349/posts/22
+Completed 200 OK in 41ms (ActiveRecord: 4.3ms)
+
+
+Started GET "/posts/new" for 8.47.97.101 at 2018-10-04 21:22:12 +0000
+Cannot render console from 8.47.97.101! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#new as HTML
+  Rendered posts/new.html.erb within layouts/application (45.7ms)
+Completed 200 OK in 395ms (Views: 394.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/posts" for 8.47.97.101 at 2018-10-04 21:22:16 +0000
+Cannot render console from 8.47.97.101! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#create as */*
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"dbiR4teO4eQpMcSUkpeH6bhKz/LdIuX9kiGcznRvAERNrLmUCpVGODkpYI3p1O0segYTcaRVe89/almk794pIg==", "post"=>{"title"=>"Why can I only change the title", "description"=>"Testing AJAX"}}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "posts" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["title", "Why can I only change the title"], ["description", "Testing AJAX"], ["created_at", "2018-10-04 21:22:16.182938"], ["updated_at", "2018-10-04 21:22:16.182938"]]
+  [1m[36m (16.2ms)[0m  [1mcommit transaction[0m
+Redirected to http://67.205.130.239:54349/posts/23
+Completed 200 OK in 21ms (ActiveRecord: 16.6ms)
+
+
+Started POST "/posts" for 8.47.97.101 at 2018-10-04 21:23:05 +0000
+Cannot render console from 8.47.97.101! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#create as */*
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"dbiR4teO4eQpMcSUkpeH6bhKz/LdIuX9kiGcznRvAERNrLmUCpVGODkpYI3p1O0segYTcaRVe89/almk794pIg==", "post"=>{"title"=>"Why can I only change the title", "description"=>"Testing AJAX"}}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "posts" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Why can I only change the title"], ["description", "Testing AJAX"], ["created_at", "2018-10-04 21:23:05.311198"], ["updated_at", "2018-10-04 21:23:05.311198"]]
+  [1m[35m (4.4ms)[0m  commit transaction
+Redirected to http://67.205.130.239:54349/posts/24
+Completed 200 OK in 12ms (ActiveRecord: 5.1ms)
+
+
+Started GET "/posts/new" for 8.47.97.101 at 2018-10-04 21:23:26 +0000
+Cannot render console from 8.47.97.101! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#new as HTML
+  Rendered posts/new.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 16ms (Views: 14.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/posts" for 8.47.97.101 at 2018-10-04 21:23:31 +0000
+Cannot render console from 8.47.97.101! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#create as */*
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"LwF96CFh+mQ8l7YQBVpNa1//nnYQvM9f79S0kX2BNasXFVWe/HpduCyPEgl+GSeunbNC9WnLUW0Cn3H75jAczQ==", "post"=>{"title"=>"Title", "description"=>"Testing AJAX"}}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "posts" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["title", "Title"], ["description", "Testing AJAX"], ["created_at", "2018-10-04 21:23:31.398212"], ["updated_at", "2018-10-04 21:23:31.398212"]]
+  [1m[36m (2.5ms)[0m  [1mcommit transaction[0m
+Redirected to http://67.205.130.239:54349/posts/25
+Completed 200 OK in 7ms (ActiveRecord: 2.8ms)
+
+
+Started GET "/posts/new" for 8.47.97.101 at 2018-10-04 21:24:05 +0000
+Cannot render console from 8.47.97.101! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#new as HTML
+  Rendered posts/new.html.erb within layouts/application (13.7ms)
+Completed 200 OK in 44ms (Views: 42.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/posts" for 8.47.97.101 at 2018-10-04 21:24:09 +0000
+Cannot render console from 8.47.97.101! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#create as */*
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"CwkzmSpRWuXC7uXJ3BEM9sflyQLAkNjX4EqOTl/2HdszHRvv90r9OdL2QdCnUmYzBakVgbnnRuUNAUskxEc0vQ==", "post"=>{"title"=>"Why can I only change the title", "description"=>"Testing AJAX"}}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "posts" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Why can I only change the title"], ["description", "Testing AJAX"], ["created_at", "2018-10-04 21:24:09.109013"], ["updated_at", "2018-10-04 21:24:09.109013"]]
+  [1m[35m (90.6ms)[0m  commit transaction
+Redirected to http://67.205.130.239:54349/posts/26
+Completed 200 OK in 96ms (ActiveRecord: 91.0ms)
+
+
+Started GET "/posts/26" for 8.47.97.101 at 2018-10-04 21:24:09 +0000
+Cannot render console from 8.47.97.101! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"26"}
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 26]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", "26"]]
+  Rendered posts/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 48ms (Views: 29.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/posts/new" for 8.47.97.101 at 2018-10-04 21:31:26 +0000
+Cannot render console from 8.47.97.101! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#new as HTML
+  Rendered posts/new.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 38ms (Views: 28.2ms | ActiveRecord: 1.1ms)
+
+
+Started POST "/posts" for 8.47.97.101 at 2018-10-04 21:31:29 +0000
+Cannot render console from 8.47.97.101! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#create as */*
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"XM+LEbmB3RU88DLrWguH1s9tI2tR+Br/4QQxnYz848lk26NnZJp6ySzolvIhSO0TDSH/6CiPhM0MT/T3F03Krw==", "post"=>{"title"=>"A new Post", "description"=>""}}
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "posts" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["title", "A new Post"], ["description", ""], ["created_at", "2018-10-04 21:31:29.356014"], ["updated_at", "2018-10-04 21:31:29.356014"]]
+  [1m[36m (42.0ms)[0m  [1mcommit transaction[0m
+[active_model_serializers] Rendered PostSerializer with ActiveModelSerializers::Adapter::Attributes (0.3ms)
+Completed 201 Created in 83ms (Views: 36.1ms | ActiveRecord: 42.6ms)
+
+
+Started GET "/posts/new" for 8.47.97.101 at 2018-10-04 21:33:37 +0000
+Cannot render console from 8.47.97.101! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#new as HTML
+  Rendered posts/new.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 29ms (Views: 27.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/posts" for 8.47.97.101 at 2018-10-04 21:33:41 +0000
+Cannot render console from 8.47.97.101! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#create as */*
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"EVzNvF6rM+MzFwXF5doONcflocoZYJp1x98I3TYxO6cpSOXKg7CUPyMPodyemWTwBal9SWAXBEcqlM23rYASwQ==", "post"=>{"title"=>"Post Title - New Post", "description"=>"malicious description -added"}}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "posts" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Post Title - New Post"], ["description", "malicious description -added"], ["created_at", "2018-10-04 21:33:41.284608"], ["updated_at", "2018-10-04 21:33:41.284608"]]
+  [1m[35m (14.0ms)[0m  commit transaction
+[active_model_serializers] Rendered PostSerializer with ActiveModelSerializers::Adapter::Attributes (0.46ms)
+Completed 201 Created in 19ms (Views: 1.4ms | ActiveRecord: 14.3ms)
