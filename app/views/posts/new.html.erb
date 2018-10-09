@@ -22,7 +22,7 @@
     $('form').submit(function(event) {
       //prevent form from submitting the default way
       event.preventDefault();
-
+      // debugger;
       var values = $(this).serialize();
 
       var posting = $.post('/posts', values);
