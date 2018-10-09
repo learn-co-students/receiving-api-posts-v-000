@@ -6732,3 +6732,26 @@ Processing by PostsController#show as */*
   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", "14"]]
   Rendered posts/show.html.erb within layouts/application (0.3ms)
 Completed 200 OK in 27ms (Views: 22.9ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/" for ::1 at 2018-10-09 08:36:35 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendered /Users/andyemily/.rvm/gems/ruby-2.3.3/gems/railties-4.2.10/lib/rails/templates/rails/welcome/index.html.erb (2.0ms)
+Completed 200 OK in 20ms (Views: 12.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/posts/new" for ::1 at 2018-10-09 08:36:42 -0400
+Processing by PostsController#new as HTML
+  Rendered posts/new.html.erb within layouts/application (18.2ms)
+Completed 200 OK in 317ms (Views: 308.4ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/posts" for ::1 at 2018-10-09 08:36:51 -0400
+Processing by PostsController#create as */*
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ImCakhgOCQb20TyG62vzGtOE0iXzu80bBAqZ7eUq8nX1eux4t2DUULHdk2DwTcJRkfgMLqCoKJqCRUJVknpx2g==", "post"=>{"title"=>"abc", "description"=>"bcd"}}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "posts" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "abc"], ["description", "bcd"], ["created_at", "2018-10-09 12:36:51.174343"], ["updated_at", "2018-10-09 12:36:51.174343"]]
+  [1m[35m (0.9ms)[0m  commit transaction
+[active_model_serializers] Rendered PostSerializer with ActiveModelSerializers::Adapter::Attributes (0.21ms)
+Completed 201 Created in 19ms (Views: 14.6ms | ActiveRecord: 1.5ms)
