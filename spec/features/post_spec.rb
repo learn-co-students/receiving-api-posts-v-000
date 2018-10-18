@@ -13,7 +13,7 @@ describe 'navigate' do
   it 'to post pages' do
     visit post_path(@post)
     expect(page.status_code).to eq(200)
-  end
+  end 
 
   it 'shows the description on the show page in a p tag' do
     visit post_path(@post)
