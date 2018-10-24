@@ -6732,3 +6732,36 @@ Processing by PostsController#show as */*
   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", "14"]]
   Rendered posts/show.html.erb within layouts/application (0.3ms)
 Completed 200 OK in 27ms (Views: 22.9ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/" for ::1 at 2018-10-24 15:31:47 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendered /Users/danielhernandez/.rvm/gems/ruby-2.3.3/gems/railties-4.2.10/lib/rails/templates/rails/welcome/index.html.erb (1.7ms)
+Completed 200 OK in 22ms (Views: 13.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/posts/new" for ::1 at 2018-10-24 15:31:53 -0500
+Processing by PostsController#new as HTML
+  Rendered posts/new.html.erb within layouts/application (21.1ms)
+Completed 200 OK in 399ms (Views: 388.1ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/posts" for ::1 at 2018-10-24 15:31:59 -0500
+Processing by PostsController#create as */*
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"mQ+UqgcdJC1jMu9HG8On9s59ePhJGQr3v6fEr2ynVHl/Ej5yxuOtzN+LlB0BIPLiurtHQDeQ7tZeC5A2k/OWJA==", "post"=>{"title"=>"Hello", "description"=>"jhgkjhg"}}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "posts" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Hello"], ["description", "jhgkjhg"], ["created_at", "2018-10-24 20:31:59.374748"], ["updated_at", "2018-10-24 20:31:59.374748"]]
+  [1m[35m (1.2ms)[0m  commit transaction
+[active_model_serializers] Rendered PostSerializer with ActiveModelSerializers::Adapter::Attributes (0.22ms)
+Completed 201 Created in 17ms (Views: 12.7ms | ActiveRecord: 1.7ms)
+
+
+Started POST "/posts" for ::1 at 2018-10-24 15:32:11 -0500
+Processing by PostsController#create as */*
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"mQ+UqgcdJC1jMu9HG8On9s59ePhJGQr3v6fEr2ynVHl/Ej5yxuOtzN+LlB0BIPLiurtHQDeQ7tZeC5A2k/OWJA==", "post"=>{"title"=>"Goodbye", "description"=>"lj;lj;k"}}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "posts" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["title", "Goodbye"], ["description", "lj;lj;k"], ["created_at", "2018-10-24 20:32:11.754932"], ["updated_at", "2018-10-24 20:32:11.754932"]]
+  [1m[36m (6.5ms)[0m  [1mcommit transaction[0m
+[active_model_serializers] Rendered PostSerializer with ActiveModelSerializers::Adapter::Attributes (0.14ms)
+Completed 201 Created in 10ms (Views: 0.7ms | ActiveRecord: 6.9ms)
