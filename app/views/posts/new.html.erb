@@ -1,3 +1,5 @@
+<h3>Submit a New Post!</h3>
+
 <%= form_for(@post) do |f| %>
   <div class="field">
     <%= f.label :title %><br>
@@ -11,3 +13,24 @@
     <%= f.submit %>
   </div>
 <% end %>
+<br>
+<h2 id="postTitle"></h2>
+<p id="postBody"></p>
+
+<script type="text/javascript" charset="utf-8">
+  $(function () {
+    $('form').submit(function(event) {
+      //prevent form from submitting the default way
+      event.preventDefault();
+      var values = $(this).serialize();
+ 
+      var posting = $.post('/posts', values);
+ 
+      posting.done(function(data) {
+        var post = data;
+        $("#postTitle").text(post["title"]);
+        $("#postBody").text(post["description"]);
+      });
+    });
+  });
+</script>
