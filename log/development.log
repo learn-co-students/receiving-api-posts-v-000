@@ -6732,3 +6732,26 @@ Processing by PostsController#show as */*
   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", "14"]]
   Rendered posts/show.html.erb within layouts/application (0.3ms)
 Completed 200 OK in 27ms (Views: 22.9ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/posts/new" for ::1 at 2018-11-22 23:29:51 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PostsController#new as HTML
+  Rendered posts/new.html.erb within layouts/application (20.2ms)
+Completed 200 OK in 402ms (Views: 383.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/posts/new" for ::1 at 2018-11-22 23:34:40 -0500
+Processing by PostsController#new as HTML
+  Rendered posts/new.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 30ms (Views: 23.4ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/posts" for ::1 at 2018-11-22 23:34:48 -0500
+Processing by PostsController#create as */*
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"9fZI5nCMJZHB//UB8el9Ye2o78P+3Hfg5aMdFDratzQwg9N256spiOaDJqAmg7wiMyIQQnXdhphdiGVIXOQr1Q==", "post"=>{"title"=>"Something about Democrats", "description"=>"  Last night I dreamt there is more to life than to bully friends.  What has that got to do with Democrats, you probably wonder...  The answer is here. Right here. Back in school my hair was silly.  Nevermind about the details, but... In a nut-shell: And still,  it was strange. Using Google, I found a 12-sided dice.  Which would be nothing special but..."}}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (1.4ms)[0m  [1mINSERT INTO "posts" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Something about Democrats"], ["description", "  Last night I dreamt there is more to life than to bully friends.  What has that got to do with Democrats, you probably wonder...  The answer is here. Right here. Back in school my hair was silly.  Nevermind about the details, but... In a nut-shell: And still,  it was strange. Using Google, I found a 12-sided dice.  Which would be nothing special but..."], ["created_at", "2018-11-23 04:34:48.514015"], ["updated_at", "2018-11-23 04:34:48.514015"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+[active_model_serializers] Rendered PostSerializer with ActiveModelSerializers::Adapter::Attributes (0.64ms)
+Completed 201 Created in 30ms (Views: 24.7ms | ActiveRecord: 2.2ms)
