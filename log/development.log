@@ -6732,3 +6732,140 @@ Processing by PostsController#show as */*
   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", "14"]]
   Rendered posts/show.html.erb within layouts/application (0.3ms)
 Completed 200 OK in 27ms (Views: 22.9ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/" for ::1 at 2018-11-23 16:17:30 -0600
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendered /Users/Tom/.rvm/gems/ruby-2.5.1/gems/railties-4.2.10/lib/rails/templates/rails/welcome/index.html.erb (4.0ms)
+Completed 200 OK in 47ms (Views: 34.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/posts/new" for ::1 at 2018-11-23 16:17:40 -0600
+Processing by PostsController#new as HTML
+  Rendered posts/new.html.erb within layouts/application (41.1ms)
+Completed 200 OK in 784ms (Views: 747.0ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/posts/new" for ::1 at 2018-11-23 16:18:29 -0600
+Processing by PostsController#new as HTML
+  Rendered posts/new.html.erb within layouts/application (6.8ms)
+Completed 200 OK in 56ms (Views: 54.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/posts/new" for ::1 at 2018-11-23 16:26:03 -0600
+Processing by PostsController#new as HTML
+  Rendered posts/new.html.erb within layouts/application (15.1ms)
+Completed 200 OK in 82ms (Views: 70.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/posts" for ::1 at 2018-11-23 16:26:11 -0600
+Processing by PostsController#create as */*
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"MaM0vjRKdcznowl7kLlpAgwsIShN5eYADNSNkIZURULbcHtgCIjzZrx7bP2Uvg5WwG1GV3ddbXRNVZm3r4wo6A==", "post"=>{"title"=>"", "description"=>""}}
+  [1m[35m (0.9ms)[0m  begin transaction
+  [1m[36mSQL (1.9ms)[0m  [1mINSERT INTO "posts" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", ""], ["description", ""], ["created_at", "2018-11-23 22:26:11.822988"], ["updated_at", "2018-11-23 22:26:11.822988"]]
+  [1m[35m (4.7ms)[0m  commit transaction
+Redirected to http://localhost:3000/posts/15
+Completed 200 OK in 26ms (ActiveRecord: 7.5ms)
+
+
+Started GET "/posts/15" for ::1 at 2018-11-23 16:26:11 -0600
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"15"}
+  [1m[36mPost Load (0.4ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 15]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", "15"]]
+  Rendered posts/show.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 130ms (Views: 56.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/posts/16.json" for ::1 at 2018-11-23 16:26:31 -0600
+Processing by PostsController#show as JSON
+  Parameters: {"id"=>"16"}
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 16]]
+Completed 404 Not Found in 5ms (ActiveRecord: 0.2ms)
+
+ActiveRecord::RecordNotFound (Couldn't find Post with 'id'=16):
+  app/controllers/posts_controller.rb:43:in `set_post'
+
+
+  Rendered /Users/Tom/.rvm/gems/ruby-2.5.1/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.8ms)
+  Rendered /Users/Tom/.rvm/gems/ruby-2.5.1/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb (1.1ms)
+  Rendered /Users/Tom/.rvm/gems/ruby-2.5.1/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.text.erb (1.1ms)
+  Rendered /Users/Tom/.rvm/gems/ruby-2.5.1/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.text.erb (148.0ms)
+
+
+Started GET "/posts/15" for ::1 at 2018-11-23 16:26:31 -0600
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"15"}
+  [1m[35mPost Load (0.2ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 15]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", "15"]]
+  Rendered posts/show.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 47ms (Views: 43.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/posts/15" for ::1 at 2018-11-23 16:29:00 -0600
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"15"}
+  [1m[35mPost Load (1.2ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 15]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", "15"]]
+  Rendered posts/show.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 91ms (Views: 69.0ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/posts/15" for ::1 at 2018-11-23 16:29:03 -0600
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"15"}
+  [1m[35mPost Load (1.5ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 15]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", "15"]]
+  Rendered posts/show.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 72ms (Views: 66.4ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/posts/new" for ::1 at 2018-11-23 16:29:09 -0600
+Processing by PostsController#new as HTML
+  Rendered posts/new.html.erb within layouts/application (19.2ms)
+Completed 200 OK in 176ms (Views: 174.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/posts" for ::1 at 2018-11-23 16:29:12 -0600
+Processing by PostsController#create as */*
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"5dxdmdmi73AHQngSjsjz9didSr2YHLNeE3sieDgR/7IPDxJH5WBp2lyaHZSKz5ShFNwtwqKkOCpS+jZfEcmSGA==", "post"=>{"title"=>"", "description"=>""}}
+  [1m[35m (0.4ms)[0m  begin transaction
+  [1m[36mSQL (36.5ms)[0m  [1mINSERT INTO "posts" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", ""], ["description", ""], ["created_at", "2018-11-23 22:29:12.262619"], ["updated_at", "2018-11-23 22:29:12.262619"]]
+  [1m[35m (2.6ms)[0m  commit transaction
+Redirected to http://localhost:3000/posts/16
+Completed 200 OK in 47ms (ActiveRecord: 39.5ms)
+
+
+Started GET "/posts/16" for ::1 at 2018-11-23 16:29:12 -0600
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"16"}
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 16]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", "16"]]
+  Rendered posts/show.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 129ms (Views: 119.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/posts/16" for ::1 at 2018-11-23 16:36:07 -0600
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"16"}
+  [1m[36mPost Load (0.4ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 16]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", "16"]]
+  Rendered posts/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 91ms (Views: 56.0ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/posts/new" for ::1 at 2018-11-23 16:36:10 -0600
+Processing by PostsController#new as HTML
+  Rendered posts/new.html.erb within layouts/application (11.6ms)
+Completed 200 OK in 62ms (Views: 60.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/posts" for ::1 at 2018-11-23 16:36:11 -0600
+Processing by PostsController#create as */*
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"G4RTfzFnXmd0lePvpRoQrepAwQdRgFiQ4NxPsZc+8UbxVxyhDaXYzS9NhmmhHXf5JgGmeGs40+ShXVuWvuac7A==", "post"=>{"title"=>"", "description"=>""}}
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "posts" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["title", ""], ["description", ""], ["created_at", "2018-11-23 22:36:11.869910"], ["updated_at", "2018-11-23 22:36:11.869910"]]
+  [1m[36m (3.7ms)[0m  [1mcommit transaction[0m
+[active_model_serializers] Rendered PostSerializer with ActiveModelSerializers::Adapter::Attributes (0.76ms)
+Completed 201 Created in 120ms (Views: 109.2ms | ActiveRecord: 4.4ms)
