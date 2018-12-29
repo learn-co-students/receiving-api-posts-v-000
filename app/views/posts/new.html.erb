@@ -11,3 +11,20 @@
     <%= f.submit %>
   </div>
 <% end %>
+
+<script type="text/javascript" charset="utf-8">
+  $(function () {
+    $('form').submit(function(event) {
+      event.preventDefault();
+      
+      const values = $(this).serialize();
+      const posting = $.post('/posts', values);
+
+      posting.done(function(data) {
+        const post = data;
+        $("#postTitle").text(post["title"]);
+        $("#postBody").text(post["description"]);
+      });
+    });
+  });
+</script>
