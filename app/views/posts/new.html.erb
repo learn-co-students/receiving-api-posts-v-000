@@ -11,3 +11,31 @@
     <%= f.submit %>
   </div>
 <% end %>
+
+<!-- div below to have a place to put entered results -->
+<div id="postResult">
+  <h2 id="postTitle"></h2>
+  <p id="postBody"></p>
+</div>
+
+<!-- we want to prevent the default form submit action to do our own thing -->
+<!-- we hook up an event handler to the form's submit event, and then block the form from doing as HTML submit -->
+<script type="text/javascript" charset="utf-8">
+  $(function () {
+    $('form').submit(function(event) {
+      //prevent form from submitting the default way
+      event.preventDefault();
+
+      // this below is the data that is associated with the submit button, which is the post (params) data
+      var values = $(this).serialize();
+      var posting = $.post('/posts', values);
+
+      posting.done(function(data) {
+        var post = data;
+        $("#postTitle").text(post["title"]);
+        $("#postBody").text(post["description"]);
+      });
+
+    });
+  });
+</script>
