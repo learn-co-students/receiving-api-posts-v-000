@@ -6911,3 +6911,129 @@ Processing by PostsController#show as HTML
   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", "19"]]
   Rendered posts/show.html.erb within layouts/application (0.2ms)
 Completed 200 OK in 39ms (Views: 36.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/posts/20.json" for ::1 at 2019-01-08 19:43:55 -0500
+Processing by PostsController#show as JSON
+  Parameters: {"id"=>"20"}
+  [1m[35mPost Load (0.1ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 20]]
+Completed 404 Not Found in 10ms (ActiveRecord: 0.7ms)
+
+ActiveRecord::RecordNotFound (Couldn't find Post with 'id'=20):
+  app/controllers/posts_controller.rb:45:in `set_post'
+
+
+  Rendered /Users/aronroitblat/.rvm/gems/ruby-2.3.1/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (2.2ms)
+  Rendered /Users/aronroitblat/.rvm/gems/ruby-2.3.1/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb (0.7ms)
+  Rendered /Users/aronroitblat/.rvm/gems/ruby-2.3.1/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.text.erb (0.7ms)
+  Rendered /Users/aronroitblat/.rvm/gems/ruby-2.3.1/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.text.erb (80.1ms)
+
+
+Started GET "/posts/19" for ::1 at 2019-01-08 19:43:56 -0500
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"19"}
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 19]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", "19"]]
+  Rendered posts/show.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 39ms (Views: 32.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/posts/20.json" for ::1 at 2019-01-08 19:43:58 -0500
+Processing by PostsController#show as JSON
+  Parameters: {"id"=>"20"}
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 20]]
+Completed 404 Not Found in 3ms (ActiveRecord: 0.1ms)
+
+ActiveRecord::RecordNotFound (Couldn't find Post with 'id'=20):
+  app/controllers/posts_controller.rb:45:in `set_post'
+
+
+  Rendered /Users/aronroitblat/.rvm/gems/ruby-2.3.1/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (2.7ms)
+  Rendered /Users/aronroitblat/.rvm/gems/ruby-2.3.1/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb (0.6ms)
+  Rendered /Users/aronroitblat/.rvm/gems/ruby-2.3.1/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.text.erb (0.7ms)
+  Rendered /Users/aronroitblat/.rvm/gems/ruby-2.3.1/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.text.erb (77.0ms)
+
+
+Started GET "/posts/19" for ::1 at 2019-01-08 19:43:58 -0500
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"19"}
+  [1m[35mPost Load (0.2ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 19]]
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", "19"]]
+  Rendered posts/show.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 25ms (Views: 21.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/posts/20.json" for ::1 at 2019-01-08 19:44:00 -0500
+Processing by PostsController#show as JSON
+  Parameters: {"id"=>"20"}
+  [1m[35mPost Load (0.1ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 20]]
+Completed 404 Not Found in 2ms (ActiveRecord: 0.1ms)
+
+ActiveRecord::RecordNotFound (Couldn't find Post with 'id'=20):
+  app/controllers/posts_controller.rb:45:in `set_post'
+
+
+  Rendered /Users/aronroitblat/.rvm/gems/ruby-2.3.1/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (2.3ms)
+  Rendered /Users/aronroitblat/.rvm/gems/ruby-2.3.1/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb (0.5ms)
+  Rendered /Users/aronroitblat/.rvm/gems/ruby-2.3.1/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.text.erb (0.6ms)
+  Rendered /Users/aronroitblat/.rvm/gems/ruby-2.3.1/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.text.erb (71.4ms)
+
+
+Started GET "/posts/19" for ::1 at 2019-01-08 19:44:00 -0500
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"19"}
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 19]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", "19"]]
+  Rendered posts/show.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 19ms (Views: 16.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/posts/1" for ::1 at 2019-01-08 19:44:05 -0500
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", "1"]]
+  Rendered posts/show.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 45ms (Views: 41.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/posts/2.json" for ::1 at 2019-01-08 19:44:07 -0500
+Processing by PostsController#show as JSON
+  Parameters: {"id"=>"2"}
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", "2"]]
+[active_model_serializers] Rendered PostSerializer with ActiveModelSerializers::Adapter::Attributes (0.36ms)
+Completed 200 OK in 43ms (Views: 39.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/posts/1" for ::1 at 2019-01-08 19:44:07 -0500
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", "1"]]
+  Rendered posts/show.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 28ms (Views: 23.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/posts/2.json" for ::1 at 2019-01-08 19:44:08 -0500
+Processing by PostsController#show as JSON
+  Parameters: {"id"=>"2"}
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", "2"]]
+[active_model_serializers] Rendered PostSerializer with ActiveModelSerializers::Adapter::Attributes (0.62ms)
+Completed 200 OK in 35ms (Views: 10.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/posts/1" for ::1 at 2019-01-08 19:44:08 -0500
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", "1"]]
+  Rendered posts/show.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 25ms (Views: 21.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2019-01-08 22:51:17 -0500
+Processing by Rails::WelcomeController#index as HTML
+  Rendered /Users/aronroitblat/.rvm/gems/ruby-2.3.1/gems/railties-4.2.10/lib/rails/templates/rails/welcome/index.html.erb (2.4ms)
+Completed 200 OK in 18ms (Views: 14.8ms | ActiveRecord: 0.0ms)
