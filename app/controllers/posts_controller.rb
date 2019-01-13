@@ -16,10 +16,10 @@ class PostsController < ApplicationController
   def new
     @post = Post.new
   end
-
+#2 update posts controller so that the show page is displayed after creating a new post.  AJAX cannot redirect as was possible with the old way
   def create
     @post = Post.create(post_params)
-    redirect_to post_path(@post)
+    render json: @post, status: 201
   end
 
   def edit
