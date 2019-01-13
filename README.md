@@ -1,5 +1,12 @@
 # Receiving API POSTs
 
+##Use JQuery and AJAX  to create a new instance of an object 
+1.) posts/new.html.erb - script
+2.) posts controller
+3.) posts/new.html.erb - HTML
+
+
+
 ## Objectives
 
 1.  Serialize form values into `params` for AJAX POST requests.
