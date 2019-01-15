@@ -11,3 +11,29 @@
     <%= f.submit %>
   </div>
 <% end %>
+
+<div id="postResult">
+  <h2 id="postTitle"></h2>
+  <p id="postBody"></p>
+</div>
+
+<script type="text/javascript" charset="utf-8">
+  $(function () {
+    $('form').submit(function(e) {
+      e.preventDefault()
+
+      var values = $(this).serialize()
+      var posting = $.post('/posts', values)
+
+      // specify what should happen when the AJAX request is done
+      // handle the response
+      posting.done(function(data) {
+        var post = data
+        $("#postTitle").text(post["title"])
+        $("#postBody").text(post["description"])
+      })
+
+
+    })
+  })
+</script>
