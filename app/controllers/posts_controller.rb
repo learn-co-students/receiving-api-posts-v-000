@@ -6,7 +6,7 @@ class PostsController < ApplicationController
   end
 
   def show
-    @post = Post.find(params[:id])
+    @post = set_post
     respond_to do |format|
       format.html { render :show }
       format.json { render json: @post}
@@ -19,7 +19,8 @@ class PostsController < ApplicationController
 
   def create
     @post = Post.create(post_params)
-    redirect_to post_path(@post)
+     render json: @post, status: 201
+    # redirect_to post_path(@post)
   end
 
   def edit
@@ -31,7 +32,7 @@ class PostsController < ApplicationController
   end
 
   def post_data
-    post = Post.find(params[:id])
+    post = set_post
     #render json: PostSerializer.serialize(post)
     render json: post.to_json(only: [:title, :description, :id],
                               include: [author: { only: [:name]}])
