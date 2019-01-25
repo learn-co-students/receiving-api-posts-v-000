@@ -6732,3 +6732,10 @@ Processing by PostsController#show as */*
   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", "14"]]
   Rendered posts/show.html.erb within layouts/application (0.3ms)
 Completed 200 OK in 27ms (Views: 22.9ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/" for ::1 at 2019-01-25 16:34:27 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendered /Users/DanaONeil/.rvm/gems/ruby-2.3.3/gems/railties-4.2.10/lib/rails/templates/rails/welcome/index.html.erb (1.8ms)
+Completed 200 OK in 34ms (Views: 12.2ms | ActiveRecord: 0.0ms)
