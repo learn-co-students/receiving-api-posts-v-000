@@ -24,11 +24,11 @@
       //prevent form from submitting the default way
       event.preventDefault();
 
-      const values = $(this).serialize();
-      var posting = $.post('/posts', values);
+      let values = $(this).serialize();
+      let posting = $.post('/posts', values);
 
       posting.done(function(data) {
-        var post = data;
+        let post = data;
         $("#postTitle").text(post["title"]);
         $("#postBody").text(post["description"]);
       });
