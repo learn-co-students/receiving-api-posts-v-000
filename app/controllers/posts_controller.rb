@@ -19,7 +19,7 @@ class PostsController < ApplicationController
 
   def create
     @post = Post.create(post_params)
-    redirect_to post_path(@post)
+    render json: @post, status: 201
   end
 
   def edit
@@ -37,7 +37,7 @@ class PostsController < ApplicationController
                               include: [author: { only: [:name]}])
   end
 
-private
+  private
   # Use callbacks to share common setup or constraints between actions.
   def set_post
     @post = Post.find(params[:id])
