@@ -1,6 +1,7 @@
-<a href="#" class="js-next" data-id="<%=@post.id%>">Next...</a>
+<a href="#" class="js-next" data-id="<%=@post.id%>">Next...#</a>
 <h1 class="postTitle"><%= @post.title %></h1>
 <p class="postBody"><%= @post.description %></p>
+<p class="authorName"> Author's Name: <%= @post.author.name %></p>
 
 <script type="text/javascript" charset="utf-8">
 $(function () {
@@ -9,6 +10,8 @@ $(function () {
     $.get("/posts/" + nextId + ".json", function(data) {
       // get post
       var post = data;
+    #  a little extra i add to get the authors name
+       $(".authorName").text(data["author"]["name"]);
       $(".postTitle").text(post["title"]);
       $(".postBody").text(post["description"]);
       // re-set the id to current on the link
