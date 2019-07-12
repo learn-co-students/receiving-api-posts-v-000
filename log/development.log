@@ -6732,3 +6732,77 @@ Processing by PostsController#show as */*
   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", "14"]]
   Rendered posts/show.html.erb within layouts/application (0.3ms)
 Completed 200 OK in 27ms (Views: 22.9ms | ActiveRecord: 1.1ms)
+Started GET "/" for 208.251.136.34 at 2019-07-12 02:25:06 +0000
+Cannot render console from 208.251.136.34! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Rails::WelcomeController#index as HTML
+  Parameters: {"internal"=>true}
+  Rendering /usr/local/rvm/gems/ruby-2.6.1/gems/railties-5.0.7.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.6.1/gems/railties-5.0.7.1/lib/rails/templates/rails/welcome/index.html.erb (6.6ms)
+Completed 200 OK in 31ms (Views: 15.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/posts" for 208.251.136.34 at 2019-07-12 02:25:09 +0000
+Cannot render console from 208.251.136.34! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/_post.html.erb (5.1ms)
+  Rendered posts/_post.html.erb (0.2ms)
+  Rendered posts/_post.html.erb (0.1ms)
+  Rendered posts/_post.html.erb (0.1ms)
+  Rendered posts/_post.html.erb (0.1ms)
+  Rendered posts/_post.html.erb (0.1ms)
+  Rendered posts/_post.html.erb (0.1ms)
+  Rendered posts/_post.html.erb (0.1ms)
+  Rendered posts/_post.html.erb (0.1ms)
+  Rendered posts/_post.html.erb (0.1ms)
+  Rendered posts/_post.html.erb (0.1ms)
+  Rendered posts/_post.html.erb (0.1ms)
+  Rendered posts/_post.html.erb (0.2ms)
+  Rendered posts/_post.html.erb (0.2ms)
+  Rendered posts/index.html.erb within layouts/application (19.2ms)
+Completed 200 OK in 349ms (Views: 340.8ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/posts/1/post_data" for 208.251.136.34 at 2019-07-12 02:25:11 +0000
+Cannot render console from 208.251.136.34! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#post_data as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mAuthor Load (0.1ms)[0m  [1m[34mSELECT  "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 34ms (Views: 3.5ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/posts/1" for 208.251.136.34 at 2019-07-12 02:25:12 +0000
+Cannot render console from 208.251.136.34! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 13ms (Views: 11.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/posts/2.json" for 208.251.136.34 at 2019-07-12 02:25:13 +0000
+Cannot render console from 208.251.136.34! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#show as JSON
+  Parameters: {"id"=>"2"}
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+Started GET "/posts/1" for 208.251.136.34 at 2019-07-12 02:25:13 +0000
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+Cannot render console from 208.251.136.34! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.1ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 33ms (Views: 31.4ms | ActiveRecord: 0.6ms)
+
+
+[active_model_serializers] Rendered PostSerializer with ActiveModelSerializers::Adapter::Attributes (0.25ms)
+Completed 200 OK in 63ms (Views: 60.6ms | ActiveRecord: 0.1ms)
+
+
