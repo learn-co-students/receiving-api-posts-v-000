@@ -9,6 +9,7 @@ $(function () {
     $.get("/posts/" + nextId + ".json", function(data) {
       // get post
       var post = data;
+      //console.log(data)
       $(".postTitle").text(post["title"]);
       $(".postBody").text(post["description"]);
       // re-set the id to current on the link
