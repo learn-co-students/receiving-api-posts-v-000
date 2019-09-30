@@ -28,7 +28,7 @@
        var posting = $.post('/posts', values);
 
        posting.done(function(data){
-  var post = data;
+          var post = data;
         $("#postTitle").text(post["title"]);
         $("#postBody").text(post["description"]);
 
